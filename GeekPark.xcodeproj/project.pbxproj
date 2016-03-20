@@ -19,6 +19,7 @@
 		F73BECBB1C9BDC9F00E5AFEF /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73BECB91C9BDC9F00E5AFEF /* Activity.storyboard */; };
 		F73BECBE1C9BDCAC00E5AFEF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73BECBC1C9BDCAC00E5AFEF /* User.storyboard */; };
 		F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */; };
+		F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC31C9E4C7300E5AFEF /* Topic.swift */; };
 		F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED7E1C9A76F8000A808B /* AppDelegate.swift */; };
 		F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED801C9A76F8000A808B /* ContainerViewController.swift */; };
 		F741ED841C9A76F8000A808B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED821C9A76F8000A808B /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		F73BECBA1C9BDC9F00E5AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Activity.storyboard; sourceTree = "<group>"; };
 		F73BECBD1C9BDCAC00E5AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTScrollView.swift; sourceTree = "<group>"; };
+		F73BECC31C9E4C7300E5AFEF /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		F741ED7B1C9A76F8000A808B /* GeekPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F741ED7E1C9A76F8000A808B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F741ED801C9A76F8000A808B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				F73BECB61C9BDC7800E5AFEF /* Topic.storyboard */,
+				F73BECC21C9E4C6200E5AFEF /* Model */,
 				F73BECBF1C9BEC0100E5AFEF /* View */,
 				F73BEC971C9BB58600E5AFEF /* Controller */,
 			);
@@ -176,6 +179,14 @@
 				F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		F73BECC21C9E4C6200E5AFEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F73BECC31C9E4C7300E5AFEF /* Topic.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F741ED721C9A76F8000A808B = {
@@ -290,6 +301,7 @@
 			files = (
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
 				F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */,
+				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
 				F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */,
 				F73BECB01C9BDB4C00E5AFEF /* ActivitiesViewController.swift in Sources */,

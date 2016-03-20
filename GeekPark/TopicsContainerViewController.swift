@@ -8,13 +8,20 @@
 
 import UIKit
 
-class TopicsContainerViewController: UIViewController {
+protocol ChangePageDelegate{
+  func changePage(page: Int)
+}
+
+class TopicsContainerViewController: UIViewController, ChangePageDelegate{
   @IBOutlet weak var topScrollView: CTScrollView!
   
   var collectionTitle = ["全部", "极客之选","产品观察","AR/VR","深度报道","编辑精选","极客早知道"]
+  var pageViewController: UIPageViewController?
+  
+  var currentPageIndex = 0
   
   override func viewDidLoad() {
-    
+    super.viewDidLoad()
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -23,6 +30,8 @@ class TopicsContainerViewController: UIViewController {
       label.textColor = UIColor.blackColor()
       return label
     }
+    topScrollView.changePageDelegate = self
+    loadPageViewController()
   }
   
   private func setupTopScrollView(){
@@ -30,5 +39,46 @@ class TopicsContainerViewController: UIViewController {
   }
   
   private func loadPageViewController(){
+    pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
+    pageViewController?.dataSource = self
+    pageViewController?.view.frame = CGRect(origin: CGPoint(x: 0, y: topScrollView.frame.height + 20), size: CGSize(width: view.frame.width, height: view.frame.height - topScrollView.frame.height))
+    pageViewController?.view.backgroundColor = UIColor.blueColor()
+    addChildViewController(pageViewController!)
+    view.addSubview(pageViewController!.view)
+    pageViewController?.didMoveToParentViewController(self)
+    let firstController = storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as! TopicsPageViewController
+    pageViewController?.setViewControllers([firstController], direction: .Forward, animated: true, completion: nil)
+  }
+  
+  func changePage(page: Int){
+    let controller =  storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as! TopicsPageViewController
+    currentPageIndex = page
+    pageViewController?.setViewControllers([controller], direction: .Forward, animated: false, completion: nil)
+  }
+}
+
+extension TopicsContainerViewController: UIPageViewControllerDataSource{
+  func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+    return turnPageController(currentPageIndex, forward: true
+  }
+  
+  func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+    return turnPageController(currentPageIndex, forward: false)
+    
+  }
+  
+  private func turnPageController(currentIndex: Int, forward: Bool) -> UIViewController?{
+    let edge = forward ? (collectionTitle.count - 1) : 0
+    var controller: TopicsPageViewController?
+    if currentIndex == edge {
+      controller = nil
+    } else {
+      controller = storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as? TopicsPageViewController
+      let index = currentIndex + (forward ? 1 : -1)
+      currentPageIndex = index
+      topScrollView.setCurrentPageIndex(index)
+      controller?.currentCollection = collectionTitle[index]
+    }
+    return controller
   }
 }

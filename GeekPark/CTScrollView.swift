@@ -12,6 +12,8 @@ class CTScrollView: UIScrollView {
   var labelTitle: [String]?
   var labels: [UILabel]?
   let padding: CGFloat = 30
+  var changePageDelegate: ChangePageDelegate?
+  var currentIndex = 0
 
   func setLabel(labelTitle: [String], setupLabelFunction: (UILabel)->(UILabel)){
     self.labelTitle = labelTitle
@@ -31,17 +33,12 @@ class CTScrollView: UIScrollView {
     contentSize.height = 10
   }
   
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
+  func setCurrentPageIndex(index: Int){
+    let label = labels?[index]
+    hightAndMoving(label!)
   }
-
   
-}
-
-extension CTScrollView: UIGestureRecognizerDelegate{
-  func handleTapGesture(gesture: UIGestureRecognizer){
-    let label = gesture.view as! UILabel
-    
+  func hightAndMoving(label: UILabel){
     //被点击的label高亮
     labels?.map{ $0.textColor = UIColor.blackColor() }
     label.textColor = UIColor.blueColor()
@@ -56,5 +53,19 @@ extension CTScrollView: UIGestureRecognizerDelegate{
     UIView.animateWithDuration(0.3, animations: {
       self.contentOffset.x = x
     })
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+
+  
+}
+
+extension CTScrollView: UIGestureRecognizerDelegate{
+  func handleTapGesture(gesture: UIGestureRecognizer){
+    let label = gesture.view as! UILabel
+    hightAndMoving(label)
+    changePageDelegate?.changePage((labels?.indexOf(label))!)
   }
 }

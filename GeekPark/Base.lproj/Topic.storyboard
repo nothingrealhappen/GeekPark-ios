@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="-1197" y="1479"/>
         </scene>
-        <!--News View Controller-->
+        <!--Topics Page View Controller-->
         <scene sceneID="bsn-be-x5b">
             <objects>
-                <viewController id="gpd-gz-xqx" customClass="NewsViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopicsPageViewController" id="gpd-gz-xqx" customClass="TopicsPageViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="asn-fC-rDY"/>
                         <viewControllerLayoutGuide type="bottom" id="khq-iu-kOY"/>
@@ -88,6 +88,9 @@
                             <constraint firstItem="LQt-BY-PYr" firstAttribute="leading" secondItem="ugD-fe-rbC" secondAttribute="leading" id="ZU4-Ma-UIW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="topicsTable" destination="LQt-BY-PYr" id="C39-tO-s1V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOj-Gh-uJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
