@@ -8,10 +8,15 @@
 
 import UIKit
 
-class NewsViewController: UIViewController {
-
+class TopicsPageViewController: UIViewController {
+  
+  @IBOutlet weak var topicsTable: UITableView!
+  
+  var topics = [Topic]()
+  var currentCollection: String?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-
+  
 }

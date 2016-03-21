@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */; };
-		F73BEC991C9BB5A800E5AFEF /* NewsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC981C9BB5A800E5AFEF /* NewsContainerViewController.swift */; };
-		F73BEC9B1C9BB60B00E5AFEF /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* NewsViewController.swift */; };
+		F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */; };
+		F73BEC9B1C9BB60B00E5AFEF /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* TopicsViewController.swift */; };
 		F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECA21C9BD99700E5AFEF /* BaseModel.swift */; };
 		F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECA91C9BDAE500E5AFEF /* UserViewController.swift */; };
 		F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECAC1C9BDB2700E5AFEF /* NotificationViewController.swift */; };
@@ -18,6 +18,8 @@
 		F73BECB81C9BDC7800E5AFEF /* Topic.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73BECB61C9BDC7800E5AFEF /* Topic.storyboard */; };
 		F73BECBB1C9BDC9F00E5AFEF /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73BECB91C9BDC9F00E5AFEF /* Activity.storyboard */; };
 		F73BECBE1C9BDCAC00E5AFEF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73BECBC1C9BDCAC00E5AFEF /* User.storyboard */; };
+		F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */; };
+		F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC31C9E4C7300E5AFEF /* Topic.swift */; };
 		F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED7E1C9A76F8000A808B /* AppDelegate.swift */; };
 		F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED801C9A76F8000A808B /* ContainerViewController.swift */; };
 		F741ED841C9A76F8000A808B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED821C9A76F8000A808B /* Main.storyboard */; };
@@ -27,8 +29,8 @@
 
 /* Begin PBXFileReference section */
 		F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
-		F73BEC981C9BB5A800E5AFEF /* NewsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsContainerViewController.swift; sourceTree = "<group>"; };
-		F73BEC9A1C9BB60B00E5AFEF /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsContainerViewController.swift; sourceTree = "<group>"; };
+		F73BEC9A1C9BB60B00E5AFEF /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
 		F73BECA21C9BD99700E5AFEF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		F73BECA91C9BDAE500E5AFEF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F73BECAC1C9BDB2700E5AFEF /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,8 @@
 		F73BECB71C9BDC7800E5AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Topic.storyboard; sourceTree = "<group>"; };
 		F73BECBA1C9BDC9F00E5AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Activity.storyboard; sourceTree = "<group>"; };
 		F73BECBD1C9BDCAC00E5AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
+		F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTScrollView.swift; sourceTree = "<group>"; };
+		F73BECC31C9E4C7300E5AFEF /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		F741ED7B1C9A76F8000A808B /* GeekPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F741ED7E1C9A76F8000A808B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F741ED801C9A76F8000A808B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -68,8 +72,8 @@
 		F73BEC971C9BB58600E5AFEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F73BEC981C9BB5A800E5AFEF /* NewsContainerViewController.swift */,
-				F73BEC9A1C9BB60B00E5AFEF /* NewsViewController.swift */,
+				F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */,
+				F73BEC9A1C9BB60B00E5AFEF /* TopicsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				F73BECB61C9BDC7800E5AFEF /* Topic.storyboard */,
+				F73BECC21C9E4C6200E5AFEF /* Model */,
+				F73BECBF1C9BEC0100E5AFEF /* View */,
 				F73BEC971C9BB58600E5AFEF /* Controller */,
 			);
 			name = Topic;
@@ -165,6 +171,22 @@
 				F73BECAF1C9BDB4C00E5AFEF /* ActivitiesViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		F73BECBF1C9BEC0100E5AFEF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F73BECC21C9E4C6200E5AFEF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F73BECC31C9E4C7300E5AFEF /* Topic.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		F741ED721C9A76F8000A808B = {
@@ -279,13 +301,15 @@
 			files = (
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
 				F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */,
+				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
 				F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */,
 				F73BECB01C9BDB4C00E5AFEF /* ActivitiesViewController.swift in Sources */,
 				F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */,
+				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
 				F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */,
-				F73BEC9B1C9BB60B00E5AFEF /* NewsViewController.swift in Sources */,
-				F73BEC991C9BB5A800E5AFEF /* NewsContainerViewController.swift in Sources */,
+				F73BEC9B1C9BB60B00E5AFEF /* TopicsViewController.swift in Sources */,
+				F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
