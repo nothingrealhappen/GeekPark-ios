@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F373234348C93092C2815404 /* Pods_GeekPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DC000D3B788B4521751996 /* Pods_GeekPark.framework */; };
 		F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */; };
 		F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */; };
-		F73BEC9B1C9BB60B00E5AFEF /* TopicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* TopicsViewController.swift */; };
+		F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */; };
 		F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECA21C9BD99700E5AFEF /* BaseModel.swift */; };
 		F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECA91C9BDAE500E5AFEF /* UserViewController.swift */; };
 		F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECAC1C9BDB2700E5AFEF /* NotificationViewController.swift */; };
@@ -20,6 +21,8 @@
 		F73BECBE1C9BDCAC00E5AFEF /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F73BECBC1C9BDCAC00E5AFEF /* User.storyboard */; };
 		F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */; };
 		F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC31C9E4C7300E5AFEF /* Topic.swift */; };
+		F73BECC61C9F883F00E5AFEF /* ImageLoopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC51C9F883F00E5AFEF /* ImageLoopTableViewCell.swift */; };
+		F73BECC81C9F993900E5AFEF /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECC71C9F993900E5AFEF /* ImageCollectionViewCell.swift */; };
 		F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED7E1C9A76F8000A808B /* AppDelegate.swift */; };
 		F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED801C9A76F8000A808B /* ContainerViewController.swift */; };
 		F741ED841C9A76F8000A808B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED821C9A76F8000A808B /* Main.storyboard */; };
@@ -28,9 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58DC000D3B788B4521751996 /* Pods_GeekPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BDB739B92701C94D062075 /* Pods-GeekPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.debug.xcconfig"; sourceTree = "<group>"; };
+		B83C40D5FD667074BE4408D4 /* Pods-GeekPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.release.xcconfig"; sourceTree = "<group>"; };
 		F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsContainerViewController.swift; sourceTree = "<group>"; };
-		F73BEC9A1C9BB60B00E5AFEF /* TopicsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsViewController.swift; sourceTree = "<group>"; };
+		F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsPageViewController.swift; sourceTree = "<group>"; };
 		F73BECA21C9BD99700E5AFEF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		F73BECA91C9BDAE500E5AFEF /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		F73BECAC1C9BDB2700E5AFEF /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +47,8 @@
 		F73BECBD1C9BDCAC00E5AFEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/User.storyboard; sourceTree = "<group>"; };
 		F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTScrollView.swift; sourceTree = "<group>"; };
 		F73BECC31C9E4C7300E5AFEF /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		F73BECC51C9F883F00E5AFEF /* ImageLoopTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageLoopTableViewCell.swift; sourceTree = "<group>"; };
+		F73BECC71C9F993900E5AFEF /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		F741ED7B1C9A76F8000A808B /* GeekPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F741ED7E1C9A76F8000A808B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F741ED801C9A76F8000A808B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -55,12 +63,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F373234348C93092C2815404 /* Pods_GeekPark.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27DE0DB4D9EB2D18383C4228 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5BDB739B92701C94D062075 /* Pods-GeekPark.debug.xcconfig */,
+				B83C40D5FD667074BE4408D4 /* Pods-GeekPark.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A9203B4678EA268551A9FF85 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58DC000D3B788B4521751996 /* Pods_GeekPark.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F73BEC941C9AB26F00E5AFEF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -73,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */,
-				F73BEC9A1C9BB60B00E5AFEF /* TopicsViewController.swift */,
+				F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -177,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */,
+				F73BECC51C9F883F00E5AFEF /* ImageLoopTableViewCell.swift */,
+				F73BECC71C9F993900E5AFEF /* ImageCollectionViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,6 +222,8 @@
 			children = (
 				F741ED7D1C9A76F8000A808B /* GeekPark */,
 				F741ED7C1C9A76F8000A808B /* Products */,
+				27DE0DB4D9EB2D18383C4228 /* Pods */,
+				A9203B4678EA268551A9FF85 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,9 +260,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F741ED8D1C9A76F8000A808B /* Build configuration list for PBXNativeTarget "GeekPark" */;
 			buildPhases = (
+				47E9C3980F6F2E0D4A03165B /* Check Pods Manifest.lock */,
 				F741ED771C9A76F8000A808B /* Sources */,
 				F741ED781C9A76F8000A808B /* Frameworks */,
 				F741ED791C9A76F8000A808B /* Resources */,
+				2BF5437F8696D10E16833E2F /* Embed Pods Frameworks */,
+				759BF5664AD90BC511C38D3A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -294,12 +327,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BF5437F8696D10E16833E2F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47E9C3980F6F2E0D4A03165B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		759BF5664AD90BC511C38D3A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F741ED771C9A76F8000A808B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
+				F73BECC61C9F883F00E5AFEF /* ImageLoopTableViewCell.swift in Sources */,
+				F73BECC81C9F993900E5AFEF /* ImageCollectionViewCell.swift in Sources */,
 				F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */,
 				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
@@ -308,7 +391,7 @@
 				F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */,
 				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
 				F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */,
-				F73BEC9B1C9BB60B00E5AFEF /* TopicsViewController.swift in Sources */,
+				F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */,
 				F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +533,7 @@
 		};
 		F741ED8E1C9A76F8000A808B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5BDB739B92701C94D062075 /* Pods-GeekPark.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: 坤 朱 (M36U6XM64T)";
@@ -464,6 +548,7 @@
 		};
 		F741ED8F1C9A76F8000A808B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B83C40D5FD667074BE4408D4 /* Pods-GeekPark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: GEEKPARK Co., Ltd. (KBEAWBS8N5)";

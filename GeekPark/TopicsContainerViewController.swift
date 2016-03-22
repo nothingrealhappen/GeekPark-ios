@@ -12,13 +12,17 @@ protocol ChangePageDelegate{
   func changePage(page: Int)
 }
 
+protocol ChangeTopLabelDelegate{
+  func changeTopLabel(index: Int)
+}
+
 class TopicsContainerViewController: UIViewController, ChangePageDelegate{
   @IBOutlet weak var topScrollView: CTScrollView!
   
-  var collectionTitle = ["全部", "极客之选","产品观察","AR/VR","深度报道","编辑精选","极客早知道"]
+  //TODO
+  var collectionTitle = ["全部", "极客之选", "产品观察","AR/VR","深度报道","编辑精选","极客早知道"]
   var pageViewController: UIPageViewController?
-  
-  var currentPageIndex = 0
+  var controllers = [TopicsPageViewController]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,12 +34,20 @@ class TopicsContainerViewController: UIViewController, ChangePageDelegate{
       label.textColor = UIColor.blackColor()
       return label
     }
+    generateControllers()
     topScrollView.changePageDelegate = self
+    topScrollView.setCurrentPageIndex(0)
     loadPageViewController()
   }
   
-  private func setupTopScrollView(){
-    
+  private func generateControllers(){
+    controllers = collectionTitle.enumerate().map{ (index, _) in
+      let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as! TopicsPageViewController
+      controller.itemIndex = index
+      controller.currentCollection = collectionTitle[index]
+      controller.changeTopLabelDelegate = self
+      return controller
+    }
   }
   
   private func loadPageViewController(){
@@ -46,25 +58,24 @@ class TopicsContainerViewController: UIViewController, ChangePageDelegate{
     addChildViewController(pageViewController!)
     view.addSubview(pageViewController!.view)
     pageViewController?.didMoveToParentViewController(self)
-    let firstController = storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as! TopicsPageViewController
-    pageViewController?.setViewControllers([firstController], direction: .Forward, animated: true, completion: nil)
+    pageViewController?.setViewControllers([controllers[0]], direction: .Forward, animated: true, completion: nil)
   }
   
   func changePage(page: Int){
-    let controller =  storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as! TopicsPageViewController
-    currentPageIndex = page
+    let controller = controllers[page]
     pageViewController?.setViewControllers([controller], direction: .Forward, animated: false, completion: nil)
   }
 }
 
-extension TopicsContainerViewController: UIPageViewControllerDataSource{
+extension TopicsContainerViewController: UIPageViewControllerDataSource {
   func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-    return turnPageController(currentPageIndex, forward: true
+    let controller = viewController as! TopicsPageViewController
+    return turnPageController(controller.itemIndex, forward: true)
   }
   
   func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-    return turnPageController(currentPageIndex, forward: false)
-    
+    let controller = viewController as! TopicsPageViewController
+    return turnPageController(controller.itemIndex, forward: false)
   }
   
   private func turnPageController(currentIndex: Int, forward: Bool) -> UIViewController?{
@@ -73,12 +84,19 @@ extension TopicsContainerViewController: UIPageViewControllerDataSource{
     if currentIndex == edge {
       controller = nil
     } else {
-      controller = storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as? TopicsPageViewController
       let index = currentIndex + (forward ? 1 : -1)
-      currentPageIndex = index
-      topScrollView.setCurrentPageIndex(index)
-      controller?.currentCollection = collectionTitle[index]
+      controller = controllers[index]
     }
     return controller
+  }
+  
+  func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+  }
+  
+}
+
+extension TopicsContainerViewController: ChangeTopLabelDelegate{
+  func changeTopLabel(index: Int) {
+    topScrollView.setCurrentPageIndex(index)
   }
 }
