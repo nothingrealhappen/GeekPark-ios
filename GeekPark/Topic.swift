@@ -9,5 +9,8 @@
 import Foundation
 
 class Topic{
-  
+  var cover_url: String?
+  init(url: String){
+    cover_url = url
+  }
 }
