@@ -26,6 +26,7 @@ class ImageLoopTableViewCell: UITableViewCell {
     collectionView.delegate = self
     collectionView.dataSource = self
     collectionView.contentSize = CGSize(width: CGFloat(topics.count) * frame.width, height: frame.height)
+    collectionView.pagingEnabled = true
   }
   
 }
@@ -52,7 +53,20 @@ extension ImageLoopTableViewCell: UICollectionViewDataSource{
 
 extension ImageLoopTableViewCell: UICollectionViewDelegateFlowLayout{
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    return CGSize(width: 1, height: 1)
+    return CGSize(width: frame.width, height: frame.height)
   }
   
+  func collectionView(collectionView: UICollectionView,
+    layout collectionViewLayout: UICollectionViewLayout,
+    insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return 0
+  }
+  
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    return 0
+  }
 }

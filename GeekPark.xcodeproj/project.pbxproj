@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F373234348C93092C2815404 /* Pods_GeekPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DC000D3B788B4521751996 /* Pods_GeekPark.framework */; };
+		F72620491CA11C0F00822C73 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */; };
 		F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */; };
 		F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */; };
 		F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */; };
@@ -34,6 +35,7 @@
 		58DC000D3B788B4521751996 /* Pods_GeekPark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeekPark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BDB739B92701C94D062075 /* Pods-GeekPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.debug.xcconfig"; sourceTree = "<group>"; };
 		B83C40D5FD667074BE4408D4 /* Pods-GeekPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.release.xcconfig"; sourceTree = "<group>"; };
+		F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicTableViewCell.swift; path = Assets.xcassets/TopicTableViewCell.swift; sourceTree = "<group>"; };
 		F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsContainerViewController.swift; sourceTree = "<group>"; };
 		F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsPageViewController.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				F73BECC01C9BF08F00E5AFEF /* CTScrollView.swift */,
 				F73BECC51C9F883F00E5AFEF /* ImageLoopTableViewCell.swift */,
 				F73BECC71C9F993900E5AFEF /* ImageCollectionViewCell.swift */,
+				F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
 				F73BECC61C9F883F00E5AFEF /* ImageLoopTableViewCell.swift in Sources */,
 				F73BECC81C9F993900E5AFEF /* ImageCollectionViewCell.swift in Sources */,
+				F72620491CA11C0F00822C73 /* TopicTableViewCell.swift in Sources */,
 				F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */,
 				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
