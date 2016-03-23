@@ -9,8 +9,27 @@
 import Foundation
 
 class Topic{
-  var cover_url: String?
-  init(url: String){
-    cover_url = url
+  var describe: String?
+  var title: String?
+  var authorName: String?
+  var collectionTitle: String?
+  var topicCover: String?
+  var publishTime: String?
+  var commentCount: String?
+  var topCover: String?
+  var body: String?
+  init(topCover: String){
+    self.topCover = topCover
+  }
+  
+  init(describe: String, title: String, authorName: String, collectionTitle: String, topicCover: String, publishTime: String, commentCount: String){
+    self.topicCover = topicCover
+    self.describe = describe
+    self.title = title
+    self.authorName = authorName
+    self.collectionTitle = collectionTitle
+    self.topicCover = topicCover
+    self.publishTime = publishTime
+    self.commentCount = commentCount
   }
 }

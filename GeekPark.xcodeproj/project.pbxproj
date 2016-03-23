@@ -11,6 +11,8 @@
 		8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1616761CA1AC6700E781B2 /* ActivityCell.swift */; };
 		F373234348C93092C2815404 /* Pods_GeekPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DC000D3B788B4521751996 /* Pods_GeekPark.framework */; };
 		F72620491CA11C0F00822C73 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */; };
+		F726204B1CA1452000822C73 /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726204A1CA1452000822C73 /* TopicDetailViewController.swift */; };
+		F726204D1CA22A6900822C73 /* topic.css in Resources */ = {isa = PBXBuildFile; fileRef = F726204C1CA22A6900822C73 /* topic.css */; };
 		F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */; };
 		F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */; };
 		F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */; };
@@ -40,6 +42,8 @@
 		A5BDB739B92701C94D062075 /* Pods-GeekPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.debug.xcconfig"; sourceTree = "<group>"; };
 		B83C40D5FD667074BE4408D4 /* Pods-GeekPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.release.xcconfig"; sourceTree = "<group>"; };
 		F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicTableViewCell.swift; path = Assets.xcassets/TopicTableViewCell.swift; sourceTree = "<group>"; };
+		F726204A1CA1452000822C73 /* TopicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailViewController.swift; sourceTree = "<group>"; };
+		F726204C1CA22A6900822C73 /* topic.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = topic.css; sourceTree = "<group>"; };
 		F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsContainerViewController.swift; sourceTree = "<group>"; };
 		F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsPageViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			children = (
 				F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */,
 				F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */,
+				F726204A1CA1452000822C73 /* TopicDetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				F741ED851C9A76F8000A808B /* Assets.xcassets */,
 				F741ED871C9A76F8000A808B /* LaunchScreen.storyboard */,
 				F741ED8A1C9A76F8000A808B /* Info.plist */,
+				F726204C1CA22A6900822C73 /* topic.css */,
 			);
 			path = GeekPark;
 			sourceTree = "<group>";
@@ -347,6 +353,7 @@
 				F73BECB81C9BDC7800E5AFEF /* Topic.storyboard in Resources */,
 				F73BECBE1C9BDCAC00E5AFEF /* User.storyboard in Resources */,
 				F73BECB31C9BDBAC00E5AFEF /* Notification.storyboard in Resources */,
+				F726204D1CA22A6900822C73 /* topic.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +427,7 @@
 				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
 				F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */,
 				F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */,
+				F726204B1CA1452000822C73 /* TopicDetailViewController.swift in Sources */,
 				F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,8 @@ import UIKit
 
 class ImageLoopTableViewCell: UITableViewCell {
 
+  @IBOutlet weak var pageControl: UIPageControl!
+  
   var topics = [Topic]() {
     didSet {
       collectionView.reloadData()
@@ -20,6 +22,9 @@ class ImageLoopTableViewCell: UITableViewCell {
   func setData(topics: [Topic]){
     self.topics = topics
     setUpCollectionView()
+    //让pageControl显示
+    pageControl.layer.zPosition = 1
+    pageControl.numberOfPages = topics.count
   }
   
   private func setUpCollectionView(){
@@ -46,7 +51,8 @@ extension ImageLoopTableViewCell: UICollectionViewDataSource{
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ImageCollectionViewCell", forIndexPath: indexPath) as! ImageCollectionViewCell
-    cell.setImageUrl(topics[indexPath.row].cover_url ?? "")
+    cell.setImageUrl(topics[indexPath.row].topCover ?? "")
+    pageControl.currentPage = indexPath.row
     return cell
   }
 }
