@@ -46,7 +46,12 @@ class TopicsPageViewController: UIViewController {
 }
 
 extension TopicsPageViewController: UITableViewDelegate{
-  
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let topic = topics[indexPath.row]
+    let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
+    controller.topic = topic
+    navigationController?.pushViewController(controller, animated: true)
+  }
 }
 
 extension TopicsPageViewController: UITableViewDataSource{

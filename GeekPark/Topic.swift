@@ -17,6 +17,7 @@ class Topic{
   var publishTime: String?
   var commentCount: String?
   var topCover: String?
+  var body: String?
   init(topCover: String){
     self.topCover = topCover
   }
