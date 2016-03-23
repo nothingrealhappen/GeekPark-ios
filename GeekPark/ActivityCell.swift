@@ -10,4 +10,18 @@ import UIKit
 
 class ActivityCell: UITableViewCell {
   
+  @IBOutlet weak var status: UILabel!
+  @IBOutlet weak var startAt: UILabel!
+  @IBOutlet weak var title: UILabel!
+  @IBOutlet weak var bannerImg: UIImageView!
+  
+  var activity: Activity?{
+    didSet{ updateViews() }
+  }
+  
+  func updateViews(){
+    status.text = activity?.statusText()
+    status.backgroundColor = activity?.statusColor()
+    title.text = activity?.title ?? "Title"
+  }
 }
