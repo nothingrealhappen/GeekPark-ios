@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+class BaseModel {
+  
+  func doRequest(router :String , params: [String] ){
+  }
+  
+}
