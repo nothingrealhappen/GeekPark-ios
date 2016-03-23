@@ -151,6 +151,12 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bannerImg" destination="PJA-uC-mIu" id="A1X-5b-hyG"/>
+                                            <outlet property="startAt" destination="Etx-z3-JZb" id="lqL-dR-YLi"/>
+                                            <outlet property="status" destination="ooJ-JN-qvI" id="Gqn-D7-4Wm"/>
+                                            <outlet property="title" destination="4sv-3p-TGX" id="mgi-0g-brW"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

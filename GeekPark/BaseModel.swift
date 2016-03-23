@@ -7,10 +7,36 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
+import EVReflection
 
-class BaseModel {
+public enum Status{
+  case SUCCESS, FAILD , ERROR
+}
+
+class BaseModel: EVObject{
   
-  func doRequest(router :String , params: [String] ){
+  static let api_root = "http://events.geekpark.net/api/v1/"
+  
+  static func doRequest(
+    method:Alamofire.Method = .GET,
+    router: String ,
+    params: [String: AnyObject],
+    callback: (Status,JSON?)->()
+    )
+  {
+    Alamofire.request(method, "\(api_root)\(router)", parameters: params)
+      .responseJSON { response in
+        if response.response?.statusCode > 300 || response.response?.statusCode < 200{
+          callback(.ERROR,nil)
+          return
+        }else{
+          guard let data = response.data else { callback(.FAILD,nil) ; return }
+          callback(.SUCCESS,JSON(data: data))
+        }
+    }
   }
+  
   
 }
