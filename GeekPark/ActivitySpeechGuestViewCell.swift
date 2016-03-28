@@ -12,13 +12,12 @@ class ActivitySpeechGuestViewCell: ActivityBaseTableViewCell{
 
   @IBOutlet weak var name: UILabel!
   @IBOutlet weak var guestTitle: UILabel!
+  var guest = Guest()
   
   override func setData(data: Any) {
-    
-    var dic = data as! Dictionary<String, String>
-    dic = ["name": "朱坤", "guestTitle": "极客公园"]
-    name.text = dic["name"]
-    guestTitle.text = dic["guestTitle"]
+    guest = data as! Guest
+    name.text = guest.name
+    guestTitle.text = guest.title
   }
   
   override func awakeFromNib() {

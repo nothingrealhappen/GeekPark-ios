@@ -61,7 +61,7 @@
                 <outlet property="guestTitle" destination="aY6-OU-zsL" id="t8D-7o-3e7"/>
                 <outlet property="name" destination="Cgx-Dv-jzb" id="LsO-oN-fMd"/>
             </connections>
-            <point key="canvasLocation" x="604" y="373"/>
+            <point key="canvasLocation" x="486" y="347"/>
         </tableViewCell>
     </objects>
 </document>

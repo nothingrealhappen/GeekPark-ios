@@ -12,4 +12,8 @@ class ActivityBaseTableViewCell: UITableViewCell {
   func setData(data: Any){
     
   }
+  
+  func getHeight() -> CGFloat?{
+    return nil
+  }
 }

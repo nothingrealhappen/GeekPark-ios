@@ -23,11 +23,13 @@
 		F72092B31CA5242D0096962F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B21CA5242D0096962F /* Extensions.swift */; };
 		F72092B51CA531190096962F /* ActivityCommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B41CA531190096962F /* ActivityCommentViewCell.swift */; };
 		F72092B81CA532FA0096962F /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B71CA532FA0096962F /* FullScreenViewController.swift */; };
-		F72092BA1CA534210096962F /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B91CA534210096962F /* SwipeViewController.swift */; };
+		F72092BA1CA534210096962F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B91CA534210096962F /* DetailViewController.swift */; };
 		F72092BC1CA6339F0096962F /* ActivityCommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72092BB1CA6339F0096962F /* ActivityCommentViewCell.xib */; };
 		F72092BE1CA636410096962F /* ActivityCommentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092BD1CA636410096962F /* ActivityCommentsViewCell.swift */; };
 		F72092C01CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092BF1CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift */; };
 		F72092C21CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72092C11CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib */; };
+		F72092C41CA790E40096962F /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092C31CA790E40096962F /* Speech.swift */; };
+		F72092C61CA792040096962F /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092C51CA792040096962F /* Guest.swift */; };
 		F72620491CA11C0F00822C73 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */; };
 		F726204B1CA1452000822C73 /* TopicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726204A1CA1452000822C73 /* TopicDetailViewController.swift */; };
 		F726204D1CA22A6900822C73 /* topic.css in Resources */ = {isa = PBXBuildFile; fileRef = F726204C1CA22A6900822C73 /* topic.css */; };
@@ -83,11 +85,13 @@
 		F72092B21CA5242D0096962F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F72092B41CA531190096962F /* ActivityCommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentViewCell.swift; sourceTree = "<group>"; };
 		F72092B71CA532FA0096962F /* FullScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
-		F72092B91CA534210096962F /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
+		F72092B91CA534210096962F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F72092BB1CA6339F0096962F /* ActivityCommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCommentViewCell.xib; sourceTree = "<group>"; };
 		F72092BD1CA636410096962F /* ActivityCommentsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentsViewCell.swift; sourceTree = "<group>"; };
 		F72092BF1CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentsOfCommentViewCell.swift; sourceTree = "<group>"; };
 		F72092C11CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCommentsOfCommentViewCell.xib; sourceTree = "<group>"; };
+		F72092C31CA790E40096962F /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
+		F72092C51CA792040096962F /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicTableViewCell.swift; path = Assets.xcassets/TopicTableViewCell.swift; sourceTree = "<group>"; };
 		F726204A1CA1452000822C73 /* TopicDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicDetailViewController.swift; sourceTree = "<group>"; };
 		F726204C1CA22A6900822C73 /* topic.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = topic.css; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				8E1616741CA1ABFE00E781B2 /* Activity.swift */,
+				F72092C31CA790E40096962F /* Speech.swift */,
+				F72092C51CA792040096962F /* Guest.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -219,7 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				F72092B71CA532FA0096962F /* FullScreenViewController.swift */,
-				F72092B91CA534210096962F /* SwipeViewController.swift */,
+				F72092B91CA534210096962F /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 				8E92EDB31CAA440C0075D95F /* SystemNotificationCell.swift in Sources */,
 				8E9601AC1CAA6EF300B2A126 /* ActivityNotificationCell.swift in Sources */,
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
+				F72092C61CA792040096962F /* Guest.swift in Sources */,
 				F73BECC61C9F883F00E5AFEF /* ImageLoopTableViewCell.swift in Sources */,
 				F72092B01CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift in Sources */,
 				F73BECC81C9F993900E5AFEF /* ImageCollectionViewCell.swift in Sources */,
@@ -563,13 +570,14 @@
 				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
 				F7E986871CA399BA0006AB21 /* HeaderViewCell.swift in Sources */,
 				F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */,
+				F72092C41CA790E40096962F /* Speech.swift in Sources */,
 				F72092B51CA531190096962F /* ActivityCommentViewCell.swift in Sources */,
 				F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */,
 				8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */,
 				F72092AE1CA514300096962F /* ActivityJoinedAudienceViewCell.swift in Sources */,
 				8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */,
 				F726204B1CA1452000822C73 /* TopicDetailViewController.swift in Sources */,
-				F72092BA1CA534210096962F /* SwipeViewController.swift in Sources */,
+				F72092BA1CA534210096962F /* DetailViewController.swift in Sources */,
 				F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */,
 				F72620551CA29DB100822C73 /* TopMainInfoViewCell.swift in Sources */,
 				8E9601AA1CAA676800B2A126 /* Notification.swift in Sources */,
