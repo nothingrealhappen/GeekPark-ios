@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopicDetailViewController: UIViewController {
+class TopicDetailViewController: FullScreenViewController {
   @IBOutlet weak var topicCover: UIImageView!
   
   @IBOutlet weak var webView: UIWebView!

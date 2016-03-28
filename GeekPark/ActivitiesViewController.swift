@@ -21,18 +21,33 @@ class ActivitiesViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setupNavbar()
     tableView.dataSource = self
+    tableView.delegate = self
     Activity.list(page) { activities in
       self.activities = activities
     }
+    
   }
   
-  func setupNavbar(){
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: false)
+    navigationController?.navigationBar.topItem?.title = "活动"
   }
-
+  
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: false)
+  }
+  
 }
 
+extension ActivitiesViewController: UITableViewDelegate{
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityDetailViewController") as! ActivityDetailViewController
+    navigationController?.pushViewController(controller, animated: true)
+  }
+}
 
 extension ActivitiesViewController: UITableViewDataSource{
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

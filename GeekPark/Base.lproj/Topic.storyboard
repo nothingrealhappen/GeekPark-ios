@@ -10,7 +10,7 @@
         <!--Topics Container View Controller-->
         <scene sceneID="Rhy-3R-Z8c">
             <objects>
-                <viewController id="bER-L6-Aps" customClass="TopicsContainerViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopicsViewController" id="bER-L6-Aps" customClass="TopicsContainerViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="opN-Xm-pJe"/>
                         <viewControllerLayoutGuide type="bottom" id="8v9-4X-3az"/>
@@ -45,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZD-aZ-p11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-531" y="766"/>
+            <point key="canvasLocation" x="-1174" y="784"/>
         </scene>
         <!--Topic Detail View Controller-->
         <scene sceneID="89V-6z-pIE">
@@ -430,24 +430,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOj-Gh-uJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1189" y="1461"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Mtf-cf-gEH">
-            <objects>
-                <navigationController storyboardIdentifier="TopicsViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="RCS-Ot-jqB" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9cY-gb-2uy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="bER-L6-Aps" kind="relationship" relationship="rootViewController" id="icv-1N-cWV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HM1-wU-btc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1189" y="766"/>
         </scene>
     </scenes>
 </document>

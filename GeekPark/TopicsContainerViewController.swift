@@ -53,7 +53,7 @@ class TopicsContainerViewController: UIViewController, ChangePageDelegate{
   private func loadPageViewController(){
     pageViewController = UIPageViewController(transitionStyle: .Scroll, navigationOrientation: .Horizontal, options: nil)
     pageViewController?.dataSource = self
-    pageViewController?.view.frame = CGRect(origin: CGPoint(x: 0, y: topScrollView.frame.height + 20), size: CGSize(width: view.frame.width, height: view.frame.height - topScrollView.frame.height))
+    pageViewController?.view.frame = CGRect(origin: CGPoint(x: 0, y: topScrollView.frame.height), size: CGSize(width: view.frame.width, height: view.frame.height - topScrollView.frame.height))
     pageViewController?.view.backgroundColor = UIColor.blueColor()
     addChildViewController(pageViewController!)
     view.addSubview(pageViewController!.view)
