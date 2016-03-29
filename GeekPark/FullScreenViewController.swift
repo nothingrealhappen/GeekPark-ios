@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FullScreenViewController: UIViewController {
+class FullScreenViewController: SwipeViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
