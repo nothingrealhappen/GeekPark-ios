@@ -41,6 +41,7 @@ class NotificationViewController: UIViewController {
 extension NotificationViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let controller = storyboard?.instantiateViewControllerWithIdentifier("NotificationsViewController") as! NotificationsViewController
+    controller.type = indexPath.row%2 == 0 ? NotificationType.System : NotificationType.Activity
     navigationController?.pushViewController(controller, animated: true)
   }
   
