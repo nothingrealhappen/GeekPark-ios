@@ -10,6 +10,7 @@ import UIKit
 
 class ActivitySpeechGuestViewCell: ActivityBaseTableViewCell{
 
+  @IBOutlet weak var avatorUrl: UIImageView!
   @IBOutlet weak var name: UILabel!
   @IBOutlet weak var guestTitle: UILabel!
   var guest = Guest()
@@ -18,6 +19,8 @@ class ActivitySpeechGuestViewCell: ActivityBaseTableViewCell{
     guest = data as! Guest
     name.text = guest.name
     guestTitle.text = guest.title
+    avatorUrl.circlize()
+    avatorUrl.kf_setImageWithURL(NSURL(string: Config.BaseUrl + (guest.avator ?? ""))!)
   }
   
   override func awakeFromNib() {

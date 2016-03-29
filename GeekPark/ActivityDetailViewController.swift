@@ -31,7 +31,7 @@ class ActivityDetailViewController: FullScreenViewController {
     Activity.speeches(activity_id){ activity in
       self.activity = activity
       self.headerDatas = ["https://dn-geekpark-new.qbox.me/uploads/image/file/72/29/722962955a200ffc1f64209068635d46.jpg", "活动简介", "活动日程", "报名用户", "用户评论"]
-      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [["https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg"]], [[]]]
+      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [[]]]
     }
     
     //让table滚动时header不为float
@@ -97,7 +97,7 @@ extension ActivityDetailViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return section == 0 ? 254 : 50
+    return section == 0 ? 190: 50
   }
   
   func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

@@ -4,7 +4,6 @@
 //
 //  Created by ScorpiusZ on 16/3/28.
 //  Copyright © 2016年 GeekPark. All rights reserved.
-//
 
 import Foundation
 
@@ -12,4 +11,5 @@ struct Config {
   struct NavigationBar {
     static let iconWidth = 25
   }
+  static let BaseUrl = "http://events.geekpark.net"
 }

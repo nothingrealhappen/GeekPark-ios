@@ -58,6 +58,7 @@
                 </variation>
             </tableViewCellContentView>
             <connections>
+                <outlet property="avatorUrl" destination="XQo-NH-fqq" id="rpg-ML-auR"/>
                 <outlet property="guestTitle" destination="aY6-OU-zsL" id="t8D-7o-3e7"/>
                 <outlet property="name" destination="Cgx-Dv-jzb" id="LsO-oN-fMd"/>
             </connections>

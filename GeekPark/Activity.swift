@@ -20,6 +20,7 @@ class Activity: BaseModel{
   var location: String?
   var banner: String?
   var speeches: [Speech]?
+  var audiences: [Audience]?
  
   static func list(page: Int,per: Int = 20 , callback: ([Activity]) -> Void ){
     doRequest(router: "activities", params: ["page":page,"per":per]){ status,result in
