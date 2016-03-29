@@ -15,9 +15,7 @@ class SwipeViewController: UIViewController {
     super.viewDidLoad()
     guesture = UIPanGestureRecognizer(target: self, action: ":handleSwipe")
   }
-}
-
-extension SwipeViewController: UIGestureRecognizerDelegate{
+  
   func handleSwipe(recog: UIPanGestureRecognizer){
     let isLeft = recog.velocityInView(view).x < 0
     if isLeft{
@@ -25,3 +23,4 @@ extension SwipeViewController: UIGestureRecognizerDelegate{
     }
   }
 }
+
