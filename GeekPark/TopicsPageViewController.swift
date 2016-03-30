@@ -53,7 +53,7 @@ class TopicsPageViewController: UIViewController {
 
 extension TopicsPageViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let topic = topics[indexPath.row]
+    let topic = currentCollection == "全部" ? topics[indexPath.row - 1] : topics[indexPath.row]
     let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
     controller.topic = topic
     navigationController?.pushViewController(controller, animated: true)
