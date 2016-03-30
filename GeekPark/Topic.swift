@@ -8,28 +8,41 @@
 
 import Foundation
 
-class Topic{
-  var describe: String?
+class Topic:BaseModel{
+  
+  var id: Int = 0
   var title: String?
-  var authorName: String?
-  var collectionTitle: String?
-  var topicCover: String?
-  var publishTime: String?
-  var commentCount: String?
-  var topCover: String?
+  var desc: String?
+  var comments_count:String?
+  var published_at: Int = 0
   var body: String?
-  init(topCover: String){
-    self.topCover = topCover
+  var author: User?
+  var cover: GImage?
+  var comments: [Comment]?
+  
+  
+  var publishedTime :String?{
+    get { return NSDate(timeIntervalSince1970: Double(self.published_at)).timeAgo }
   }
   
-  init(describe: String, title: String, authorName: String, collectionTitle: String, topicCover: String, publishTime: String, commentCount: String){
-    self.topicCover = topicCover
-    self.describe = describe
-    self.title = title
-    self.authorName = authorName
-    self.collectionTitle = collectionTitle
-    self.topicCover = topicCover
-    self.publishTime = publishTime
-    self.commentCount = commentCount
+  static func list(page: Int,handler: GDataHandler, collectionName: String,callback: ([Topic]->())){
+    doRequest(router: "collection/find_by_name/topics",
+              params: ["page":page,"keyword":collectionName],
+              api_root: BaseModel.main_api_root,
+              dataHandler: handler
+    ) { result in
+        let topics = [Topic](json: result!.rawString())
+        callback(topics)
+    }
+  }
+  
+  static func findById(id: Int?,handler: GDataHandler,callback: (Topic? ->())){
+    guard let id = id else { handler.onDataEmpty() ;return}
+    doRequest(router: "topics/\(id)",
+              api_root: BaseModel.main_api_root,
+              dataHandler: handler){ result in
+      let topic = Topic(json: result?.rawString())
+      callback(topic)
+    }
   }
 }

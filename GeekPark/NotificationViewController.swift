@@ -22,6 +22,11 @@ class NotificationViewController: UIViewController {
     setupNaviBar()
   }
   
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+    navigationController?.setNavigationBarHidden(true, animated: false)
+  }
+  
   func setupTableView(){
     tableView.dataSource = self
     tableView.delegate = self
