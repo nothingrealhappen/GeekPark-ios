@@ -26,7 +26,6 @@ class ActivitiesViewController: UIViewController {
     Activity.list(page) { activities in
       self.activities = activities
     }
-    
   }
   
   override func viewDidAppear(animated: Bool) {
@@ -45,6 +44,7 @@ class ActivitiesViewController: UIViewController {
 extension ActivitiesViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityDetailViewController") as! ActivityDetailViewController
+    controller.activity_id = activities[indexPath.row].id
     navigationController?.pushViewController(controller, animated: true)
   }
 }

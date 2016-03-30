@@ -17,12 +17,13 @@ public enum Status{
 
 class BaseModel: EVObject{
   
-  static let api_root = "http://events.geekpark.net/api/v1/"
+  static let api_root = "http://events.geekpark.net/api/v2/"
+//  static let api_root = "http://127.0.0.1:3000/api/v2/"
   
   static func doRequest(
     method:Alamofire.Method = .GET,
     router: String ,
-    params: [String: AnyObject],
+    params: [String: AnyObject]?,
     callback: (Status,JSON?)->()
     )
   {

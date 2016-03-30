@@ -8,19 +8,37 @@
 
 import UIKit
 
-class ActivityDetailViewController: FullScreenViewController {
+protocol ChangeDetailHeightDelegate {
+  func updateHeight()
+}
 
+class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeightDelegate{
+  //用于简介的点击展开
+  var currentDesOpen: Bool = false
+  
+  var activity_id = ""
+  var activity: Activity?
   @IBOutlet weak var containerTable: UITableView!
   let cellIdentify = ["TopMainInfoViewCell", "ActivityDescribeViewCell", "ActivitySpeechesViewCell",  "ActivityJoinedAudienceViewCell", "ActivityCommentsViewCell"]
   
   //TODO
-  let datas = [[["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"]], ["未来头条 —— 发现那些带来改变的，并在未来有希望带来更大改变的产品和产品极客。更美：伴随着人们对美的向往以及生活方式的升级，全社会对整形的需求又不断的增加，与此同时，整形行业长久以来的信息不对称又使得整容这项平常的治疗手段饱受误解，让那些期望通过整容取悦自己的消费者望而却步。刘迪希望通过更美这款产品告诉全社会「整形也许并不像你们想的那样」。美若：时至今日，眼镜早已不再是治疗近视的工具，一副好的眼镜可以从根本上提升从根本从根本上提升佩上提升佩"], [[["time": "09:00", "speechTitle": "90赫兹和VR"], ["time": "10:00", "speechTitle": "90赫兹与VR现状"]]], [["https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg"]], [[]]]
-  let headerDatas = ["https://dn-geekpark-new.qbox.me/uploads/image/file/a2/31/a231fcf76b59f7981d2082a36d06a359.jpg?imageView2/2/w/302", "活动简介", "活动日程", "报名用户", "用户评论"]
+  var datas: [NSArray] = [[["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"]], [""], [[["time": "09:00", "speechTitle": "90赫兹和VR"], ["time": "10:00", "speechTitle": "90赫兹与VR现状"]]], [["https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg"]], [[]]]{
+    didSet{
+      containerTable.reloadData()
+    }
+  }
+  var headerDatas: [String] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
     containerTable.delegate = self
     containerTable.dataSource = self
+    
+    Activity.member(activity_id){ activity in
+      self.activity = activity
+      self.headerDatas = ["https://dn-geekpark-new.qbox.me/uploads/image/file/72/29/722962955a200ffc1f64209068635d46.jpg", "活动简介", "活动日程", "报名用户", "用户评论"]
+      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [[]]]
+    }
     
     //让table滚动时header不为float
     let height: CGFloat = 230
@@ -32,17 +50,65 @@ class ActivityDetailViewController: FullScreenViewController {
   override func viewWillDisappear(animated: Bool) {
     super.viewWillDisappear(animated)
   }
+  
+  func updateHeight(){
+    currentDesOpen = !currentDesOpen
+    containerTable.beginUpdates()
+    containerTable.endUpdates()
+  }
+  
 }
 
 extension ActivityDetailViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    //点击地点的时候
+    if indexPath.section == 0 && indexPath.row == 2{
+      selectMap(activity?.location)
+    }
+  }
+  
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    let identify = cellIdentify[indexPath.section]
+    let cell = tableView.dequeueReusableCellWithIdentifier(identify) as! ActivityBaseTableViewCell
+    let data = datas[indexPath.section][indexPath.row]
+    cell.setData(data)
+    if identify == "ActivityDescribeViewCell" && currentDesOpen {
+      return (cell as! ActivityDescribeViewCell).getDescribeHeight() + 40
+    }
+    return cell.getHeight() ?? cell.frame.height
+  }
+  
+  
+  func selectMap(location: String?){
+    let alert = UIAlertController(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+    if UIApplication.sharedApplication().canOpenURL(NSURL(string: "iosamap://")!){
+      alert.addAction(UIAlertAction(title: "高德", style: .Default, handler: { action in
+        self.openMap("iosamap://poi?sourceApplication=com.zk.gif&backScheme=ZkunGif&name=" + (location ?? ""))
+      }))
+    }
+    if UIApplication.sharedApplication().canOpenURL(NSURL(string: "baidumap://")!){
+      alert.addAction(UIAlertAction(title: "百度", style: .Default, handler: { action in
+        self.openMap("baidumap://map/geocoder?address=" + (location ?? ""))
+      }))
+    }
+    alert.addAction(UIAlertAction(title: "自带地图", style: .Default, handler:{ action in
+      self.openMap("http://maps.apple.com/?daddr=" + (location ?? ""))
+    }))
+    alert.addAction(UIAlertAction(title: "取消", style: .Cancel, handler: nil))
+    presentViewController(alert, animated: true, completion: nil)
+  }
+  
+  func openMap(url: String){
+    let urlStr : NSString = url.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLFragmentAllowedCharacterSet())!
+    let searchURL : NSURL = NSURL(string: urlStr as String)!
+    UIApplication.sharedApplication().openURL(searchURL)
   }
 }
 
 extension ActivityDetailViewController: UITableViewDataSource {
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 5
+    return headerDatas.count
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,8 +124,12 @@ extension ActivityDetailViewController: UITableViewDataSource {
     if identify == "TopMainInfoViewCell" && indexPath.row == datas[0].count-1 {
       let removeButtomLine = cell as! TopMainInfoViewCell
       removeButtomLine.lineStatus = .Last
+      removeButtomLine.selectionStyle = .Gray
     }
     cell.setData(data)
+    if identify == "ActivityDescribeViewCell"{
+      (cell as! ActivityDescribeViewCell).changeHeightDelegate = self
+    }
     return cell
   }
   
@@ -68,15 +138,7 @@ extension ActivityDetailViewController: UITableViewDataSource {
     let data: Any = headerDatas[section]
     let cell = tableView.dequeueReusableCellWithIdentifier(identify) as! ActivityBaseTableViewCell
     cell.setData(data)
-    return cell
-  }
-  
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    let identify = cellIdentify[indexPath.section]
-    let cell = tableView.dequeueReusableCellWithIdentifier(identify) as! ActivityBaseTableViewCell
-    let data = datas[indexPath.section][indexPath.row]
-    cell.setData(data)
-    return cell.frame.height
+    return cell.contentView
   }
   
   func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -84,7 +146,7 @@ extension ActivityDetailViewController: UITableViewDataSource {
   }
   
   func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    return section == 0 ? 254 : 50
+    return section == 0 ? 190: 50
   }
   
   func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

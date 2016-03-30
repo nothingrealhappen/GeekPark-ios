@@ -51,7 +51,6 @@ extension TopicsPageViewController: UITableViewDelegate{
     let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
     controller.topic = topic
     navigationController?.pushViewController(controller, animated: true)
-    print(navigationController)
   }
 }
 

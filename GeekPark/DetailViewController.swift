@@ -8,17 +8,19 @@
 
 import UIKit
 
-class SwipeViewController: UIViewController {
+//给所有的子页面添加右划返回功能
+class DetailViewController: UIViewController {
   var guesture: UIPanGestureRecognizer?
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    guesture = UIPanGestureRecognizer(target: self, action: ":handleSwipe")
+    guesture = UIPanGestureRecognizer(target: self, action: #selector(DetailViewController.handleSwipe(_:)))
+    view.addGestureRecognizer(guesture!)
   }
-  
+
   func handleSwipe(recog: UIPanGestureRecognizer){
-    let isLeft = recog.velocityInView(view).x < 0
-    if isLeft{
+    let isright = recog.velocityInView(view).x > 0
+    if isright {
       self.navigationController?.popViewControllerAnimated(true)
     }
   }

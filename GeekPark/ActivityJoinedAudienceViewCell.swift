@@ -11,16 +11,19 @@ import UIKit
 class ActivityJoinedAudienceViewCell: ActivityBaseTableViewCell{
 
   @IBOutlet weak var audienceCollectionView: UICollectionView!
-  var avators = [String]()
+  var audiences = [Audience]()
   
   override func setData(data: Any) {
-    avators = data as! [String]
+    audiences = data as! [Audience]
     audienceCollectionView.dataSource = self
     audienceCollectionView.delegate = self
+    audienceCollectionView.contentSize = CGSize(width: frame.width, height: frame.height)
   }
   
-  override func awakeFromNib() {
-    super.awakeFromNib()
+  override func getHeight() -> CGFloat? {
+    var n = audiences.count / 7
+    if audiences.count % 7 > 0 { n = n + 1 }
+    return CGFloat((n + 1)*7 + 44 * n)
   }
   
 }
@@ -31,13 +34,12 @@ extension ActivityJoinedAudienceViewCell: UICollectionViewDataSource{
   }
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return avators.count ?? 0
+    return audiences.count ?? 0
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("AudienceAvatorCollectionViewCell", forIndexPath: indexPath) as! AudienceAvatorCollectionViewCell
-    cell.setUrl(avators[indexPath.row])
-    cell.avatorImage.circlize()
+    cell.setUrl(audiences[indexPath.row])
     return cell
   }
 }

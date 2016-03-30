@@ -14,12 +14,14 @@ class Activity: BaseModel{
   
   var id = ""
   var title = ""
-  var start_at = ""
-  var introduction :String?
+  var timestamp_start_at = ""
+  var introduction: String?
   var status = ""
-  var location :String?
+  var location: String?
   var banner: String?
-  
+  var speeches: [Speech]?
+  var audiences: [Audience]?
+ 
   static func list(page: Int,per: Int = 20 , callback: ([Activity]) -> Void ){
     doRequest(router: "activities", params: ["page":page,"per":per]){ status,result in
       if status == .SUCCESS {
@@ -30,12 +32,27 @@ class Activity: BaseModel{
     }
   }
   
+  static func member(id: String, callback: (Activity) -> Void){
+    doRequest(router: "activities/\(id)", params: nil){ status, result in
+      if status == .SUCCESS{
+        let activity = Activity(json: result!["activity"].rawString())
+        callback(activity)
+      } else {
+      }
+    }
+  }
+  
+  func infoDictionary() -> NSArray{
+    return [["title": "活动", "value": title], ["title": "时间", "value": NSDate.formateTimeFromTimeStamp(timestamp_start_at, formateString: "YYYY.MM.DD.hh:mm") ?? ""], ["title": "地点", "value": location ?? ""]]
+  }
+  
   let statusMap = [
     "end": "已结束",
     "applying": "报名中",
     "preparing": "准备中",
     "progressing": "进行中"
   ]
+  
   let statusColorMap = [
     "end": UIColor(red: 28/255.0, green: 199/255.0, blue: 107/255.0, alpha: 1),
     "applying": UIColor(red: 217/255.0, green: 210/255.0, blue: 32/255.0, alpha: 1),

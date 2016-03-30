@@ -11,11 +11,19 @@ import UIKit
 class ActivitySpeechesViewCell: ActivityBaseTableViewCell{
 
   @IBOutlet weak var speechesTable: UITableView!
-  
-  var data = [["time": "09:00", "speechTitle": "来宾签到/暖场电影", "guests": []], ["time": "09:00", "speechTitle": "来宾签到/暖场电影", "guests": []]]
+  var speeches = [Speech]()
   
   override func setData(data: Any) {
+    speeches = data as! [Speech]
     speechesTable.reloadData()
+  }
+  
+  override func getHeight() -> CGFloat? {
+    var height = CGFloat(speeches.count * 25)
+    height = speeches.reduce(height){ sum, speech in
+      return sum + CGFloat(speech.guests.count * 66)
+    }
+    return height
   }
   
   override func awakeFromNib() {
@@ -38,18 +46,19 @@ extension ActivitySpeechesViewCell: UITableViewDataSource{
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return data.count
+    return speeches.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = NSBundle.mainBundle().loadNibNamed("ActivitySpeechViewCell", owner: self, options: nil).first as! ActivitySpeechViewCell
-    cell.setData(data[indexPath.row])
+    cell.setData(speeches[indexPath.row])
     return cell
   }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 200
+    let cell = NSBundle.mainBundle().loadNibNamed("ActivitySpeechViewCell", owner: self, options: nil).first as! ActivitySpeechViewCell
+    cell.setData(speeches[indexPath.row])
+    return (cell.getHeight() ?? cell.frame.height)
   }
-  
   
 }

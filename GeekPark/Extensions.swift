@@ -14,7 +14,6 @@ extension UIView: CircleAble {
     clipsToBounds = true
   }
   
-  
   func circlizeWithBorder(){
     circlize()
     layer.borderWidth = 1
@@ -65,4 +64,39 @@ extension UIViewController: GDataHandler, UIGestureRecognizerDelegate{
     onDataRefresh()
   }
   
+}
+
+extension NSDate {
+  public var timeAgo: String{
+    let components = self.dateComponents()
+    if components.year > 0 {
+      return "\(components.year)年之前"
+    }
+    if components.month > 0 {
+      return "\(components.month)月之前"
+    }
+    if components.day > 0 {
+      return "\(components.day)天之前"
+    }
+    if components.hour > 0 {
+      return "\(components.hour)小时之前"
+    }
+    if components.minute > 0 {
+      return "\(components.minute)分钟之前"
+    }
+    return "\(components.second)秒之前"
+  }
+  
+  private func dateComponents() -> NSDateComponents {
+    let calander = NSCalendar.currentCalendar()
+    return calander.components([.Second, .Minute, .Hour, .Day, .Month, .Year], fromDate: self, toDate: NSDate(), options: [])
+  }
+
+  static func formateTimeFromTimeStamp(timestamp: String, formateString: String) -> String?{
+    guard let dou = Double(timestamp) else { return nil }
+    let date = NSDate(timeIntervalSince1970: dou)
+    let formatter = NSDateFormatter()
+    formatter.dateFormat = formateString
+    return formatter.stringFromDate(date)
+  }
 }
