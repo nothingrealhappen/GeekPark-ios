@@ -17,13 +17,14 @@ public enum Status{
 
 class BaseModel: EVObject{
   
-  static let api_root = "http://events.geekpark.net/api/v2/"
-//  static let api_root = "http://127.0.0.1:3000/api/v2/"
+  static let event_api_root = "http://events.geekpark.net/api/v2/"
+  static let main_api_root = "http://www.geekpark.net/api/v1/"
   
   static func doRequest(
     method:Alamofire.Method = .GET,
     router: String ,
-    params: [String: AnyObject]?,
+    api_root: String = event_api_root,
+    params: [String: AnyObject]? = nil,
     callback: (Status,JSON?)->()
     )
   {
@@ -39,5 +40,22 @@ class BaseModel: EVObject{
     }
   }
   
+  static func doRequest(
+    method:Alamofire.Method = .GET,
+    router: String ,
+    params: [String: AnyObject]? = nil,
+    api_root: String = event_api_root,
+    dataHandler: GDataHandler,
+    callback: (JSON?)->()
+    )
+  {
+    doRequest(router: router, params: params,api_root:api_root){ status,result in
+      switch status{
+      case .SUCCESS: callback(result)
+      case .ERROR: dataHandler.onDataError()
+      case .FAILD: dataHandler.onDataEmpty()
+      }
+    }
+  }
   
 }

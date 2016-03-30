@@ -49,8 +49,6 @@ extension NotificationsViewController: UITableViewDataSource{
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let notification = notifications[indexPath.row]
-    print(notification.cellType)
-    print(tableView.dequeueReusableCellWithIdentifier(notification.cellType))
     let cell = tableView.dequeueReusableCellWithIdentifier(notification.cellType) as! NotificationBaseCell
     cell.notification = notification
     return cell

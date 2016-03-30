@@ -37,6 +37,7 @@ extension UIViewController: GDataHandler, UIGestureRecognizerDelegate{
   
   private func showEmptyView(msg: String, imageName: String){
     let container = UIView(frame: CGRect(origin: view.frame.origin, size: view.frame.size))
+    container.backgroundColor = UIColor.whiteColor()
     
     let label = UILabel(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: view.frame.width, height: 14)))
     label.text = msg
