@@ -26,14 +26,14 @@ class TopicsContainerViewController: UIViewController, ChangePageDelegate{
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  }
-  
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
     topScrollView.setLabel(collectionTitle){ label in
       label.textColor = UIColor.blackColor()
       return label
     }
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
     generateControllers()
     topScrollView.changePageDelegate = self
     topScrollView.setCurrentPageIndex(0)
