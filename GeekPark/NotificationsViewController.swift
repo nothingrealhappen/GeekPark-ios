@@ -20,6 +20,11 @@ class NotificationsViewController: UIViewController {
     setupViews()
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    navigationController?.setNavigationBarHidden(false, animated: false)
+  }
+  
   func setupViews(){
     navigationItem.title = type == .System ? "系统通知" : "活动推广"
     setupTable()
