@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    guesture = UIPanGestureRecognizer(target: self, action: "handleSwipe:")
+    guesture = UIPanGestureRecognizer(target: self, action: #selector(DetailViewController.handleSwipe(_:)))
     view.addGestureRecognizer(guesture!)
   }
 

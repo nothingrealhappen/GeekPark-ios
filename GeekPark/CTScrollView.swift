@@ -27,7 +27,7 @@ class CTScrollView: UIScrollView {
       label = setupLabelFunction(label)
       self.contentSize.width += (CGRectGetMaxX(label.bounds) + padding)
       addSubview(label)
-      label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: "handleTapGesture:"))
+      label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CTScrollView.handleTapGesture(_:))))
       return label
     }
     contentSize.height = 10

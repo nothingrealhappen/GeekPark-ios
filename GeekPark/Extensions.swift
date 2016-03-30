@@ -52,7 +52,7 @@ extension UIViewController: GDataHandler, UIGestureRecognizerDelegate{
                                y: container.center.y - label.frame.height/2 - imageView.frame.height / 2 - 30 )
     container.addSubview(imageView)
     
-    let tap = UITapGestureRecognizer(target: self, action: ":handleTap")
+    let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.handleTap(_:)))
     tap.delegate = self
     container.addGestureRecognizer(tap)
     
