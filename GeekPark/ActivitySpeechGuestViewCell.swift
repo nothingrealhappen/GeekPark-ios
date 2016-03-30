@@ -20,7 +20,7 @@ class ActivitySpeechGuestViewCell: ActivityBaseTableViewCell{
     name.text = guest.name
     guestTitle.text = guest.title
     avatorUrl.circlize()
-    avatorUrl.kf_setImageWithURL(NSURL(string: Config.BaseUrl + (guest.avator ?? ""))!)
+    avatorUrl.kf_setImageWithURL(NSURL(string: (guest.avator ?? ""))!, placeholderImage: UIImage(named: "user_icon"))
   }
   
   override func awakeFromNib() {
