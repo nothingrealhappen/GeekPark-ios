@@ -32,7 +32,7 @@ class Activity: BaseModel{
     }
   }
   
-  static func speeches(id: String, callback: (Activity) -> Void){
+  static func member(id: String, callback: (Activity) -> Void){
     doRequest(router: "activities/\(id)", params: nil){ status, result in
       if status == .SUCCESS{
         let activity = Activity(json: result!["activity"].rawString())

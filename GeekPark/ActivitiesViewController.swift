@@ -26,7 +26,6 @@ class ActivitiesViewController: UIViewController {
     Activity.list(page) { activities in
       self.activities = activities
     }
-    
   }
   
   override func viewDidAppear(animated: Bool) {

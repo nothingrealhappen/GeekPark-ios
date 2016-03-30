@@ -61,5 +61,4 @@ extension ActivitySpeechesViewCell: UITableViewDataSource{
     return (cell.getHeight() ?? cell.frame.height)
   }
   
-  
 }
