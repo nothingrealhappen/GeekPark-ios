@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ActivitiesViewController: UIViewController, GRefreshable {
+class ActivitiesViewController: UIViewController {
 
   
   @IBOutlet weak var tableView: UITableView!
@@ -23,25 +23,8 @@ class ActivitiesViewController: UIViewController, GRefreshable {
     super.viewDidLoad()
     tableView.dataSource = self
     tableView.delegate = self
-    tableView.refreshableDelegate = self
-    loadData()
-  }
-  
-  func pullRefresh() {
-    self.activities = []
-    page = 1
-    loadData()
-  }
-  
-  func loadMore() {
-    page += 1
-    loadData()
-  }
-  
-  func loadData(){
     Activity.list(page) { activities in
-      self.activities = self.activities + activities
-      self.tableView.isLoading = false
+      self.activities = activities
     }
   }
   

@@ -18,8 +18,3 @@ protocol GDataHandler {
   func onDataError()
   func onDataRefresh()
 }
-
-protocol GRefreshable {
-  func loadMore()
-  func pullRefresh()
-}

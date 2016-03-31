@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TopicsPageViewController: UIViewController, GRefreshable {
+class TopicsPageViewController: UIViewController {
   
   @IBOutlet weak var topicsTable: UITableView!
   var changeTopLabelDelegate: ChangeTopLabelDelegate?
@@ -19,9 +19,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   var topics = [Topic](){
     didSet{
       topicsTable.reloadData()
-      if topics.count > 2 {
-        topLoopTopic = [topics[0],topics[1]]
-      }
+      topLoopTopic = [topics[0],topics[1]]
     }
   }
   var currentCollection: String?
@@ -43,27 +41,13 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   
   func getTopics(){
     Topic.list(page,handler: self, collectionName: currentCollection!){ topics in
-      self.topics = self.topics + topics
-      self.topicsTable.isLoading = false
-      self.topicsTable.refreshableDelegate = self
+      self.topics = topics
     }
   }
   
   override func onDataRefresh() {
     getTopics()
   }
-  
-  func pullRefresh() {
-    page = 1
-    topics = []
-    getTopics()
-  }
-  
-  func loadMore() {
-    page += 1
-    getTopics()
-  }
-  
   
 }
 
