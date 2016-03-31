@@ -10,7 +10,6 @@
 		8E1616751CA1ABFE00E781B2 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1616741CA1ABFE00E781B2 /* Activity.swift */; };
 		8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1616761CA1AC6700E781B2 /* ActivityCell.swift */; };
 		8E3800331CABBAED006CBE03 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3800321CABBAED006CBE03 /* Comment.swift */; };
-		8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */; };
 		8E92EDA91CA9071D0075D95F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDA81CA9071D0075D95F /* Config.swift */; };
 		8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAB1CA909800075D95F /* NotificationCell.swift */; };
 		8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */; };
@@ -77,7 +76,6 @@
 		8E1616741CA1ABFE00E781B2 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		8E1616761CA1AC6700E781B2 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		8E3800321CABBAED006CBE03 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
-		8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refreshable.swift"; sourceTree = "<group>"; };
 		8E92EDA81CA9071D0075D95F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E92EDAB1CA909800075D95F /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				F72092B21CA5242D0096962F /* Extensions.swift */,
-				8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -590,7 +587,6 @@
 				F72092B31CA5242D0096962F /* Extensions.swift in Sources */,
 				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
 				8E92EDB11CAA28A50075D95F /* Protocols.swift in Sources */,
-				8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */,
 				F72620531CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift in Sources */,
 				F72092C01CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
