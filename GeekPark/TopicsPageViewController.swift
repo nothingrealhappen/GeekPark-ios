@@ -29,23 +29,21 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   override func viewDidLoad() {
     super.viewDidLoad()
     topicsTable.delegate = self
+    topicsTable.refreshableDelegate = self
     getTopics()
   }
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     changeTopLabelDelegate?.changeTopLabel(itemIndex)
+    topicsTable.addCntentOffSetObserver()
   }
   
-  override func viewDidAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-  }
   
   func getTopics(){
     Topic.list(page,handler: self, collectionName: currentCollection!){ topics in
       self.topics = self.topics + topics
       self.topicsTable.isLoading = false
-      self.topicsTable.refreshableDelegate = self
     }
   }
   
@@ -64,7 +62,10 @@ class TopicsPageViewController: UIViewController, GRefreshable {
     getTopics()
   }
   
-  
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    topicsTable.removeContentOffSetObserver()
+  }
 }
 
 extension TopicsPageViewController: UITableViewDelegate{

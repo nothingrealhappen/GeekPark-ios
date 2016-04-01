@@ -16,7 +16,11 @@ class LaunchView: UIView{
     super.init(coder: aDecoder)
   }
   
+  static var loaded = false
+  
   static func showAtWindow(image: String? = nil) {
+    if loaded { return }
+    loaded = true
     
     let launchView = NSBundle.mainBundle().loadNibNamed("LaunchView", owner: self, options: nil).first as! LaunchView
     
@@ -42,10 +46,7 @@ class LaunchView: UIView{
     
   }
   
-
-  
   deinit {
-    //        print("SecondLaunchView--deinit")
   }
 
 }

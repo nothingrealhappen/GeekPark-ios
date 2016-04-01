@@ -65,8 +65,17 @@ extension UIScrollView{
   }
   
   override public func willMoveToSuperview(newSuperview: UIView?) {
+    super.willMoveToSuperview(newSuperview)
+  }
+  
+  func addCntentOffSetObserver(){
     addObserver(self, forKeyPath: ContentOffsetKeyPath, options: .Initial, context: &kvoContext)
   }
+  
+  func removeContentOffSetObserver(){
+    removeObserver(self, forKeyPath: ContentOffsetKeyPath)
+  }
+  
   
   public override func observeValueForKeyPath(keyPath: String?, ofObject object: AnyObject?, change: [String : AnyObject]?, context: UnsafeMutablePointer<Void>) {
     if(context == &kvoContext){
