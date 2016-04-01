@@ -11,6 +11,8 @@
 		8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1616761CA1AC6700E781B2 /* ActivityCell.swift */; };
 		8E3800331CABBAED006CBE03 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3800321CABBAED006CBE03 /* Comment.swift */; };
 		8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */; };
+		8E62A4231CAE2119007867BD /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E62A4221CAE2119007867BD /* LaunchView.swift */; };
+		8E62A4251CAE21A9007867BD /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E62A4241CAE21A9007867BD /* LaunchView.xib */; };
 		8E92EDA91CA9071D0075D95F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDA81CA9071D0075D95F /* Config.swift */; };
 		8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAB1CA909800075D95F /* NotificationCell.swift */; };
 		8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */; };
@@ -78,6 +80,8 @@
 		8E1616761CA1AC6700E781B2 /* ActivityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		8E3800321CABBAED006CBE03 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refreshable.swift"; sourceTree = "<group>"; };
+		8E62A4221CAE2119007867BD /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
+		8E62A4241CAE21A9007867BD /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
 		8E92EDA81CA9071D0075D95F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E92EDAB1CA909800075D95F /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 			isa = PBXGroup;
 			children = (
 				F7C042461CAB7D13000E4F4F /* BaseButton.swift */,
+				8E62A4221CAE2119007867BD /* LaunchView.swift */,
+				8E62A4241CAE21A9007867BD /* LaunchView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -513,6 +519,7 @@
 				F73BECBB1C9BDC9F00E5AFEF /* Activity.storyboard in Resources */,
 				F741ED861C9A76F8000A808B /* Assets.xcassets in Resources */,
 				F73C03881CA4DE2E004AC3D8 /* ActivitySpeechGuestViewCell.xib in Resources */,
+				8E62A4251CAE21A9007867BD /* LaunchView.xib in Resources */,
 				F741ED841C9A76F8000A808B /* Main.storyboard in Resources */,
 				F73BECB81C9BDC7800E5AFEF /* Topic.storyboard in Resources */,
 				F72092C21CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib in Resources */,
@@ -599,6 +606,7 @@
 				8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */,
 				F7BB45EE1CA3D74F006741CB /* ActivityBaseTableViewCell.swift in Sources */,
 				F73C03841CA4D9AF004AC3D8 /* ActivitySpeechesViewCell.swift in Sources */,
+				8E62A4231CAE2119007867BD /* LaunchView.swift in Sources */,
 				8E92EDA91CA9071D0075D95F /* Config.swift in Sources */,
 				F7E986891CA3B8F00006AB21 /* ActivityDescribeViewCell.swift in Sources */,
 				8E9601B01CAB876A00B2A126 /* GImage.swift in Sources */,
