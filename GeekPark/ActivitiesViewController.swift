@@ -27,6 +27,16 @@ class ActivitiesViewController: UIViewController, GRefreshable {
     loadData()
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.addCntentOffSetObserver()
+  }
+  
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    tableView.removeContentOffSetObserver()
+  }
+  
   func pullRefresh() {
     self.activities = []
     page = 1
@@ -55,6 +65,7 @@ class ActivitiesViewController: UIViewController, GRefreshable {
     super.viewWillDisappear(animated)
     navigationController?.setNavigationBarHidden(true, animated: false)
   }
+  
   
 }
 
