@@ -33,11 +33,17 @@ class ContainerViewController: UIViewController {
     currentItem = menuItems.first
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    LaunchView.showAtWindow()
+  }
+  
   private func addButtomTabBarItems(){
     buttomTabBar.items = menuItems.map{ item in
       UITabBarItem(title: item.title!, image: UIImage(named: item.image!), selectedImage: UIImage(named: item.activeImage!))
     }
   }
+  
   
   private func changeController(controllerName: String?){
     guard let controllerName = controllerName else { return }
