@@ -14,14 +14,11 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   var changeTopLabelDelegate: ChangeTopLabelDelegate?
   
   var itemIndex = 0
-  var topLoopTopic = [Topic]()
+  var topLoopTopic = [Topic](){ didSet{ topicsTable.reloadData() } }
   var page = 1
   var topics = [Topic](){
     didSet{
       topicsTable.reloadData()
-      if topics.count > 2 {
-        topLoopTopic = [topics[0],topics[1]]
-      }
     }
   }
   var currentCollection: String?
@@ -44,6 +41,11 @@ class TopicsPageViewController: UIViewController, GRefreshable {
     Topic.list(page,handler: self, collectionName: currentCollection!){ topics in
       self.topics = self.topics + topics
       self.topicsTable.isLoading = false
+    }
+    if itemIndex == 0{
+      Topic.top() { topics in
+        self.topLoopTopic = topics
+      }
     }
   }
   
@@ -70,7 +72,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
 
 extension TopicsPageViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let topic = currentCollection == "全部" ? topics[indexPath.row - 1] : topics[indexPath.row]
+    let topic = itemIndex == 0 ? topics[indexPath.row - 1] : topics[indexPath.row]
     let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
     controller.topic = topic
     navigationController?.pushViewController(controller, animated: true)
@@ -80,7 +82,7 @@ extension TopicsPageViewController: UITableViewDelegate{
 extension TopicsPageViewController: UITableViewDataSource{
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    if currentCollection == "全部" {
+    if itemIndex == 0{
       if indexPath.row == 0{
         let cell = tableView.dequeueReusableCellWithIdentifier("ImageLoopTableViewCell", forIndexPath: indexPath) as! ImageLoopTableViewCell
         cell.setData(topLoopTopic)

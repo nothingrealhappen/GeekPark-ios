@@ -36,6 +36,15 @@ class Topic:BaseModel{
     }
   }
   
+  static func top(callback: ([Topic]-> ())){
+    doRequest(router: "topics/top",api_root: BaseModel.main_api_root){ status,result in
+      if status == .SUCCESS {
+        let topics = [Topic](json: result!.rawString())
+        callback(topics)
+      }
+    }
+  }
+  
   static func findById(id: Int?,handler: GDataHandler,callback: (Topic? ->())){
     guard let id = id else { handler.onDataEmpty() ;return}
     doRequest(router: "topics/\(id)",
