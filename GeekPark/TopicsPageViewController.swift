@@ -50,7 +50,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   }
   
   override func onDataRefresh() {
-    getTopics()
+    pullRefresh()
   }
   
   func pullRefresh() {
@@ -97,6 +97,14 @@ extension TopicsPageViewController: UITableViewDataSource{
       let cell = tableView.dequeueReusableCellWithIdentifier("TopicTableViewCell") as! TopicTableViewCell
       cell.setData(topics[indexPath.row])
       return cell
+    }
+  }
+  
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    if itemIndex == 0 && indexPath.row == 0{
+      return 210
+    }else{
+      return 110.5
     }
   }
   

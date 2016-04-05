@@ -13,6 +13,7 @@ class Topic:BaseModel{
   var id: Int = 0
   var title: String?
   var desc: String?
+  var collection_name: String?
   var comments_count:String?
   var published_at: Int = 0
   var body: String?
@@ -20,6 +21,11 @@ class Topic:BaseModel{
   var cover: GImage?
   var comments: [Comment]?
   
+  var descText: String?{
+    get{
+      return (self.collection_name ?? "")+" | "+(self.author?.username ?? "")
+    }
+  }
   
   var publishedTime :String?{
     get { return NSDate(timeIntervalSince1970: Double(self.published_at)).timeAgo }

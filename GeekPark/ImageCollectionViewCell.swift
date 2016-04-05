@@ -11,9 +11,17 @@ import Kingfisher
 
 class ImageCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var titleText: UILabel!
   
-  func setImageUrl(url: String){
-    imageView.kf_setImageWithURL(NSURL(string: url)!)
+  var topic : Topic?{
+    didSet{
+      updateViews()
+    }
+  }
+  
+  func updateViews(){
+    imageView.kf_setImageWithURL(NSURL(string: topic?.cover?.file_url ?? "")!)
+    titleText.text = topic?.title
   }
   
 }

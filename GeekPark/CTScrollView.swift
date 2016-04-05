@@ -14,23 +14,30 @@ class CTScrollView: UIScrollView {
   let padding: CGFloat = 30
   var changePageDelegate: ChangePageDelegate?
   var currentIndex = 0
+  
+  let normalSize: CGFloat = 14.0
+  let highlightSize: CGFloat = 16.0
+  let normalColor = UIColor(red:150/255, green: 150/255, blue: 150/255, alpha: 1)
+  let highlightColor = UIColor(red:1/255, green: 165/255, blue: 245/255, alpha: 1)
 
   func setLabel(labelTitle: [String], setupLabelFunction: (UILabel)->(UILabel)){
     self.labelTitle = labelTitle
     labels = labelTitle.map(){ title in
       var label = UILabel()
       label.text = title
-      label.font = UIFont.systemFontOfSize(14)
+      label.font = UIFont.systemFontOfSize(normalSize)
       label.sizeToFit()
+      label.textColor = normalColor
       label.userInteractionEnabled = true
       label.frame.origin.x = self.contentSize.width + padding/2
+      label.frame.origin.y = 8
+      print("center = \(center), self height = \(frame.height), height = \(label.frame.height), origin = \(label.frame.origin) ")
       label = setupLabelFunction(label)
       self.contentSize.width += (CGRectGetMaxX(label.bounds) + padding)
       addSubview(label)
       label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CTScrollView.handleTapGesture(_:))))
       return label
     }
-    contentSize.height = 10
   }
   
   func setCurrentPageIndex(index: Int){
@@ -40,8 +47,13 @@ class CTScrollView: UIScrollView {
   
   func hightAndMoving(label: UILabel){
     //被点击的label高亮
-    labels?.map{ $0.textColor = UIColor.blackColor() }
-    label.textColor = UIColor.blueColor()
+    labels?.map{
+      $0.textColor = normalColor
+      $0.font = UIFont.systemFontOfSize(normalSize)
+    }
+    label.textColor = highlightColor
+    label.font = UIFont.systemFontOfSize(highlightSize)
+    label.sizeToFit()
     
     //移动到被点击的label处
     var x = label.frame.origin.x - (frame.width - label.frame.width)/2
