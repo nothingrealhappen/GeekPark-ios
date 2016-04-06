@@ -30,13 +30,14 @@ class CTScrollView: UIScrollView {
       label.textColor = normalColor
       label.userInteractionEnabled = true
       label.frame.origin.x = self.contentSize.width + padding/2
-      label.frame.origin.y = 8
+      label.frame.origin.y = 28
       label = setupLabelFunction(label)
       self.contentSize.width += (CGRectGetMaxX(label.bounds) + padding)
       addSubview(label)
       label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CTScrollView.handleTapGesture(_:))))
       return label
     }
+    contentSize = CGSizeMake(contentSize.width, 0)
   }
   
   func setCurrentPageIndex(index: Int){

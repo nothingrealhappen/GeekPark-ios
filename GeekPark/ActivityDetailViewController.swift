@@ -47,10 +47,6 @@ class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeight
     containerTable.contentInset = UIEdgeInsetsMake(-height, 0, 0, 0)
   }
   
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated)
-  }
-  
   func updateHeight(){
     currentDesOpen = !currentDesOpen
     containerTable.beginUpdates()
