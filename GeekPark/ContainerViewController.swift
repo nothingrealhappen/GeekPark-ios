@@ -21,10 +21,10 @@ class ContainerViewController: UIViewController {
   }
   
   let menuItems = [
-    MenuItem(title: "资讯", image: "news_icon", activeImage: "", controllerName: "TopicsViewController"),
-    MenuItem(title: "活动", image: "activity_icon", activeImage: "", controllerName: "ActivitiesViewController"),
-    MenuItem(title: "消息", image: "message_icon", activeImage: "", controllerName: "NotificationViewController"),
-    MenuItem(title: "我的", image: "user_icon", activeImage: "", controllerName: "UserViewController")
+    MenuItem(title: "资讯", image: "news-icon", activeImage: "", controllerName: "TopicsViewController"),
+    MenuItem(title: "活动", image: "activity-icon", activeImage: "", controllerName: "ActivitiesViewController"),
+    MenuItem(title: "消息", image: "message-icon", activeImage: "", controllerName: "NotificationViewController"),
+    MenuItem(title: "我的", image: "user-icon", activeImage: "", controllerName: "UserViewController")
   ]
   
   override func viewDidLoad() {
