@@ -104,7 +104,7 @@ extension TopicsPageViewController: UITableViewDataSource{
     if itemIndex == 0 && indexPath.row == 0{
       return 210
     }else{
-      return 110.5
+      return UIScreen.mainScreen().bounds.width * 160 / 750 + 31
     }
   }
   

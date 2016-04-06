@@ -22,7 +22,6 @@ class NotificationsViewController: UIViewController {
   
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.setNavigationBarHidden(false, animated: false)
   }
   
   func setupViews(){

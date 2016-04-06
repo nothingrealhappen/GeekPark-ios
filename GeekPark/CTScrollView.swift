@@ -18,7 +18,7 @@ class CTScrollView: UIScrollView {
   let normalSize: CGFloat = 14.0
   let highlightSize: CGFloat = 16.0
   let normalColor = UIColor(red:150/255, green: 150/255, blue: 150/255, alpha: 1)
-  let highlightColor = UIColor(red:1/255, green: 165/255, blue: 245/255, alpha: 1)
+  let highlightColor = UIColor(red:20/255, green: 95/255, blue: 243/255, alpha: 1)
 
   func setLabel(labelTitle: [String], setupLabelFunction: (UILabel)->(UILabel)){
     self.labelTitle = labelTitle
@@ -30,14 +30,14 @@ class CTScrollView: UIScrollView {
       label.textColor = normalColor
       label.userInteractionEnabled = true
       label.frame.origin.x = self.contentSize.width + padding/2
-      label.frame.origin.y = 8
-      print("center = \(center), self height = \(frame.height), height = \(label.frame.height), origin = \(label.frame.origin) ")
+      label.frame.origin.y = 28
       label = setupLabelFunction(label)
       self.contentSize.width += (CGRectGetMaxX(label.bounds) + padding)
       addSubview(label)
       label.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CTScrollView.handleTapGesture(_:))))
       return label
     }
+    contentSize = CGSizeMake(contentSize.width, 0)
   }
   
   func setCurrentPageIndex(index: Int){

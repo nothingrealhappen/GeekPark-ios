@@ -10,7 +10,7 @@
         <!--Notification View Controller-->
         <scene sceneID="aMj-d8-ZLi">
             <objects>
-                <viewController storyboardIdentifier="NotificationViewController" id="Zqw-cL-4f3" customClass="NotificationViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Zqw-cL-4f3" customClass="NotificationViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aJW-xu-h94"/>
                         <viewControllerLayoutGuide type="bottom" id="DwT-Sd-K91"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-uP-hNW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="101" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wlC-uP-hNW">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -135,18 +135,19 @@
                             <constraint firstItem="wlC-uP-hNW" firstAttribute="top" secondItem="aJW-xu-h94" secondAttribute="bottom" id="wQN-qL-pwN"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Onv-z3-j7H"/>
                     <connections>
                         <outlet property="tableView" destination="wlC-uP-hNW" id="buG-P0-wfN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfM-2p-jTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853" y="910"/>
+            <point key="canvasLocation" x="1665" y="910"/>
         </scene>
         <!--Notifications View Controller-->
         <scene sceneID="yQr-oD-EBF">
             <objects>
-                <viewController storyboardIdentifier="NotificationsViewController" automaticallyAdjustsScrollViewInsets="NO" id="HYU-Tb-hSe" customClass="NotificationsViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationsViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="HYU-Tb-hSe" customClass="NotificationsViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JBJ-9H-dK6"/>
                         <viewControllerLayoutGuide type="bottom" id="Rgw-Xl-KdK"/>
@@ -387,12 +388,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XUb-VP-76u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="910"/>
+            <point key="canvasLocation" x="2347" y="910"/>
+        </scene>
+        <!--消息-->
+        <scene sceneID="N48-Hk-iIx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNB-zy-p6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="NotificationViewController" automaticallyAdjustsScrollViewInsets="NO" id="6Bl-rf-c3L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="消息" image="message-icon" id="jOb-cT-2uz"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mcg-Q5-p6j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zqw-cL-4f3" kind="relationship" relationship="rootViewController" id="AoY-UY-SNO"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="853" y="910"/>
         </scene>
     </scenes>
     <resources>
         <image name="activity-img" width="357" height="174"/>
         <image name="arrow-icon" width="16" height="31"/>
+        <image name="message-icon" width="20" height="24"/>
         <image name="notification-icon" width="58" height="52"/>
     </resources>
 </document>

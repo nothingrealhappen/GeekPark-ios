@@ -15,16 +15,7 @@ class NotificationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTableView()
-  }
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
     setupNaviBar()
-  }
-  
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: false)
   }
   
   func setupTableView(){

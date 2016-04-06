@@ -63,7 +63,6 @@
 		F73C03861CA4DDF0004AC3D8 /* ActivitySpeechViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73C03851CA4DDF0004AC3D8 /* ActivitySpeechViewCell.xib */; };
 		F73C03881CA4DE2E004AC3D8 /* ActivitySpeechGuestViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73C03871CA4DE2E004AC3D8 /* ActivitySpeechGuestViewCell.xib */; };
 		F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED7E1C9A76F8000A808B /* AppDelegate.swift */; };
-		F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F741ED801C9A76F8000A808B /* ContainerViewController.swift */; };
 		F741ED841C9A76F8000A808B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED821C9A76F8000A808B /* Main.storyboard */; };
 		F741ED861C9A76F8000A808B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F741ED851C9A76F8000A808B /* Assets.xcassets */; };
 		F741ED891C9A76F8000A808B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED871C9A76F8000A808B /* LaunchScreen.storyboard */; };
@@ -134,7 +133,6 @@
 		F73C03871CA4DE2E004AC3D8 /* ActivitySpeechGuestViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitySpeechGuestViewCell.xib; sourceTree = "<group>"; };
 		F741ED7B1C9A76F8000A808B /* GeekPark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeekPark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F741ED7E1C9A76F8000A808B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F741ED801C9A76F8000A808B /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		F741ED831C9A76F8000A808B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F741ED851C9A76F8000A808B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F741ED881C9A76F8000A808B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -354,7 +352,6 @@
 		F73BECA71C9BDAC400E5AFEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F741ED801C9A76F8000A808B /* ContainerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -610,7 +607,6 @@
 				8E92EDA91CA9071D0075D95F /* Config.swift in Sources */,
 				F7E986891CA3B8F00006AB21 /* ActivityDescribeViewCell.swift in Sources */,
 				8E9601B01CAB876A00B2A126 /* GImage.swift in Sources */,
-				F741ED811C9A76F8000A808B /* ContainerViewController.swift in Sources */,
 				F73C03821CA4D463004AC3D8 /* ActivitySpeechGuestViewCell.swift in Sources */,
 				8E3800331CABBAED006CBE03 /* Comment.swift in Sources */,
 				F726204F1CA27AD400822C73 /* ActivityDetailViewController.swift in Sources */,

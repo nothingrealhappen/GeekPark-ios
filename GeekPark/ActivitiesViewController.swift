@@ -24,6 +24,7 @@ class ActivitiesViewController: UIViewController, GRefreshable {
     tableView.dataSource = self
     tableView.delegate = self
     tableView.refreshableDelegate = self
+    navigationController?.navigationBar.topItem?.title = "活动"
     loadData()
   }
   
@@ -54,18 +55,6 @@ class ActivitiesViewController: UIViewController, GRefreshable {
       self.tableView.isLoading = false
     }
   }
-  
-  override func viewDidAppear(animated: Bool) {
-    super.viewDidAppear(animated)
-    navigationController?.setNavigationBarHidden(false, animated: false)
-    navigationController?.navigationBar.topItem?.title = "活动"
-  }
-  
-  override func viewWillDisappear(animated: Bool) {
-    super.viewWillDisappear(animated)
-    navigationController?.setNavigationBarHidden(true, animated: false)
-  }
-  
   
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1px-GE-cfP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,7 +10,7 @@
         <!--Activities View Controller-->
         <scene sceneID="Wva-yu-vcG">
             <objects>
-                <viewController storyboardIdentifier="ActivitiesViewController" id="dPK-ON-u67" customClass="ActivitiesViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dPK-ON-u67" customClass="ActivitiesViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ppd-B8-4ae"/>
                         <viewControllerLayoutGuide type="bottom" id="HY2-rK-ma2"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="263" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-f3-XUy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="263" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-f3-XUy">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -169,18 +169,19 @@
                             <constraint firstAttribute="trailing" secondItem="xQu-f3-XUy" secondAttribute="trailing" id="uep-6Y-XSF"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Yf7-ec-fo1"/>
                     <connections>
                         <outlet property="tableView" destination="xQu-f3-XUy" id="O9x-pG-okU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qDF-yI-TnI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="917.5"/>
+            <point key="canvasLocation" x="964" y="917"/>
         </scene>
         <!--Activity Detail View Controller-->
         <scene sceneID="dFZ-4l-dhy">
             <objects>
-                <viewController storyboardIdentifier="ActivityDetailViewController" id="uGR-gT-Vh7" customClass="ActivityDetailViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityDetailViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="uGR-gT-Vh7" customClass="ActivityDetailViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f1a-wm-JZa"/>
                         <viewControllerLayoutGuide type="bottom" id="lsQ-zh-Sjv"/>
@@ -499,10 +500,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Im5-Nq-ew8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="908"/>
+            <point key="canvasLocation" x="1703" y="908"/>
+        </scene>
+        <!--活动-->
+        <scene sceneID="D5Z-SN-wXE">
+            <objects>
+                <navigationController storyboardIdentifier="ActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="1px-GE-cfP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="活动" image="activity-icon" id="jwP-Dy-06E"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VdO-TI-S6I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dPK-ON-u67" kind="relationship" relationship="rootViewController" id="oh8-7l-8Bb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NdC-MX-Zeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="917"/>
         </scene>
     </scenes>
     <resources>
+        <image name="activity-icon" width="24" height="20"/>
         <image name="activity-img" width="357" height="174"/>
         <image name="clock-icon" width="42" height="42"/>
         <image name="location-icon" width="37" height="45"/>

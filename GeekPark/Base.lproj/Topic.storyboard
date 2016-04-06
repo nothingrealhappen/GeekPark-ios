@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="FE3-Hk-44t">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,7 +10,7 @@
         <!--Topics Container View Controller-->
         <scene sceneID="Rhy-3R-Z8c">
             <objects>
-                <viewController storyboardIdentifier="TopicsViewController" id="bER-L6-Aps" customClass="TopicsContainerViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="bER-L6-Aps" customClass="TopicsContainerViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="opN-Xm-pJe"/>
                         <viewControllerLayoutGuide type="bottom" id="8v9-4X-3az"/>
@@ -19,10 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUo-Ex-sjE" customClass="CTScrollView" customModule="GeekPark" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="600" height="51"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUo-Ex-sjE" customClass="CTScrollView" customModule="GeekPark" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="51" id="gxY-TO-cGI"/>
+                                    <constraint firstAttribute="height" constant="50" id="gxY-TO-cGI"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -30,7 +31,7 @@
                             <constraint firstItem="SUo-Ex-sjE" firstAttribute="leading" secondItem="Lnv-Dt-Jw8" secondAttribute="leading" id="RiK-4c-09C"/>
                             <constraint firstAttribute="trailing" secondItem="SUo-Ex-sjE" secondAttribute="trailing" id="bbw-7G-a2C"/>
                             <constraint firstItem="8v9-4X-3az" firstAttribute="top" secondItem="SUo-Ex-sjE" secondAttribute="bottom" constant="549" id="hxs-Pn-QFE"/>
-                            <constraint firstItem="SUo-Ex-sjE" firstAttribute="top" secondItem="Lnv-Dt-Jw8" secondAttribute="top" constant="20" id="prR-iy-SB9"/>
+                            <constraint firstItem="SUo-Ex-sjE" firstAttribute="top" secondItem="Lnv-Dt-Jw8" secondAttribute="topMargin" id="prR-iy-SB9"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -45,12 +46,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZD-aZ-p11" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1174" y="784"/>
+            <point key="canvasLocation" x="-362" y="784"/>
         </scene>
         <!--Topic Detail View Controller-->
         <scene sceneID="89V-6z-pIE">
             <objects>
-                <viewController storyboardIdentifier="TopicDetailViewController" id="Pf1-pS-7oV" customClass="TopicDetailViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TopicDetailViewController" hidesBottomBarWhenPushed="YES" id="Pf1-pS-7oV" customClass="TopicDetailViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8La-kN-dpt"/>
                         <viewControllerLayoutGuide type="bottom" id="F92-5w-jjk"/>
@@ -344,7 +345,7 @@
                                                     </variation>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="collection" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nLg-Sk-H4y">
-                                                    <rect key="frame" x="184" y="127" width="383" height="13.5"/>
+                                                    <rect key="frame" x="184" y="128" width="383" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.17647058823529413" green="0.1803921568627451" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -364,12 +365,12 @@
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-J4-lom">
-                                                    <rect key="frame" x="567" y="127.5" width="23" height="13.5"/>
+                                                    <rect key="frame" x="567" y="127" width="23" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="beR-xI-sfG">
+                                                <view contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="beR-xI-sfG">
                                                     <rect key="frame" x="10" y="151" width="580" height="1"/>
                                                     <color key="backgroundColor" red="0.35686274509999999" green="0.35686274509999999" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -457,5 +458,27 @@
             </objects>
             <point key="canvasLocation" x="-1189" y="1461"/>
         </scene>
+        <!--资讯-->
+        <scene sceneID="UEL-UY-dNt">
+            <objects>
+                <navigationController storyboardIdentifier="TopicsViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FE3-Hk-44t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="资讯" image="news-icon" id="4bR-9a-tPk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fTU-bh-rcX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bER-L6-Aps" kind="relationship" relationship="rootViewController" id="wLa-8h-fo4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckh-fD-pES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1174" y="784"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="news-icon" width="24" height="24"/>
+    </resources>
 </document>
