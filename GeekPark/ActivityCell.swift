@@ -24,5 +24,6 @@ class ActivityCell: UITableViewCell {
     status.backgroundColor = activity?.statusColor()
     title.text = activity?.title ?? "Title"
     startAt.text = NSDate.formateTimeFromTimeStamp((activity?.timestamp_start_at)!, formateString: "YYYY.MM.dd hh:mm")
+    bannerImg.kf_setImageWithURL(NSURL(string: activity?.banner ?? "")!)
   }
 }

@@ -13,6 +13,7 @@ class Topic:BaseModel{
   var id: Int = 0
   var title: String?
   var desc: String?
+  var collection_name: String?
   var comments_count:String?
   var published_at: Int = 0
   var body: String?
@@ -20,6 +21,11 @@ class Topic:BaseModel{
   var cover: GImage?
   var comments: [Comment]?
   
+  var descText: String?{
+    get{
+      return (self.collection_name ?? "")+" | "+(self.author?.username ?? "")
+    }
+  }
   
   var publishedTime :String?{
     get { return NSDate(timeIntervalSince1970: Double(self.published_at)).timeAgo }
@@ -33,6 +39,15 @@ class Topic:BaseModel{
     ) { result in
         let topics = [Topic](json: result!.rawString())
         callback(topics)
+    }
+  }
+  
+  static func top(callback: ([Topic]-> ())){
+    doRequest(router: "topics/top",api_root: BaseModel.main_api_root){ status,result in
+      if status == .SUCCESS {
+        let topics = [Topic](json: result!.rawString())
+        callback(topics)
+      }
     }
   }
   

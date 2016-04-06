@@ -51,7 +51,7 @@ extension ImageLoopTableViewCell: UICollectionViewDataSource{
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ImageCollectionViewCell", forIndexPath: indexPath) as! ImageCollectionViewCell
-    cell.setImageUrl(topics[indexPath.row].cover?.file_url ?? "")
+    cell.topic = topics[indexPath.row]
     pageControl.currentPage = indexPath.row
     return cell
   }
