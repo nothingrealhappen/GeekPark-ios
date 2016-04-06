@@ -69,6 +69,7 @@
 		F7B0BD041CA9321700EE6A36 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0BD031CA9321700EE6A36 /* Audience.swift */; };
 		F7BB45EE1CA3D74F006741CB /* ActivityBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BB45ED1CA3D74F006741CB /* ActivityBaseTableViewCell.swift */; };
 		F7C042471CAB7D13000E4F4F /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C042461CAB7D13000E4F4F /* BaseButton.swift */; };
+		F7C0424D1CAD1361000E4F4F /* ActivityIntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C0424C1CAD1361000E4F4F /* ActivityIntroductionViewController.swift */; };
 		F7E986871CA399BA0006AB21 /* HeaderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E986861CA399BA0006AB21 /* HeaderViewCell.swift */; };
 		F7E986891CA3B8F00006AB21 /* ActivityDescribeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E986881CA3B8F00006AB21 /* ActivityDescribeViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -141,6 +142,7 @@
 		F7B0BD031CA9321700EE6A36 /* Audience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
 		F7BB45ED1CA3D74F006741CB /* ActivityBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityBaseTableViewCell.swift; sourceTree = "<group>"; };
 		F7C042461CAB7D13000E4F4F /* BaseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseButton.swift; sourceTree = "<group>"; };
+		F7C0424C1CAD1361000E4F4F /* ActivityIntroductionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIntroductionViewController.swift; sourceTree = "<group>"; };
 		F7E986861CA399BA0006AB21 /* HeaderViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewCell.swift; sourceTree = "<group>"; };
 		F7E986881CA3B8F00006AB21 /* ActivityDescribeViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDescribeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -378,6 +380,7 @@
 			children = (
 				F73BECAF1C9BDB4C00E5AFEF /* ActivitiesViewController.swift */,
 				F726204E1CA27AD400822C73 /* ActivityDetailViewController.swift */,
+				F7C0424C1CAD1361000E4F4F /* ActivityIntroductionViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -595,6 +598,7 @@
 				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
 				8E92EDB11CAA28A50075D95F /* Protocols.swift in Sources */,
 				8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */,
+				F7C0424D1CAD1361000E4F4F /* ActivityIntroductionViewController.swift in Sources */,
 				F72620531CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift in Sources */,
 				F72092C01CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,

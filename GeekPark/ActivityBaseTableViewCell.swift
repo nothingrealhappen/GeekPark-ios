@@ -8,7 +8,13 @@
 
 import UIKit
 
+//用于view中调用它的controller的protocol
+protocol ViewControllerDelegate{
+  func callbackFromViewEvent()
+}
+
 class ActivityBaseTableViewCell: UITableViewCell {
+  var viewControllerDelegate: ViewControllerDelegate?
   
   override func awakeFromNib() {
     super.awakeFromNib()

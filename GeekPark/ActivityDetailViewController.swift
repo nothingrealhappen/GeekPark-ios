@@ -8,20 +8,14 @@
 
 import UIKit
 
-protocol ChangeDetailHeightDelegate {
-  func updateHeight()
-}
-
-class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeightDelegate{
-  //用于简介的点击展开
-  var currentDesOpen: Bool = false
+class ActivityDetailViewController: FullScreenViewController {
   
+  @IBOutlet weak var containerTable: UITableView!
   var activity_id = ""
   var activity: Activity?
-  @IBOutlet weak var containerTable: UITableView!
+  
   let cellIdentify = ["TopMainInfoViewCell", "ActivityDescribeViewCell", "ActivitySpeechesViewCell",  "ActivityJoinedAudienceViewCell", "ActivityCommentsViewCell"]
   
-  //TODO
   var datas: [NSArray] = [[["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"]], [""], [[["time": "09:00", "speechTitle": "90赫兹和VR"], ["time": "10:00", "speechTitle": "90赫兹与VR现状"]]], [["https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg"]], [[]]]{
     didSet{
       containerTable.reloadData()
@@ -47,12 +41,6 @@ class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeight
     containerTable.contentInset = UIEdgeInsetsMake(-height, 0, 0, 0)
   }
   
-  func updateHeight(){
-    currentDesOpen = !currentDesOpen
-    containerTable.beginUpdates()
-    containerTable.endUpdates()
-  }
-  
 }
 
 extension ActivityDetailViewController: UITableViewDelegate {
@@ -69,9 +57,6 @@ extension ActivityDetailViewController: UITableViewDelegate {
     let cell = tableView.dequeueReusableCellWithIdentifier(identify) as! ActivityBaseTableViewCell
     let data = datas[indexPath.section][indexPath.row]
     cell.setData(data)
-    if identify == "ActivityDescribeViewCell" && currentDesOpen {
-      return (cell as! ActivityDescribeViewCell).getDescribeHeight() + 40
-    }
     return cell.getHeight() ?? cell.frame.height
   }
   
@@ -123,8 +108,8 @@ extension ActivityDetailViewController: UITableViewDataSource {
       removeButtomLine.selectionStyle = .Gray
     }
     cell.setData(data)
-    if identify == "ActivityDescribeViewCell"{
-      (cell as! ActivityDescribeViewCell).changeHeightDelegate = self
+    if identify == "ActivityDescribeViewCell" {
+      (cell as! ActivityDescribeViewCell).viewControllerDelegate = self
     }
     return cell
   }
@@ -149,4 +134,12 @@ extension ActivityDetailViewController: UITableViewDataSource {
     return 0
   }
   
+}
+
+extension ActivityDetailViewController: ViewControllerDelegate{
+  func callbackFromViewEvent() {
+    let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityIntroductionViewController") as! ActivityIntroductionViewController
+    controller.introduction = activity?.introduction ?? ""
+    navigationController?.pushViewController(controller, animated: true)
+  }
 }

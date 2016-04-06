@@ -10,6 +10,7 @@ import UIKit
 
 //给所有的子页面添加右划返回功能
 class DetailViewController: UIViewController {
+  //应该使用swipeGesture
   var guesture: UIPanGestureRecognizer?
 
   override func viewDidLoad() {

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-class NotificationsViewController: UIViewController {
+class NotificationsViewController: DetailViewController {
   
   @IBOutlet weak var tableView: UITableView!
   var type: NotificationType = .System

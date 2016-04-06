@@ -557,6 +557,54 @@
             </objects>
             <point key="canvasLocation" x="152" y="917"/>
         </scene>
+        <!--Activity Introduction View Controller-->
+        <scene sceneID="TB6-mw-LUn">
+            <objects>
+                <viewController storyboardIdentifier="ActivityIntroductionViewController" id="BzC-cJ-RVm" customClass="ActivityIntroductionViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sip-TO-kBQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="9zc-hc-jJN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="baP-yY-KpP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g3a-BY-cQY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ku-yF-FdC">
+                                        <rect key="frame" x="8" y="8" width="584" height="71"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8Ku-yF-FdC" firstAttribute="top" secondItem="g3a-BY-cQY" secondAttribute="top" constant="8" id="TA1-4p-K2C"/>
+                                    <constraint firstAttribute="trailing" secondItem="8Ku-yF-FdC" secondAttribute="trailing" constant="10" id="ptY-eN-RwD"/>
+                                    <constraint firstItem="8Ku-yF-FdC" firstAttribute="leading" secondItem="g3a-BY-cQY" secondAttribute="leading" constant="10" id="vEH-Yu-omw"/>
+                                    <constraint firstAttribute="bottom" secondItem="8Ku-yF-FdC" secondAttribute="bottom" constant="10" id="xVW-7w-GQF"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g3a-BY-cQY" firstAttribute="top" secondItem="baP-yY-KpP" secondAttribute="top" id="4fV-qC-ep3"/>
+                            <constraint firstItem="8Ku-yF-FdC" firstAttribute="width" secondItem="baP-yY-KpP" secondAttribute="width" constant="-20" id="czP-oa-VZE"/>
+                            <constraint firstAttribute="trailing" secondItem="g3a-BY-cQY" secondAttribute="trailing" id="hQg-gw-Y5h"/>
+                            <constraint firstItem="g3a-BY-cQY" firstAttribute="leading" secondItem="baP-yY-KpP" secondAttribute="leading" id="mJI-zR-wIV"/>
+                            <constraint firstItem="g3a-BY-cQY" firstAttribute="bottom" secondItem="9zc-hc-jJN" secondAttribute="top" id="mj2-vG-byF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="introductionLabel" destination="8Ku-yF-FdC" id="hvI-cx-2uu"/>
+                        <outlet property="scrollView" destination="g3a-BY-cQY" id="e06-Hb-TfF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MOU-Ja-61N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1577" y="908"/>
+        </scene>
     </scenes>
     <resources>
         <image name="activity-icon" width="24" height="20"/>
