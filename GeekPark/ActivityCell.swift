@@ -14,6 +14,8 @@ class ActivityCell: UITableViewCell {
   @IBOutlet weak var startAt: UILabel!
   @IBOutlet weak var title: UILabel!
   @IBOutlet weak var bannerImg: UIImageView!
+  @IBOutlet weak var statusBg: UIView!
+  @IBOutlet weak var locationText: UILabel!
   
   var activity: Activity?{
     didSet{ updateViews() }
@@ -21,8 +23,9 @@ class ActivityCell: UITableViewCell {
   
   func updateViews(){
     status.text = activity?.statusText()
-    status.backgroundColor = activity?.statusColor()
+    statusBg.backgroundColor = activity?.statusColor()
     title.text = activity?.title ?? "Title"
+    locationText.text = activity?.location
     startAt.text = NSDate.formateTimeFromTimeStamp((activity?.timestamp_start_at)!, formateString: "YYYY.MM.dd hh:mm")
     bannerImg.kf_setImageWithURL(NSURL(string: activity?.banner ?? "")!)
   }

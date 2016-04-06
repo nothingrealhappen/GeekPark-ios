@@ -49,23 +49,21 @@ class Activity: BaseModel{
   let statusMap = [
     "end": "已结束",
     "applying": "报名中",
-    "preparing": "准备中",
     "progressing": "进行中"
   ]
   
   let statusColorMap = [
-    "end": UIColor(red: 28/255.0, green: 199/255.0, blue: 107/255.0, alpha: 1),
-    "applying": UIColor(red: 217/255.0, green: 210/255.0, blue: 32/255.0, alpha: 1),
-    "preparing": UIColor(red: 28/255.0, green: 199/255.0, blue: 107/255.0, alpha: 1),
-    "progressing": UIColor(red: 217/255.0, green: 210/255.0, blue: 32/255.0, alpha: 1),
+    "end": UIColor(red: 160/255.0, green: 160/255.0, blue: 160/255.0, alpha: 1),
+    "applying": UIColor(red: 45/255.0, green: 198/255.0, blue: 105/255.0, alpha: 1),
+    "progressing": UIColor(red: 220/255.0, green: 146/255.0, blue: 1/255.0, alpha: 1),
   ]
   
   func statusText() -> String?{
-    return statusMap[self.status] ?? statusMap["end"]
+    return statusMap[self.status] ?? statusMap["applying"]
   }
   
   func statusColor() -> UIColor? {
-    return statusColorMap[self.status] ?? statusColorMap["end"]
+    return statusColorMap[self.status] ?? statusColorMap["applying"]
   }
   
 }
