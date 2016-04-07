@@ -28,13 +28,7 @@ class ActivitiesViewController: UIViewController, GRefreshable {
     loadData()
   }
   
-  override func viewWillAppear(animated: Bool) {
-    super.viewWillAppear(animated)
-    tableView.addCntentOffSetObserver()
-  }
-  
-  override func viewDidDisappear(animated: Bool) {
-    super.viewDidDisappear(animated)
+  deinit{
     tableView.removeContentOffSetObserver()
   }
   

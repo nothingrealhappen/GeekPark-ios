@@ -33,7 +33,6 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     changeTopLabelDelegate?.changeTopLabel(itemIndex)
-    topicsTable.addCntentOffSetObserver()
   }
   
   
@@ -64,10 +63,10 @@ class TopicsPageViewController: UIViewController, GRefreshable {
     getTopics()
   }
   
-  override func viewDidDisappear(animated: Bool) {
-    super.viewDidDisappear(animated)
+  deinit{
     topicsTable.removeContentOffSetObserver()
   }
+  
 }
 
 extension TopicsPageViewController: UITableViewDelegate{
@@ -93,7 +92,6 @@ extension TopicsPageViewController: UITableViewDataSource{
         cell.setData(topics[indexPath.row-1])
         return cell
       }
-      
     } else {
       let cell = tableView.dequeueReusableCellWithIdentifier("TopicTableViewCell") as! TopicTableViewCell
       cell.setData(topics[indexPath.row])

@@ -16,7 +16,7 @@ class ActivityDetailViewController: FullScreenViewController {
   
   let cellIdentify = ["TopMainInfoViewCell", "ActivityDescribeViewCell", "ActivitySpeechesViewCell",  "ActivityJoinedAudienceViewCell", "ActivityCommentsViewCell"]
   
-  var datas: [NSArray] = [[["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"]], [""], [[["time": "09:00", "speechTitle": "90赫兹和VR"], ["time": "10:00", "speechTitle": "90赫兹与VR现状"]]], [["https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg"]], [[]]]{
+  var datas: [NSArray] = [[]]{
     didSet{
       containerTable.reloadData()
     }
@@ -39,6 +39,14 @@ class ActivityDetailViewController: FullScreenViewController {
     let view = UIView(frame: CGRect(x: 0, y: 0, width: containerTable.frame.width, height: height))
     containerTable.tableHeaderView = view
     containerTable.contentInset = UIEdgeInsetsMake(-height, 0, 0, 0)
+  }
+  
+  override func viewWillAppear(animated: Bool) {
+    navigationController?.setNavigationBarHidden(true, animated: false)
+  }
+  
+  override func viewWillDisappear(animated: Bool) {
+    navigationController?.setNavigationBarHidden(false, animated: false)
   }
   
 }

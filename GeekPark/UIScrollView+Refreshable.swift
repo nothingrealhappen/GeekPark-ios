@@ -24,6 +24,9 @@ extension UIScrollView{
       return objc_getAssociatedObject(self, &AssociatedKeys.delegateName) as? GRefreshable
     }
     set(newValue){
+      if newValue != nil{
+        addContentOffSetObserver()
+      }
       refreshControl?.removeFromSuperview()
       addRefreshControl()
       objc_setAssociatedObject(self,&AssociatedKeys.delegateName,newValue as! NSObjectProtocol? ,objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
@@ -68,7 +71,7 @@ extension UIScrollView{
     super.willMoveToSuperview(newSuperview)
   }
   
-  func addCntentOffSetObserver(){
+  func addContentOffSetObserver(){
     addObserver(self, forKeyPath: ContentOffsetKeyPath, options: .Initial, context: &kvoContext)
   }
   
