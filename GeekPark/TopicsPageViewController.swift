@@ -33,7 +33,6 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
     changeTopLabelDelegate?.changeTopLabel(itemIndex)
-    topicsTable.addCntentOffSetObserver()
   }
   
   
@@ -64,14 +63,15 @@ class TopicsPageViewController: UIViewController, GRefreshable {
     getTopics()
   }
   
-  override func viewDidDisappear(animated: Bool) {
-    super.viewDidDisappear(animated)
+  deinit{
     topicsTable.removeContentOffSetObserver()
   }
+  
 }
 
 extension TopicsPageViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let topic = itemIndex == 0 ? topics[indexPath.row - 1] : topics[indexPath.row]
     let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
     controller.topic = topic
@@ -92,7 +92,6 @@ extension TopicsPageViewController: UITableViewDataSource{
         cell.setData(topics[indexPath.row-1])
         return cell
       }
-      
     } else {
       let cell = tableView.dequeueReusableCellWithIdentifier("TopicTableViewCell") as! TopicTableViewCell
       cell.setData(topics[indexPath.row])

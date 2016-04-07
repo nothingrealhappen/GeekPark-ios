@@ -20,7 +20,7 @@ class TopicsContainerViewController: UIViewController, ChangePageDelegate{
   @IBOutlet weak var topScrollView: CTScrollView!
   
   //TODO
-  var collectionTitle = ["全部", "极客之选", "产品观察","AR/VR","深度报道","编辑精选","极客早知道"]
+  var collectionTitle = ["最新", "极客之选", "产品观察","AR/VR","深度报道","编辑精选","极客早知道"]
   var pageViewController: UIPageViewController?
   var controllers = [TopicsPageViewController]()
   
