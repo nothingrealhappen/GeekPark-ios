@@ -72,6 +72,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
 
 extension TopicsPageViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let topic = itemIndex == 0 ? topics[indexPath.row - 1] : topics[indexPath.row]
     let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
     controller.topic = topic
