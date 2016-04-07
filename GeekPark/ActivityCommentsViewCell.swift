@@ -10,37 +10,32 @@ import UIKit
 
 class ActivityCommentsViewCell: ActivityBaseTableViewCell{
   
-  @IBOutlet weak var commentsTable: UITableView!
+  var commentsView: CommentsView?
+  var cellHeight: CGFloat = 50
+  var comments = [Comment]()
   
-  override func setData(data: Any) {
-    commentsTable.delegate = self
-    commentsTable.dataSource = self
-  }
-}
-
-extension ActivityCommentsViewCell: UITableViewDataSource{
-  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = NSBundle.mainBundle().loadNibNamed("ActivityCommentViewCell", owner: self, options: nil).first as! ActivityCommentViewCell
-    let data = ["userName": "极客君", "avatorUrl": "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "content": "32个赞赞赞赞赞", "publishTime": "15分钟前"]
-    cell.setData(data)
-    return cell
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    commentsView = NSBundle.mainBundle().loadNibNamed("CommentsView", owner: self, options: nil)[0] as? CommentsView
+    commentsView!.frame.size = self.frame.size
+    self.addSubview(commentsView!)
   }
   
-  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
+  override func setData(comments: Any) {
+    self.comments = comments as! [Comment]
+    self.commentsView?.comments = self.comments
   }
   
-  func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 2
+  func getHeightAndReloadTable(comments: [Comment]) -> CGFloat{
+    let height: CGFloat = comments.reduce(0){ sum, comment in
+      let tmpHeight = comment.body!.boundingRectWithSize(CGSize(width:UIScreen.mainScreen().bounds.width-40, height: CGFloat(DBL_MAX)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "HelveticaNeue-UltraLight",
+        size: 17.0)! , NSForegroundColorAttributeName: UIColor.redColor()], context: nil).height
+      return sum + tmpHeight + 83
+    }
+    return height
   }
   
-  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return 200
-  }
-}
-
-extension ActivityCommentsViewCell: UITableViewDelegate{
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    
+  override func getHeight() -> CGFloat? {
+    return getHeightAndReloadTable(comments)
   }
 }

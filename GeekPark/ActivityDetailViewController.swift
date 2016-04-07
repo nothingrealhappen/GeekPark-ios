@@ -31,7 +31,7 @@ class ActivityDetailViewController: FullScreenViewController {
     Activity.member(activity_id){ activity in
       self.activity = activity
       self.headerDatas = ["https://dn-geekpark-new.qbox.me/uploads/image/file/72/29/722962955a200ffc1f64209068635d46.jpg", "活动简介", "活动日程", "报名用户", "用户评论"]
-      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [[]]]
+      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [activity.comments ?? []]]
     }
     
     //让table滚动时header不为float

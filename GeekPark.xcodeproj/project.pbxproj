@@ -27,13 +27,9 @@
 		F72092AE1CA514300096962F /* ActivityJoinedAudienceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092AD1CA514300096962F /* ActivityJoinedAudienceViewCell.swift */; };
 		F72092B01CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092AF1CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift */; };
 		F72092B31CA5242D0096962F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B21CA5242D0096962F /* Extensions.swift */; };
-		F72092B51CA531190096962F /* ActivityCommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B41CA531190096962F /* ActivityCommentViewCell.swift */; };
 		F72092B81CA532FA0096962F /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B71CA532FA0096962F /* FullScreenViewController.swift */; };
 		F72092BA1CA534210096962F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092B91CA534210096962F /* DetailViewController.swift */; };
-		F72092BC1CA6339F0096962F /* ActivityCommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72092BB1CA6339F0096962F /* ActivityCommentViewCell.xib */; };
 		F72092BE1CA636410096962F /* ActivityCommentsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092BD1CA636410096962F /* ActivityCommentsViewCell.swift */; };
-		F72092C01CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092BF1CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift */; };
-		F72092C21CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F72092C11CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib */; };
 		F72092C41CA790E40096962F /* Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092C31CA790E40096962F /* Speech.swift */; };
 		F72092C61CA792040096962F /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092C51CA792040096962F /* Guest.swift */; };
 		F72620491CA11C0F00822C73 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */; };
@@ -66,6 +62,9 @@
 		F741ED841C9A76F8000A808B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED821C9A76F8000A808B /* Main.storyboard */; };
 		F741ED861C9A76F8000A808B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F741ED851C9A76F8000A808B /* Assets.xcassets */; };
 		F741ED891C9A76F8000A808B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F741ED871C9A76F8000A808B /* LaunchScreen.storyboard */; };
+		F78E4B7F1CB4D54A0049C560 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B7E1CB4D54A0049C560 /* CommentsView.swift */; };
+		F78E4B811CB4D67C0049C560 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F78E4B801CB4D67C0049C560 /* CommentsView.xib */; };
+		F78E4B831CB4F3A90049C560 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B821CB4F3A90049C560 /* CommentViewCell.swift */; };
 		F7B0BD041CA9321700EE6A36 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0BD031CA9321700EE6A36 /* Audience.swift */; };
 		F7BB45EE1CA3D74F006741CB /* ActivityBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BB45ED1CA3D74F006741CB /* ActivityBaseTableViewCell.swift */; };
 		F7C042471CAB7D13000E4F4F /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C042461CAB7D13000E4F4F /* BaseButton.swift */; };
@@ -97,13 +96,9 @@
 		F72092AD1CA514300096962F /* ActivityJoinedAudienceViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityJoinedAudienceViewCell.swift; sourceTree = "<group>"; };
 		F72092AF1CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudienceAvatorCollectionViewCell.swift; sourceTree = "<group>"; };
 		F72092B21CA5242D0096962F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		F72092B41CA531190096962F /* ActivityCommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentViewCell.swift; sourceTree = "<group>"; };
 		F72092B71CA532FA0096962F /* FullScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
 		F72092B91CA534210096962F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		F72092BB1CA6339F0096962F /* ActivityCommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCommentViewCell.xib; sourceTree = "<group>"; };
 		F72092BD1CA636410096962F /* ActivityCommentsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentsViewCell.swift; sourceTree = "<group>"; };
-		F72092BF1CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCommentsOfCommentViewCell.swift; sourceTree = "<group>"; };
-		F72092C11CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityCommentsOfCommentViewCell.xib; sourceTree = "<group>"; };
 		F72092C31CA790E40096962F /* Speech.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speech.swift; sourceTree = "<group>"; };
 		F72092C51CA792040096962F /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		F72620481CA11C0F00822C73 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TopicTableViewCell.swift; path = Assets.xcassets/TopicTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,6 +133,9 @@
 		F741ED851C9A76F8000A808B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F741ED881C9A76F8000A808B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F741ED8A1C9A76F8000A808B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F78E4B7E1CB4D54A0049C560 /* CommentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		F78E4B801CB4D67C0049C560 /* CommentsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
+		F78E4B821CB4F3A90049C560 /* CommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
 		F7B0BD011CA929F300EE6A36 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F7B0BD031CA9321700EE6A36 /* Audience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
 		F7BB45ED1CA3D74F006741CB /* ActivityBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityBaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -196,10 +194,6 @@
 				F72092AD1CA514300096962F /* ActivityJoinedAudienceViewCell.swift */,
 				F72092AF1CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift */,
 				F72092BD1CA636410096962F /* ActivityCommentsViewCell.swift */,
-				F72092B41CA531190096962F /* ActivityCommentViewCell.swift */,
-				F72092BB1CA6339F0096962F /* ActivityCommentViewCell.xib */,
-				F72092BF1CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift */,
-				F72092C11CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -447,6 +441,9 @@
 				F7C042461CAB7D13000E4F4F /* BaseButton.swift */,
 				8E62A4221CAE2119007867BD /* LaunchView.swift */,
 				8E62A4241CAE21A9007867BD /* LaunchView.xib */,
+				F78E4B7E1CB4D54A0049C560 /* CommentsView.swift */,
+				F78E4B821CB4F3A90049C560 /* CommentViewCell.swift */,
+				F78E4B801CB4D67C0049C560 /* CommentsView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -513,16 +510,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F78E4B811CB4D67C0049C560 /* CommentsView.xib in Resources */,
 				F741ED891C9A76F8000A808B /* LaunchScreen.storyboard in Resources */,
 				F73C03861CA4DDF0004AC3D8 /* ActivitySpeechViewCell.xib in Resources */,
-				F72092BC1CA6339F0096962F /* ActivityCommentViewCell.xib in Resources */,
 				F73BECBB1C9BDC9F00E5AFEF /* Activity.storyboard in Resources */,
 				F741ED861C9A76F8000A808B /* Assets.xcassets in Resources */,
 				F73C03881CA4DE2E004AC3D8 /* ActivitySpeechGuestViewCell.xib in Resources */,
 				8E62A4251CAE21A9007867BD /* LaunchView.xib in Resources */,
 				F741ED841C9A76F8000A808B /* Main.storyboard in Resources */,
 				F73BECB81C9BDC7800E5AFEF /* Topic.storyboard in Resources */,
-				F72092C21CA6380E0096962F /* ActivityCommentsOfCommentViewCell.xib in Resources */,
 				F73BECBE1C9BDCAC00E5AFEF /* User.storyboard in Resources */,
 				F73BECB31C9BDBAC00E5AFEF /* Notification.storyboard in Resources */,
 				F726204D1CA22A6900822C73 /* topic.css in Resources */,
@@ -600,7 +596,6 @@
 				8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */,
 				F7C0424D1CAD1361000E4F4F /* ActivityIntroductionViewController.swift in Sources */,
 				F72620531CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift in Sources */,
-				F72092C01CA637E60096962F /* ActivityCommentsOfCommentViewCell.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
 				F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */,
 				F73BECB01C9BDB4C00E5AFEF /* ActivitiesViewController.swift in Sources */,
@@ -608,6 +603,7 @@
 				F7BB45EE1CA3D74F006741CB /* ActivityBaseTableViewCell.swift in Sources */,
 				F73C03841CA4D9AF004AC3D8 /* ActivitySpeechesViewCell.swift in Sources */,
 				8E62A4231CAE2119007867BD /* LaunchView.swift in Sources */,
+				F78E4B831CB4F3A90049C560 /* CommentViewCell.swift in Sources */,
 				8E92EDA91CA9071D0075D95F /* Config.swift in Sources */,
 				F7E986891CA3B8F00006AB21 /* ActivityDescribeViewCell.swift in Sources */,
 				8E9601B01CAB876A00B2A126 /* GImage.swift in Sources */,
@@ -615,10 +611,10 @@
 				8E3800331CABBAED006CBE03 /* Comment.swift in Sources */,
 				F726204F1CA27AD400822C73 /* ActivityDetailViewController.swift in Sources */,
 				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
+				F78E4B7F1CB4D54A0049C560 /* CommentsView.swift in Sources */,
 				F7E986871CA399BA0006AB21 /* HeaderViewCell.swift in Sources */,
 				F741ED7F1C9A76F8000A808B /* AppDelegate.swift in Sources */,
 				F72092C41CA790E40096962F /* Speech.swift in Sources */,
-				F72092B51CA531190096962F /* ActivityCommentViewCell.swift in Sources */,
 				F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */,
 				F7C042471CAB7D13000E4F4F /* BaseButton.swift in Sources */,
 				8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */,
