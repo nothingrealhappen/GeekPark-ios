@@ -8,20 +8,14 @@
 
 import UIKit
 
-protocol ChangeDetailHeightDelegate {
-  func updateHeight()
-}
-
-class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeightDelegate{
-  //用于简介的点击展开
-  var currentDesOpen: Bool = false
+class ActivityDetailViewController: FullScreenViewController {
   
+  @IBOutlet weak var containerTable: UITableView!
   var activity_id = ""
   var activity: Activity?
-  @IBOutlet weak var containerTable: UITableView!
+  
   let cellIdentify = ["TopMainInfoViewCell", "ActivityDescribeViewCell", "ActivitySpeechesViewCell",  "ActivityJoinedAudienceViewCell", "ActivityCommentsViewCell"]
   
-  //TODO
   var datas: [NSArray] = [[["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"], ["title": "活动", "value": "未来头条"]], [""], [[["time": "09:00", "speechTitle": "90赫兹和VR"], ["time": "10:00", "speechTitle": "90赫兹与VR现状"]]], [["https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg", "https://dn-geekpark-new.qbox.me/uploads/user/avatar/000/216/517/thumb_16a3a14a1bb1bdead60fada0593075ca.jpg"]], [[]]]{
     didSet{
       containerTable.reloadData()
@@ -37,7 +31,7 @@ class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeight
     Activity.member(activity_id){ activity in
       self.activity = activity
       self.headerDatas = ["https://dn-geekpark-new.qbox.me/uploads/image/file/72/29/722962955a200ffc1f64209068635d46.jpg", "活动简介", "活动日程", "报名用户", "用户评论"]
-      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [[]]]
+      self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [activity.comments ?? []]]
     }
     
     //让table滚动时header不为float
@@ -45,12 +39,6 @@ class ActivityDetailViewController: FullScreenViewController, ChangeDetailHeight
     let view = UIView(frame: CGRect(x: 0, y: 0, width: containerTable.frame.width, height: height))
     containerTable.tableHeaderView = view
     containerTable.contentInset = UIEdgeInsetsMake(-height, 0, 0, 0)
-  }
-  
-  func updateHeight(){
-    currentDesOpen = !currentDesOpen
-    containerTable.beginUpdates()
-    containerTable.endUpdates()
   }
   
 }
@@ -69,9 +57,6 @@ extension ActivityDetailViewController: UITableViewDelegate {
     let cell = tableView.dequeueReusableCellWithIdentifier(identify) as! ActivityBaseTableViewCell
     let data = datas[indexPath.section][indexPath.row]
     cell.setData(data)
-    if identify == "ActivityDescribeViewCell" && currentDesOpen {
-      return (cell as! ActivityDescribeViewCell).getDescribeHeight() + 40
-    }
     return cell.getHeight() ?? cell.frame.height
   }
   
@@ -123,8 +108,8 @@ extension ActivityDetailViewController: UITableViewDataSource {
       removeButtomLine.selectionStyle = .Gray
     }
     cell.setData(data)
-    if identify == "ActivityDescribeViewCell"{
-      (cell as! ActivityDescribeViewCell).changeHeightDelegate = self
+    if identify == "ActivityDescribeViewCell" {
+      (cell as! ActivityDescribeViewCell).viewControllerDelegate = self
     }
     return cell
   }
@@ -149,4 +134,12 @@ extension ActivityDetailViewController: UITableViewDataSource {
     return 0
   }
   
+}
+
+extension ActivityDetailViewController: ViewControllerDelegate{
+  func callbackFromViewEvent() {
+    let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityIntroductionViewController") as! ActivityIntroductionViewController
+    controller.introduction = activity?.introduction ?? ""
+    navigationController?.pushViewController(controller, animated: true)
+  }
 }

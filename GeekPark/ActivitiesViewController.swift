@@ -60,6 +60,7 @@ class ActivitiesViewController: UIViewController, GRefreshable {
 
 extension ActivitiesViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityDetailViewController") as! ActivityDetailViewController
     controller.activity_id = activities[indexPath.row].id
     navigationController?.pushViewController(controller, animated: true)

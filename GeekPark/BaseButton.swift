@@ -12,7 +12,7 @@ class BaseButton: UIButton{
   override var highlighted: Bool{
     didSet{
       if (highlighted){
-        self.alpha = 0.8
+        self.alpha = 0.9
       } else {
         self.alpha = 1
       }

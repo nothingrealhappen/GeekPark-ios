@@ -11,7 +11,6 @@ import UIKit
 class ActivityDescribeViewCell: ActivityBaseTableViewCell{
   @IBOutlet weak var openButton: BaseButton!
   @IBOutlet weak var describeLabel: UILabel!
-  var changeHeightDelegate: ChangeDetailHeightDelegate?
   
   override func willMoveToWindow(newWindow: UIWindow?) {
     super.willMoveToWindow(newWindow)
@@ -21,7 +20,7 @@ class ActivityDescribeViewCell: ActivityBaseTableViewCell{
   }
   
   @IBAction func openDetailButton() {
-    changeHeightDelegate?.updateHeight()
+    viewControllerDelegate?.callbackFromViewEvent()
   }
   
   override func setData(data: Any){
@@ -40,7 +39,7 @@ class ActivityDescribeViewCell: ActivityBaseTableViewCell{
   }
   
   func getDescribeHeight() -> CGFloat {
-    describeLabel.frame.size = CGSize(width: UIScreen.mainScreen().bounds.width-10, height: CGFloat(DBL_MAX))
+    describeLabel.frame.size = CGSize(width: UIScreen.mainScreen().bounds.width-20, height: CGFloat(DBL_MAX))
     describeLabel.sizeToFit()
     return describeLabel.frame.height
   }

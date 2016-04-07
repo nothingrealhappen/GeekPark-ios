@@ -21,6 +21,7 @@ class Activity: BaseModel{
   var banner: String?
   var speeches: [Speech]?
   var audiences: [Audience]?
+  var comments: [Comment]?
  
   static func list(page: Int,per: Int = 20 , callback: ([Activity]) -> Void ){
     doRequest(router: "activities", params: ["page":page,"per":per]){ status,result in
@@ -36,7 +37,11 @@ class Activity: BaseModel{
     doRequest(router: "activities/\(id)", params: nil){ status, result in
       if status == .SUCCESS{
         let activity = Activity(json: result!["activity"].rawString())
-        callback(activity)
+        Comment.list("activity", commentable_id: id){
+          comments in
+          activity.comments = comments
+          callback(activity)
+        }
       } else {
       }
     }
