@@ -12,9 +12,9 @@ class BaseButton: UIButton{
   override var highlighted: Bool{
     didSet{
       if (highlighted){
-        self.alpha = 0.9
+        self.tintColor = Config.Color.hightlightColor
       } else {
-        self.alpha = 1
+        self.tintColor = Config.Color.normalColor
       }
     }
   }

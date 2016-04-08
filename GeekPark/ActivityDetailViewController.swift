@@ -11,17 +11,31 @@ import UIKit
 class ActivityDetailViewController: FullScreenViewController {
   
   @IBOutlet weak var containerTable: UITableView!
+  var topNavigationBar = CTTopNavigationBar()
+  
   var activity_id = ""
   var activity: Activity?
   
   let cellIdentify = ["TopMainInfoViewCell", "ActivityDescribeViewCell", "ActivitySpeechesViewCell",  "ActivityJoinedAudienceViewCell", "ActivityCommentsViewCell"]
   
-  var datas: [NSArray] = [[]]{
+  var datas: [NSArray] = [[], [], [], [], []]{
     didSet{
       containerTable.reloadData()
+      addTopNavigationbar()
     }
   }
-  var headerDatas: [String] = []
+  var headerDatas: [String] = ["", "活动简介", "活动日程", "报名用户", "用户评论"]
+  
+  func addTopNavigationbar(){
+    //添加头部的navigationBar
+    topNavigationBar = NSBundle.mainBundle().loadNibNamed("CTTopNavigationBar", owner: self, options: nil).first as! CTTopNavigationBar
+    let naviHeight = navigationController!.navigationBar.frame.height + 10
+    topNavigationBar.frame = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: naviHeight)
+    topNavigationBar.topNavigationBarDelegate = self
+    topNavigationBar.style = .like
+    view.addSubview(topNavigationBar)
+    topNavigationBar.layer.zPosition = 5
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,7 +44,7 @@ class ActivityDetailViewController: FullScreenViewController {
     
     Activity.member(activity_id){ activity in
       self.activity = activity
-      self.headerDatas = ["https://dn-geekpark-new.qbox.me/uploads/image/file/72/29/722962955a200ffc1f64209068635d46.jpg", "活动简介", "活动日程", "报名用户", "用户评论"]
+      self.headerDatas[0] = "https://dn-geekpark-new.qbox.me/uploads/image/file/72/29/722962955a200ffc1f64209068635d46.jpg"
       self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [activity.comments ?? []]]
     }
     
@@ -39,6 +53,7 @@ class ActivityDetailViewController: FullScreenViewController {
     let view = UIView(frame: CGRect(x: 0, y: 0, width: containerTable.frame.width, height: height))
     containerTable.tableHeaderView = view
     containerTable.contentInset = UIEdgeInsetsMake(-height, 0, 0, 0)
+    
   }
   
   override func viewWillAppear(animated: Bool) {
@@ -51,7 +66,25 @@ class ActivityDetailViewController: FullScreenViewController {
   
 }
 
+extension ActivityDetailViewController: CTTopNavigationBarDelegate {
+  func back() {
+    navigationController?.popViewControllerAnimated(true)
+  }
+  
+  func moveToComment() {
+  }
+  
+}
+
 extension ActivityDetailViewController: UITableViewDelegate {
+  func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    if velocity.y > 0 {
+      topNavigationBar.moveUp()
+    } else if velocity.y < 0 {
+      topNavigationBar.moveDown()
+    }
+  }
+  
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     //点击地点的时候
