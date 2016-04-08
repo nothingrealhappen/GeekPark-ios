@@ -12,10 +12,19 @@ class NotificationViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
   
+  var notificationGroups = [NotificationGroup](){
+    didSet{
+      tableView.reloadData()
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupTableView()
     setupNaviBar()
+    NotificationGroup.list(){ notificationGroups in
+      self.notificationGroups = notificationGroups
+    }
   }
   
   func setupTableView(){
@@ -26,10 +35,6 @@ class NotificationViewController: UIViewController {
   func setupNaviBar(){
     navigationController?.setNavigationBarHidden(false, animated: false)
     navigationController?.navigationBar.topItem?.title = "消息"
-    let button  = UIButton(frame: CGRect(origin: CGPoint(x: 0,y:0), size: CGSize(width: Config.NavigationBar.iconWidth, height: Config.NavigationBar.iconWidth)))
-    button.setImage(UIImage(named: "setting-icon"), forState: UIControlState.Normal)
-    let rightButton = UIBarButtonItem(customView: button)
-    navigationController?.navigationBar.topItem?.rightBarButtonItem = rightButton
   }
   
 }
@@ -37,20 +42,23 @@ class NotificationViewController: UIViewController {
 extension NotificationViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let controller = storyboard?.instantiateViewControllerWithIdentifier("NotificationsViewController") as! NotificationsViewController
-    controller.type = indexPath.row%2 == 0 ? NotificationType.System : NotificationType.Activity
+    controller.notificationGroup = notificationGroups[indexPath.row]
     navigationController?.pushViewController(controller, animated: true)
   }
   
+  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    return 44+10+8+1
+  }
 }
 
 extension NotificationViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 3
+    return notificationGroups.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("NotificationCell") as! NotificationCell
-    cell.unreadCount = indexPath.row 
+    cell.notificationGroup = notificationGroups[indexPath.row]
     return cell
   }
   

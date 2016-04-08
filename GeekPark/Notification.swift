@@ -8,9 +8,6 @@
 
 import Foundation
 
-enum NotificationType: String {
-  case Activity,System
-}
 
 class Notification: BaseModel{
   
@@ -23,6 +20,11 @@ class Notification: BaseModel{
   }
   
   static func list(type: NotificationType, callback: ([Notification])-> ()){
+    print(type)
+    if type == .Comment {
+      callback([])
+      return
+    }
     var list = [Notification]()
     for _ in 0...2{
       let n = Notification()
