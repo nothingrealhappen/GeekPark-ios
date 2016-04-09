@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "arrow-icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "下一页 copy.png",
       "scale" : "2x"
     },
     {

@@ -670,10 +670,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="activity-icon" width="24" height="20"/>
+        <image name="activity-icon" width="16" height="16"/>
         <image name="activity-img" width="357" height="174"/>
-        <image name="arrow-icon" width="16" height="31"/>
-        <image name="clock-icon" width="42" height="42"/>
-        <image name="location-icon" width="37" height="45"/>
+        <image name="arrow-icon" width="10" height="19"/>
+        <image name="clock-icon" width="16" height="16"/>
+        <image name="location-icon" width="16" height="16"/>
     </resources>
 </document>

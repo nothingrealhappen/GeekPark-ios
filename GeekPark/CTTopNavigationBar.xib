@@ -13,7 +13,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAZ-6r-ait" customClass="WriteOrLikeButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="380" y="556" width="50" height="44"/>
+                    <rect key="frame" x="452" y="559" width="26" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="vAZ-6r-ait" secondAttribute="height" multiplier="38:27" id="0Va-GH-4nK"/>
                         <constraint firstAttribute="width" secondItem="vAZ-6r-ait" secondAttribute="height" multiplier="25:22" id="Jm6-RY-22b"/>
@@ -23,12 +23,13 @@
                     <variation key="default">
                         <mask key="constraints">
                             <exclude reference="0Va-GH-4nK"/>
+                            <exclude reference="Jm6-RY-22b"/>
                             <exclude reference="WKQ-Q3-T1q"/>
                         </mask>
                     </variation>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpt-fR-jNT" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="530" y="544" width="50" height="56"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpt-fR-jNT" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
+                    <rect key="frame" x="554" y="569" width="26" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Rpt-fR-jNT" secondAttribute="height" multiplier="36:50" id="D2M-mz-rMj"/>
                         <constraint firstAttribute="width" constant="50" id="SJf-b6-fZ5"/>
@@ -40,6 +41,7 @@
                     </state>
                     <variation key="default">
                         <mask key="constraints">
+                            <exclude reference="D2M-mz-rMj"/>
                             <exclude reference="SJf-b6-fZ5"/>
                             <exclude reference="V4V-Ty-EAP"/>
                             <exclude reference="wfh-7r-CPR"/>
@@ -49,10 +51,29 @@
                         <action selector="clickShareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="2ny-zO-cZw"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-Ef-dca" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="455" y="552" width="50" height="48"/>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-oL-3P1" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
+                    <rect key="frame" x="15" y="565" width="50" height="22"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="50" id="TOS-df-7za"/>
+                    </constraints>
+                    <state key="normal" image="back_icon">
+                        <color key="titleColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="TOS-df-7za"/>
+                        </mask>
+                    </variation>
+                    <connections>
+                        <action selector="clickBackAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="5oq-F8-MFS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-Ef-dca" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
+                    <rect key="frame" x="503" y="567" width="26" height="26"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dNT-Ef-dca" secondAttribute="height" multiplier="1:1" id="DKq-LD-FSx"/>
                         <constraint firstAttribute="width" secondItem="dNT-Ef-dca" secondAttribute="height" multiplier="25:24" id="GJf-M0-tq4"/>
+                        <constraint firstAttribute="width" constant="26" id="U1N-5x-X7u"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
@@ -60,20 +81,13 @@
                         <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="GJf-M0-tq4"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="clickCommentAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="F0S-lK-W9D"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-oL-3P1" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="15" y="564" width="50" height="36"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="50" id="TOS-df-7za"/>
-                    </constraints>
-                    <state key="normal" image="back_icon">
-                        <color key="titleColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                    <connections>
-                        <action selector="clickBackAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="5oq-F8-MFS"/>
                     </connections>
                 </button>
             </subviews>
@@ -81,22 +95,23 @@
             <constraints>
                 <constraint firstItem="vAZ-6r-ait" firstAttribute="top" secondItem="dNT-Ef-dca" secondAttribute="top" id="839-uu-7xn"/>
                 <constraint firstItem="dNT-Ef-dca" firstAttribute="width" secondItem="Rpt-fR-jNT" secondAttribute="width" id="Cj1-aB-RSy"/>
-                <constraint firstAttribute="bottom" secondItem="vAZ-6r-ait" secondAttribute="bottom" id="EUR-64-T82"/>
+                <constraint firstAttribute="bottom" secondItem="vAZ-6r-ait" secondAttribute="bottom" constant="7" id="EUR-64-T82"/>
                 <constraint firstItem="dNT-Ef-dca" firstAttribute="top" secondItem="Rpt-fR-jNT" secondAttribute="top" id="FF5-Et-hVT"/>
                 <constraint firstItem="vAZ-6r-ait" firstAttribute="width" secondItem="dNT-Ef-dca" secondAttribute="width" id="Fvd-RW-nx9"/>
-                <constraint firstAttribute="bottom" secondItem="AYL-oL-3P1" secondAttribute="bottom" id="O3M-6l-NqU"/>
+                <constraint firstAttribute="bottom" secondItem="AYL-oL-3P1" secondAttribute="bottom" constant="7" id="O3M-6l-NqU"/>
                 <constraint firstItem="dNT-Ef-dca" firstAttribute="width" secondItem="Rpt-fR-jNT" secondAttribute="height" multiplier="37:26" id="Pcq-1o-mMU"/>
                 <constraint firstItem="AYL-oL-3P1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Rjq-pP-Hgo"/>
-                <constraint firstAttribute="bottom" secondItem="dNT-Ef-dca" secondAttribute="bottom" id="TTm-RD-aaZ"/>
+                <constraint firstAttribute="bottom" secondItem="dNT-Ef-dca" secondAttribute="bottom" constant="7" id="TTm-RD-aaZ"/>
                 <constraint firstItem="Rpt-fR-jNT" firstAttribute="leading" secondItem="dNT-Ef-dca" secondAttribute="trailing" constant="25" id="Yny-vD-Agg"/>
                 <constraint firstItem="vAZ-6r-ait" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yvx-SH-55s"/>
                 <constraint firstAttribute="trailing" secondItem="Rpt-fR-jNT" secondAttribute="trailing" constant="20" id="Ze1-j8-Fx6"/>
                 <constraint firstItem="AYL-oL-3P1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cQ3-B8-W3e"/>
                 <constraint firstItem="Rpt-fR-jNT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gEo-D4-EoH"/>
-                <constraint firstAttribute="bottom" secondItem="Rpt-fR-jNT" secondAttribute="bottom" id="iVR-QU-1yO"/>
+                <constraint firstAttribute="bottom" secondItem="Rpt-fR-jNT" secondAttribute="bottom" constant="7" id="iVR-QU-1yO"/>
                 <constraint firstItem="dNT-Ef-dca" firstAttribute="leading" secondItem="vAZ-6r-ait" secondAttribute="trailing" constant="25" id="j6M-C1-MH8"/>
                 <constraint firstItem="dNT-Ef-dca" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="tkG-v0-sC4"/>
                 <constraint firstItem="vAZ-6r-ait" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="x3i-Ui-vKt"/>
+                <constraint firstItem="Rpt-fR-jNT" firstAttribute="width" secondItem="dNT-Ef-dca" secondAttribute="width" id="yf8-Fy-Fsr"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
@@ -104,6 +119,7 @@
                     <exclude reference="839-uu-7xn"/>
                     <exclude reference="Yvx-SH-55s"/>
                     <exclude reference="x3i-Ui-vKt"/>
+                    <exclude reference="Cj1-aB-RSy"/>
                     <exclude reference="FF5-Et-hVT"/>
                     <exclude reference="Pcq-1o-mMU"/>
                     <exclude reference="tkG-v0-sC4"/>
@@ -117,8 +133,8 @@
         </view>
     </objects>
     <resources>
-        <image name="back_icon" width="19" height="36"/>
-        <image name="comment_icon" width="50" height="48"/>
-        <image name="share_icon" width="36" height="50"/>
+        <image name="back_icon" width="10" height="19"/>
+        <image name="comment_icon" width="24" height="24"/>
+        <image name="share_icon" width="24" height="24"/>
     </resources>
 </document>
