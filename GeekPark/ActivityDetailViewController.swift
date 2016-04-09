@@ -53,7 +53,6 @@ class ActivityDetailViewController: FullScreenViewController {
     let view = UIView(frame: CGRect(x: 0, y: 0, width: containerTable.frame.width, height: height))
     containerTable.tableHeaderView = view
     containerTable.contentInset = UIEdgeInsetsMake(-height, 0, 0, 0)
-    
   }
   
   override func viewWillAppear(animated: Bool) {
