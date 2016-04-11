@@ -21,6 +21,12 @@ class NotificationCell: UITableViewCell {
     didSet{ updateViews() }
   }
   
+  var isLast: Bool = false {
+    didSet{
+      separator.hidden = isLast
+    }
+  }
+  
   func updateViews(){
     if notificationGroup?.unreadCount ?? 0 > 0 {
       bagdeView.text = "\(notificationGroup?.unreadCount ?? 0)"
@@ -32,6 +38,5 @@ class NotificationCell: UITableViewCell {
     contentText.text = notificationGroup?.content
     timeText.text = NSDate(timeIntervalSince1970: Double(notificationGroup?.time ?? 0.0)).timeAgo
     iconImg.image = UIImage(named: notificationGroup?.imageName ?? "")
-    print(notificationGroup?.imageName)
   }
 }

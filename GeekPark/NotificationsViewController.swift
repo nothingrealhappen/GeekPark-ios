@@ -23,23 +23,29 @@ class NotificationsViewController: DetailViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
+    getData()
   }
   
   override func viewWillAppear(animated: Bool) {
+    self.tabBarController?.tabBar.hidden = true
     super.viewWillAppear(animated)
   }
+  
   
   func setupViews(){
     navigationItem.title = notificationGroup?.title
     setupTable()
   }
   
-  func setupTable(){
-    tableView.dataSource = self
-    tableView.delegate = self
+  func getData(){
     Notification.list(notificationGroup?.type ?? .System ){ notifications in
       self.notifications = notifications
     }
+  }
+  
+  func setupTable(){
+    tableView.dataSource = self
+    tableView.delegate = self
   }
   
 }

@@ -75,7 +75,7 @@ extension TopicsPageViewController: UITableViewDelegate{
     let topic = itemIndex == 0 ? topics[indexPath.row - 1] : topics[indexPath.row]
     let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicDetailViewController") as! TopicDetailViewController
     controller.topic = topic
-    navigationController?.pushViewController(controller, animated: true)
+    self.gct_pushAndHideTabbar(controller)
   }
 }
 

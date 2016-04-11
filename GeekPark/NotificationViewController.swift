@@ -33,8 +33,7 @@ class NotificationViewController: UIViewController {
   }
   
   func setupNaviBar(){
-    navigationController?.setNavigationBarHidden(false, animated: false)
-    navigationController?.navigationBar.topItem?.title = "消息"
+    navigationItem.title = "消息"
   }
   
 }
@@ -43,7 +42,7 @@ extension NotificationViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let controller = storyboard?.instantiateViewControllerWithIdentifier("NotificationsViewController") as! NotificationsViewController
     controller.notificationGroup = notificationGroups[indexPath.row]
-    navigationController?.pushViewController(controller, animated: true)
+    self.gct_pushAndHideTabbar(controller)
   }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -59,6 +58,9 @@ extension NotificationViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("NotificationCell") as! NotificationCell
     cell.notificationGroup = notificationGroups[indexPath.row]
+    if indexPath.row == notificationGroups.count - 1{
+      cell.isLast = true
+    }
     return cell
   }
   

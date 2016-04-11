@@ -20,7 +20,6 @@ class Notification: BaseModel{
   }
   
   static func list(type: NotificationType, callback: ([Notification])-> ()){
-    print(type)
     if type == .Comment {
       callback([])
       return
@@ -28,8 +27,8 @@ class Notification: BaseModel{
     var list = [Notification]()
     for _ in 0...2{
       let n = Notification()
-      n.title = "您的未来头条活动报名申请没有获得通过～"
-      n.content = "很遗憾，活动太火爆了，当前活动报名人数过多，您的申请没有获得通过～"
+      n.title = "您的未来头条活动报名申请没有获得通过~"
+      n.content = "很遗憾，活动太火爆了，当前活动报名人数过多，您的申请没有获得通过~"
       n.date = "3月18"
       n.type = type.rawValue
       list.append(n)

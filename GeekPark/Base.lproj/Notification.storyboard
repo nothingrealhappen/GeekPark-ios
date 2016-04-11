@@ -130,7 +130,7 @@
         <!--Notifications View Controller-->
         <scene sceneID="yQr-oD-EBF">
             <objects>
-                <viewController storyboardIdentifier="NotificationsViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="HYU-Tb-hSe" customClass="NotificationsViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificationsViewController" automaticallyAdjustsScrollViewInsets="NO" id="HYU-Tb-hSe" customClass="NotificationsViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JBJ-9H-dK6"/>
                         <viewControllerLayoutGuide type="bottom" id="Rgw-Xl-KdK"/>
@@ -421,7 +421,7 @@
         <!--消息-->
         <scene sceneID="N48-Hk-iIx">
             <objects>
-                <navigationController storyboardIdentifier="NotificationViewController" automaticallyAdjustsScrollViewInsets="NO" id="6Bl-rf-c3L" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NotificationViewController" id="6Bl-rf-c3L" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="message-icon" id="jOb-cT-2uz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
