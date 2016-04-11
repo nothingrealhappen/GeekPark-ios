@@ -55,6 +55,10 @@ extension NotificationsViewController: UITableViewDelegate{
     return notificationGroup?.type == .System ? 180 : 270
   }
   
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+  }
+  
 }
 
 extension NotificationsViewController: UITableViewDataSource{

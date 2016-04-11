@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1px-GE-cfP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -10,7 +10,7 @@
         <!--Activities View Controller-->
         <scene sceneID="Wva-yu-vcG">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dPK-ON-u67" customClass="ActivitiesViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="dPK-ON-u67" customClass="ActivitiesViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ppd-B8-4ae"/>
                         <viewControllerLayoutGuide type="bottom" id="HY2-rK-ma2"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="241" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-f3-XUy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="241" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-f3-XUy">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -614,25 +614,24 @@
             </objects>
             <point key="canvasLocation" x="1658" y="917"/>
         </scene>
-        <!--活动-->
-        <scene sceneID="D5Z-SN-wXE">
+        <!--Activity Containner View Controller-->
+        <scene sceneID="bfK-ZX-Y56">
             <objects>
-                <navigationController storyboardIdentifier="ActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="1px-GE-cfP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="活动" image="activity-icon" id="jwP-Dy-06E"/>
-                    <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VdO-TI-S6I">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="dPK-ON-u67" kind="relationship" relationship="rootViewController" id="oh8-7l-8Bb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NdC-MX-Zeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="a4v-s9-gUm" customClass="ActivityContainnerViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7s0-pT-NHe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dbb-fq-u0C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e3h-BZ-hrB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DuN-wl-n44"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hru-En-R4K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="152" y="917"/>
+            <point key="canvasLocation" x="1440" y="1604"/>
         </scene>
         <!--Activity Introduction View Controller-->
         <scene sceneID="TB6-mw-LUn">
@@ -681,6 +680,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOU-Ja-61N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2386" y="917"/>
+        </scene>
+        <!--活动-->
+        <scene sceneID="a2M-Ba-uKP">
+            <objects>
+                <navigationController storyboardIdentifier="ActivityContainnerViewController" automaticallyAdjustsScrollViewInsets="NO" id="sMp-mZ-TJF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="活动" image="activity-icon" id="jwP-Dy-06E"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="78A-47-TYi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a4v-s9-gUm" kind="relationship" relationship="rootViewController" id="dzE-rc-Rzv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUJ-Xm-Sxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628" y="1604"/>
         </scene>
     </scenes>
     <resources>

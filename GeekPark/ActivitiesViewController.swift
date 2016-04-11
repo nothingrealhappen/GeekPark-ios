@@ -21,11 +21,19 @@ class ActivitiesViewController: UIViewController, GRefreshable {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    setupViews()
+    loadData()
+  }
+  
+  func setupViews(){
+    self.title = "活动"
+    setupTableView()
+  }
+  
+  func setupTableView(){
     tableView.dataSource = self
     tableView.delegate = self
     tableView.refreshableDelegate = self
-    navigationItem.title = "活动"
-    loadData()
   }
   
   deinit{

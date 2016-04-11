@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="294" y="595"/>
         </scene>
-        <!--ActivitiesViewController-->
+        <!--ActivityContainnerViewController-->
         <scene sceneID="FzM-gw-gQG">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="ActivitiesViewController" storyboardName="Activity" referencedIdentifier="ActivitiesViewController" id="CSl-fM-9y6" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="ActivitiesViewController" storyboardName="Activity" referencedIdentifier="ActivityContainnerViewController" id="CSl-fM-9y6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="MPZ-XZ-fCQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NB0-LR-OeO" userLabel="First Responder" sceneMemberID="firstResponder"/>

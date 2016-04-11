@@ -13,7 +13,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   @IBOutlet weak var topicsTable: UITableView!
   var changeTopLabelDelegate: ChangeTopLabelDelegate?
   
-  var itemIndex = 0
+  var itemIndex = -1
   var topLoopTopic = [Topic](){ didSet{ topicsTable.reloadData() } }
   var page = 1
   var topics = [Topic](){
@@ -21,7 +21,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
       topicsTable.reloadData()
     }
   }
-  var currentCollection: String?
+  var currentCollection: String = ""
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -37,7 +37,7 @@ class TopicsPageViewController: UIViewController, GRefreshable {
   
   
   func getTopics(){
-    Topic.list(page,handler: self, collectionName: currentCollection!){ topics in
+    Topic.list(page,handler: self, collectionName: currentCollection){ topics in
       self.topics = self.topics + topics
       self.topicsTable.isLoading = false
     }

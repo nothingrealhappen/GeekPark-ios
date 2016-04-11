@@ -41,7 +41,7 @@ class TopicsContainerViewController: UIViewController, ChangePageDelegate{
     controllers = collectionTitle.enumerate().map{ (index, _) in
       let controller = storyboard?.instantiateViewControllerWithIdentifier("TopicsPageViewController") as! TopicsPageViewController
       controller.itemIndex = index
-      controller.currentCollection = collectionTitle[index]
+      controller.currentCollection = collectionTitle[index] ?? ""
       controller.changeTopLabelDelegate = self
       return controller
     }
