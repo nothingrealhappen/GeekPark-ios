@@ -462,7 +462,7 @@
         <scene sceneID="UEL-UY-dNt">
             <objects>
                 <navigationController storyboardIdentifier="TopicsViewController" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FE3-Hk-44t" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="资讯" image="news-icon" id="4bR-9a-tPk"/>
+                    <tabBarItem key="tabBarItem" title="资讯" image="news-icon" selectedImage="news-icon-selected" id="4bR-9a-tPk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fTU-bh-rcX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -480,5 +480,6 @@
     </scenes>
     <resources>
         <image name="news-icon" width="24" height="24"/>
+        <image name="news-icon-selected" width="24" height="24"/>
     </resources>
 </document>

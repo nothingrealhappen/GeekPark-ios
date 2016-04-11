@@ -391,6 +391,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rgw-Xl-KdK" firstAttribute="top" secondItem="XI2-Ng-Y1I" secondAttribute="bottom" constant="8" symbolic="YES" id="GcK-dg-PbW"/>
                             <constraint firstItem="Rgw-Xl-KdK" firstAttribute="top" secondItem="XI2-Ng-Y1I" secondAttribute="baseline" id="RXe-6z-WjQ"/>
@@ -422,7 +423,7 @@
         <scene sceneID="N48-Hk-iIx">
             <objects>
                 <navigationController storyboardIdentifier="NotificationViewController" automaticallyAdjustsScrollViewInsets="NO" id="6Bl-rf-c3L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="消息" image="message-icon" id="jOb-cT-2uz"/>
+                    <tabBarItem key="tabBarItem" title="消息" image="message-icon" selectedImage="message-icon-selected" id="jOb-cT-2uz"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mcg-Q5-p6j">
@@ -441,8 +442,9 @@
     </scenes>
     <resources>
         <image name="activity-img" width="357" height="174"/>
-        <image name="arrow-icon" width="16" height="31"/>
-        <image name="message-icon" width="20" height="24"/>
+        <image name="arrow-icon" width="10" height="19"/>
+        <image name="message-icon" width="24" height="24"/>
+        <image name="message-icon-selected" width="24" height="24"/>
         <image name="notification-icon" width="58" height="52"/>
     </resources>
 </document>

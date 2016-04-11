@@ -90,7 +90,7 @@
         <scene sceneID="Kpa-fm-O8M">
             <objects>
                 <navigationController storyboardIdentifier="UserViewController" automaticallyAdjustsScrollViewInsets="NO" id="vLX-st-MRa" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="user-icon" id="jWB-dq-kip"/>
+                    <tabBarItem key="tabBarItem" title="我的" image="user-icon" selectedImage="user-icon-selected" id="jWB-dq-kip"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="M6N-4h-Pq5">
@@ -109,5 +109,6 @@
     </scenes>
     <resources>
         <image name="user-icon" width="24" height="24"/>
+        <image name="user-icon-selected" width="24" height="24"/>
     </resources>
 </document>

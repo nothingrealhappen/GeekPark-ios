@@ -10,7 +10,7 @@
         <!--Activities View Controller-->
         <scene sceneID="Wva-yu-vcG">
             <objects>
-                <viewController storyboardIdentifier="ActivitiesViewController" automaticallyAdjustsScrollViewInsets="NO" id="dPK-ON-u67" customClass="ActivitiesViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivitiesViewController" id="dPK-ON-u67" customClass="ActivitiesViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ppd-B8-4ae"/>
                         <viewControllerLayoutGuide type="bottom" id="HY2-rK-ma2"/>
@@ -19,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="241" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-f3-XUy">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="241" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xQu-f3-XUy">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ActivityCell" rowHeight="241" id="Rzb-hX-dOB" customClass="ActivityCell" customModule="GeekPark" customModuleProvider="target">
@@ -197,6 +197,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HY2-rK-ma2" firstAttribute="top" secondItem="xQu-f3-XUy" secondAttribute="bottom" id="2W9-0p-ZiU"/>
                             <constraint firstItem="xQu-f3-XUy" firstAttribute="leading" secondItem="XvS-DM-dA8" secondAttribute="leading" id="MlJ-M2-WTt"/>
@@ -685,7 +686,7 @@
         <scene sceneID="a2M-Ba-uKP">
             <objects>
                 <navigationController storyboardIdentifier="ActivityContainnerViewController" automaticallyAdjustsScrollViewInsets="NO" id="sMp-mZ-TJF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="活动" image="activity-icon" id="jwP-Dy-06E"/>
+                    <tabBarItem key="tabBarItem" title="活动" image="activity-icon" selectedImage="activity-icon-selected" id="jwP-Dy-06E"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="78A-47-TYi">
@@ -703,7 +704,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="activity-icon" width="16" height="16"/>
+        <image name="activity-icon" width="24" height="24"/>
+        <image name="activity-icon-selected" width="24" height="24"/>
         <image name="activity-img" width="357" height="174"/>
         <image name="arrow-icon" width="10" height="19"/>
         <image name="clock-icon" width="16" height="16"/>

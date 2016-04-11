@@ -40,6 +40,7 @@ extension UserViewController: UITableViewDelegate{
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let setting = settingGroups[indexPath.section][indexPath.row]
     if let controller = setting.controller {
+      controller.title = setting.title
       self.gct_pushAndHideTabbar(controller)
     }
   }

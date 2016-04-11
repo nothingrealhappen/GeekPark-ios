@@ -46,7 +46,6 @@
 		F726204F1CA27AD400822C73 /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F726204E1CA27AD400822C73 /* ActivityDetailViewController.swift */; };
 		F72620531CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72620521CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift */; };
 		F72620551CA29DB100822C73 /* TopMainInfoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72620541CA29DB100822C73 /* TopMainInfoViewCell.swift */; };
-		F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */; };
 		F73BEC991C9BB5A800E5AFEF /* TopicsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */; };
 		F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */; };
 		F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73BECA21C9BD99700E5AFEF /* BaseModel.swift */; };
@@ -127,7 +126,6 @@
 		F726204E1CA27AD400822C73 /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		F72620521CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopImageHeaderCellTableViewCell.swift; sourceTree = "<group>"; };
 		F72620541CA29DB100822C73 /* TopMainInfoViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopMainInfoViewCell.swift; sourceTree = "<group>"; };
-		F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		F73BEC981C9BB5A800E5AFEF /* TopicsContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsContainerViewController.swift; sourceTree = "<group>"; };
 		F73BEC9A1C9BB60B00E5AFEF /* TopicsPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicsPageViewController.swift; sourceTree = "<group>"; };
 		F73BECA21C9BD99700E5AFEF /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -298,14 +296,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		F73BEC941C9AB26F00E5AFEF /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F73BEC921C9AB26900E5AFEF /* TabBarItem.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		F73BEC971C9BB58600E5AFEF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,15 +328,6 @@
 				F7B0BD011CA929F300EE6A36 /* Config.swift */,
 			);
 			name = Commen;
-			sourceTree = "<group>";
-		};
-		F73BECA01C9BD92300E5AFEF /* Container */ = {
-			isa = PBXGroup;
-			children = (
-				F73BECA71C9BDAC400E5AFEF /* Controller */,
-				F73BEC941C9AB26F00E5AFEF /* Model */,
-			);
-			name = Container;
 			sourceTree = "<group>";
 		};
 		F73BECA11C9BD97800E5AFEF /* Model */ = {
@@ -391,13 +372,6 @@
 				F73BECA81C9BDAD200E5AFEF /* Controller */,
 			);
 			name = User;
-			sourceTree = "<group>";
-		};
-		F73BECA71C9BDAC400E5AFEF /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		F73BECA81C9BDAD200E5AFEF /* Controller */ = {
@@ -471,7 +445,6 @@
 				F73BECA61C9BDA8C00E5AFEF /* User */,
 				F73BECA51C9BDA7600E5AFEF /* Notification */,
 				F73BECA41C9BDA4500E5AFEF /* Activity */,
-				F73BECA01C9BD92300E5AFEF /* Container */,
 				F73BEC9F1C9BD6D800E5AFEF /* Commen */,
 				F73BEC9E1C9BD5F500E5AFEF /* Topic */,
 				F741ED7E1C9A76F8000A808B /* AppDelegate.swift */,
@@ -651,7 +624,6 @@
 				F7C0424D1CAD1361000E4F4F /* ActivityIntroductionViewController.swift in Sources */,
 				F72620531CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
-				F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */,
 				F73BECB01C9BDB4C00E5AFEF /* ActivitiesViewController.swift in Sources */,
 				8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */,
 				8EA58C8D1CBB91580069F2BD /* NSObject+Extension.swift in Sources */,
