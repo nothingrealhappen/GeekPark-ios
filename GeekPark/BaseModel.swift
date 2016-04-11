@@ -17,10 +17,10 @@ public enum Status{
 
 class BaseModel: EVObject{
   
-//  static let event_api_root = "http://events.geekpark.net/api/v2/"
-  static let event_api_root = "http://lh:3000/api/v2/"
-  static let main_api_root = "http://lh:3001/api/v1/"
-//  static let main_api_root = "http://www.geekpark.net/api/v1/"
+  static let event_api_root = "http://events.geekpark.net/api/v2/"
+//  static let event_api_root = "http://lh:3000/api/v2/"
+//  static let main_api_root = "http://lh:3001/api/v1/"
+  static let main_api_root = "http://www.geekpark.net/api/v1/"
   
   static func doRequest(
     method:Alamofire.Method = .GET,

@@ -10,38 +10,49 @@ import UIKit
 class NotificationsViewController: DetailViewController {
   
   @IBOutlet weak var tableView: UITableView!
-  var type: NotificationType = .System
+  var notificationGroup: NotificationGroup?
   var notifications = [Notification]() {
-    didSet{ tableView.reloadData() }
+    didSet{
+      tableView.reloadData()
+      if notifications.isEmpty {
+        onDataEmpty()
+      }
+    }
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     setupViews()
+    getData()
   }
   
   override func viewWillAppear(animated: Bool) {
+    self.tabBarController?.tabBar.hidden = true
     super.viewWillAppear(animated)
   }
   
+  
   func setupViews(){
-    navigationItem.title = type == .System ? "系统通知" : "活动推广"
+    navigationItem.title = notificationGroup?.title
     setupTable()
+  }
+  
+  func getData(){
+    Notification.list(notificationGroup?.type ?? .System ){ notifications in
+      self.notifications = notifications
+    }
   }
   
   func setupTable(){
     tableView.dataSource = self
     tableView.delegate = self
-    Notification.list(type){ notifications in
-      self.notifications = notifications
-    }
   }
   
 }
 
 extension NotificationsViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    return type == .System ? 150 : 250
+    return notificationGroup?.type == .System ? 180 : 270
   }
   
 }

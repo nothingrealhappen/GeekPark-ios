@@ -9,7 +9,7 @@
         <scene sceneID="mcq-5Q-1YJ">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="NotificationViewController" storyboardName="Notification" referencedIdentifier="NotificationViewController" id="Tm0-d0-82X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ltQ-Ay-BNQ"/>
+                    <tabBarItem key="tabBarItem" title="" id="ltQ-Ay-BNQ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJH-eU-yka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

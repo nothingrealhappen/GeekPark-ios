@@ -24,7 +24,7 @@ class ActivitiesViewController: UIViewController, GRefreshable {
     tableView.dataSource = self
     tableView.delegate = self
     tableView.refreshableDelegate = self
-    navigationController?.navigationBar.topItem?.title = "活动"
+    navigationItem.title = "活动"
     loadData()
   }
   
@@ -57,7 +57,7 @@ extension ActivitiesViewController: UITableViewDelegate{
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let controller = storyboard?.instantiateViewControllerWithIdentifier("ActivityDetailViewController") as! ActivityDetailViewController
     controller.activity_id = activities[indexPath.row].id
-    navigationController?.pushViewController(controller, animated: true)
+    self.gct_pushAndHideTabbar(controller)
   }
 }
 

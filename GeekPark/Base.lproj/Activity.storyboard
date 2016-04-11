@@ -216,7 +216,7 @@
         <!--Activity Detail View Controller-->
         <scene sceneID="dFZ-4l-dhy">
             <objects>
-                <viewController storyboardIdentifier="ActivityDetailViewController" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="uGR-gT-Vh7" customClass="ActivityDetailViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ActivityDetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="uGR-gT-Vh7" customClass="ActivityDetailViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f1a-wm-JZa"/>
                         <viewControllerLayoutGuide type="bottom" id="lsQ-zh-Sjv"/>

@@ -10,7 +10,6 @@ import UIKit
 
 class NotificationCell: UITableViewCell {
 
-  @IBOutlet weak var iconImgBorder: UIImageView!
   @IBOutlet weak var timeText: UILabel!
   @IBOutlet weak var titleText: UILabel!
   @IBOutlet weak var contentText: UILabel!
@@ -18,19 +17,26 @@ class NotificationCell: UITableViewCell {
   @IBOutlet weak var separator: UIView!
   @IBOutlet weak var iconImg: UIImageView!
   
-  var unreadCount :Int? {
+  var notificationGroup :NotificationGroup?{
     didSet{ updateViews() }
   }
   
+  var isLast: Bool = false {
+    didSet{
+      separator.hidden = isLast
+    }
+  }
+  
   func updateViews(){
-    iconImgBorder.circlizeWithBorder()
-    if unreadCount ?? 0 > 0 {
-      bagdeView.text = "\(unreadCount!)"
+    if notificationGroup?.unreadCount ?? 0 > 0 {
+      bagdeView.text = "\(notificationGroup?.unreadCount ?? 0)"
       bagdeView.circlize()
     }else{
       bagdeView.removeFromSuperview()
     }
+    titleText.text = notificationGroup?.title
+    contentText.text = notificationGroup?.content
+    timeText.text = NSDate(timeIntervalSince1970: Double(notificationGroup?.time ?? 0.0)).timeAgo
+    iconImg.image = UIImage(named: notificationGroup?.imageName ?? "")
   }
-  
-  
 }
