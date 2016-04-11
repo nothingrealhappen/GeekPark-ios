@@ -44,7 +44,7 @@ class ActivityDetailViewController: FullScreenViewController {
     
     Activity.member(activity_id){ activity in
       self.activity = activity
-      self.headerDatas = [activity.banner ?? "", "活动简介", "活动日程", "\(activity.audiences?.count ?? 0)人已报名", "\(activity.comments?.count ?? 0)条评论"]
+      self.headerDatas = [activity.banner ?? "", "活动简介", "活动日程", "\(activity.audiences_count)人已报名", "\(activity.comments?.count ?? 0)条评论"]
       self.datas = [activity.infoDictionary(), [activity.introduction ?? ""], [activity.speeches ?? []], [activity.audiences ?? []], [activity.comments ?? []]]
     }
     
