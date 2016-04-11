@@ -33,13 +33,14 @@ class NotificationViewController: UIViewController {
   }
   
   func setupNaviBar(){
-    navigationItem.title = "消息"
+    self.title = "消息"
   }
   
 }
 
 extension NotificationViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
     let controller = storyboard?.instantiateViewControllerWithIdentifier("NotificationsViewController") as! NotificationsViewController
     controller.notificationGroup = notificationGroups[indexPath.row]
     self.gct_pushAndHideTabbar(controller)
@@ -48,6 +49,8 @@ extension NotificationViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     return 44+10+8+1
   }
+  
+  
 }
 
 extension NotificationViewController: UITableViewDataSource {

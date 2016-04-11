@@ -9,6 +9,19 @@
 import UIKit
 
 extension UIViewController{
+  
+  class func initByName(storyboardName: String) -> Self
+  {
+    return instantiateFromStoryboardHelper(storyboardName, storyboardId: nameOfClass)
+  }
+  
+  private class func instantiateFromStoryboardHelper<T>(storyboardName: String, storyboardId: String) -> T
+  {
+    let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+    let controller = storyboard.instantiateViewControllerWithIdentifier(storyboardId) as! T
+    return controller
+  }
+  
   private func gct_pushViewController(viewController: UIViewController, animated: Bool, hideTabbar: Bool) {
     viewController.hidesBottomBarWhenPushed = hideTabbar
     self.navigationController?.pushViewController(viewController, animated: animated)
@@ -25,3 +38,4 @@ extension UIViewController{
   
 
 }
+

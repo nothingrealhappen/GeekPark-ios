@@ -29,6 +29,8 @@
 		8EA58C841CBB563D0069F2BD /* TabBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA58C831CBB563D0069F2BD /* TabBar+Extension.swift */; };
 		8EA58C891CBB7B6D0069F2BD /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA58C881CBB7B6D0069F2BD /* Setting.swift */; };
 		8EA58C8B1CBB7E5E0069F2BD /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA58C8A1CBB7E5E0069F2BD /* UserCell.swift */; };
+		8EA58C8D1CBB91580069F2BD /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA58C8C1CBB91580069F2BD /* NSObject+Extension.swift */; };
+		8EA58C911CBBAA300069F2BD /* ActivityContainnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA58C901CBBAA300069F2BD /* ActivityContainnerViewController.swift */; };
 		F373234348C93092C2815404 /* Pods_GeekPark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58DC000D3B788B4521751996 /* Pods_GeekPark.framework */; };
 		F72092AE1CA514300096962F /* ActivityJoinedAudienceViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092AD1CA514300096962F /* ActivityJoinedAudienceViewCell.swift */; };
 		F72092B01CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72092AF1CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift */; };
@@ -107,6 +109,8 @@
 		8EA58C831CBB563D0069F2BD /* TabBar+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabBar+Extension.swift"; sourceTree = "<group>"; };
 		8EA58C881CBB7B6D0069F2BD /* Setting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		8EA58C8A1CBB7E5E0069F2BD /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		8EA58C8C1CBB91580069F2BD /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		8EA58C901CBBAA300069F2BD /* ActivityContainnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityContainnerViewController.swift; sourceTree = "<group>"; };
 		A5BDB739B92701C94D062075 /* Pods-GeekPark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.debug.xcconfig"; sourceTree = "<group>"; };
 		B83C40D5FD667074BE4408D4 /* Pods-GeekPark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeekPark.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeekPark/Pods-GeekPark.release.xcconfig"; sourceTree = "<group>"; };
 		F72092AD1CA514300096962F /* ActivityJoinedAudienceViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityJoinedAudienceViewCell.swift; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				8EA58C811CBB552E0069F2BD /* NavigationBar+Extension.swift */,
 				8EA58C831CBB563D0069F2BD /* TabBar+Extension.swift */,
 				F78E4B8A1CB7882B0049C560 /* UIColor+HEXColor.swift */,
+				8EA58C8C1CBB91580069F2BD /* NSObject+Extension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -418,6 +423,7 @@
 				F73BECAF1C9BDB4C00E5AFEF /* ActivitiesViewController.swift */,
 				F726204E1CA27AD400822C73 /* ActivityDetailViewController.swift */,
 				F7C0424C1CAD1361000E4F4F /* ActivityIntroductionViewController.swift */,
+				8EA58C901CBBAA300069F2BD /* ActivityContainnerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -648,6 +654,7 @@
 				F73BEC931C9AB26900E5AFEF /* TabBarItem.swift in Sources */,
 				F73BECB01C9BDB4C00E5AFEF /* ActivitiesViewController.swift in Sources */,
 				8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */,
+				8EA58C8D1CBB91580069F2BD /* NSObject+Extension.swift in Sources */,
 				F7BB45EE1CA3D74F006741CB /* ActivityBaseTableViewCell.swift in Sources */,
 				F73C03841CA4D9AF004AC3D8 /* ActivitySpeechesViewCell.swift in Sources */,
 				8E62A4231CAE2119007867BD /* LaunchView.swift in Sources */,
@@ -673,6 +680,7 @@
 				8EA58C821CBB552E0069F2BD /* NavigationBar+Extension.swift in Sources */,
 				F7B0BD041CA9321700EE6A36 /* Audience.swift in Sources */,
 				8E9601B31CAB878300B2A126 /* User.swift in Sources */,
+				8EA58C911CBBAA300069F2BD /* ActivityContainnerViewController.swift in Sources */,
 				8EA58C8B1CBB7E5E0069F2BD /* UserCell.swift in Sources */,
 				F72092AE1CA514300096962F /* ActivityJoinedAudienceViewCell.swift in Sources */,
 				F78E4B8B1CB7882B0049C560 /* UIColor+HEXColor.swift in Sources */,

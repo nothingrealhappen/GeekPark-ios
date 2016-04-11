@@ -19,7 +19,7 @@ class UserViewController: UIViewController {
   }
 
   func setupViews(){
-    self.navigationItem.title = "我的"
+    self.title = "我的"
     
     tableView.dataSource = self
     tableView.delegate = self
@@ -38,6 +38,10 @@ extension UserViewController: UITableViewDelegate{
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    let setting = settingGroups[indexPath.section][indexPath.row]
+    if let controller = setting.controller {
+      self.gct_pushAndHideTabbar(controller)
+    }
   }
   
   func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
