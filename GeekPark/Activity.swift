@@ -48,27 +48,29 @@ class Activity: BaseModel{
   }
   
   func infoDictionary() -> NSArray{
-    return [["title": "活动", "value": title], ["title": "时间", "value": NSDate.formateTimeFromTimeStamp(timestamp_start_at, formateString: "YYYY.MM.DD.hh:mm") ?? ""], ["title": "地点", "value": location ?? ""]]
+    return [["image": "activity-icon", "value": title, "status": status], ["image": "clock-icon", "value": NSDate.formateTimeFromTimeStamp(timestamp_start_at, formateString: "MM.dd hh:mm") ?? ""], ["image": "location-icon", "value": location ?? "", "arrow": ""]]
   }
   
-  let statusMap = [
+  static let statusMap = [
     "end": "已结束",
     "applying": "报名中",
+    "examing": "审核中",
     "progressing": "进行中"
   ]
   
-  let statusColorMap = [
+  static let statusColorMap = [
     "end": UIColor(red: 160/255.0, green: 160/255.0, blue: 160/255.0, alpha: 1),
     "applying": UIColor(red: 45/255.0, green: 198/255.0, blue: 105/255.0, alpha: 1),
+    "examing": UIColor(red: 45/255.0, green: 198/255.0, blue: 105/255.0, alpha: 1),
     "progressing": UIColor(red: 220/255.0, green: 146/255.0, blue: 1/255.0, alpha: 1),
   ]
   
   func statusText() -> String?{
-    return statusMap[self.status] ?? statusMap["applying"]
+    return Activity.statusMap[self.status] ?? Activity.statusMap["applying"]
   }
   
   func statusColor() -> UIColor? {
-    return statusColorMap[self.status] ?? statusColorMap["applying"]
+    return Activity.statusColorMap[self.status] ?? Activity.statusColorMap["applying"]
   }
   
 }

@@ -27,6 +27,7 @@ class ActivityCommentsViewCell: ActivityBaseTableViewCell{
   }
   
   func getHeightAndReloadTable(comments: [Comment]) -> CGFloat{
+    if comments.count == 0{ return 55 }
     let height: CGFloat = comments.reduce(0){ sum, comment in
       let tmpHeight = comment.body!.boundingRectWithSize(CGSize(width:UIScreen.mainScreen().bounds.width-40, height: CGFloat(DBL_MAX)), options: NSStringDrawingOptions.UsesLineFragmentOrigin, attributes: [NSFontAttributeName: UIFont(name: "HelveticaNeue-UltraLight",
         size: 17.0)! , NSForegroundColorAttributeName: UIColor.redColor()], context: nil).height

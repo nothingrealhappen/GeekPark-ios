@@ -12,7 +12,6 @@ class AudienceAvatorCollectionViewCell: UICollectionViewCell {
   @IBOutlet weak var avatorImage: UIImageView!
   func setUrl(audience: Audience){
     avatorImage.kf_setImageWithURL(NSURL(string: audience.avator ?? "")!)
-    avatorImage.kf_setImageWithURL(NSURL(string: audience.avator ?? "")!, placeholderImage: UIImage(named: "user_icon"))
     avatorImage.circlize()
   }
 }

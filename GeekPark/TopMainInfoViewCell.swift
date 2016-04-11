@@ -8,24 +8,44 @@
 
 import UIKit
 
-enum LineStatus{
+enum LineStatus {
   case Normal
   case Last
 }
 
-class TopMainInfoViewCell: ActivityBaseTableViewCell{
+class TopMainInfoViewCell: ActivityBaseTableViewCell {
   
   @IBOutlet weak var value: UILabel!
-  @IBOutlet weak var mainTitle: UILabel!
+  @IBOutlet weak var icon: UIImageView!
   @IBOutlet weak var buttomLine: UIView!
+  @IBOutlet weak var statusView: UIView!
+  @IBOutlet weak var statusLabel: UILabel!
+  @IBOutlet weak var arrowView: UIImageView!
+  
   var lineStatus: LineStatus = .Normal
   
-  override func setData(data: Any){
+  override func setData(data: Any) {
     let dic = data as! Dictionary<String, String>
-    self.value.text = dic["value"]
-    self.mainTitle.text = dic["title"]
+    value.text = dic["value"]
+    icon.image = UIImage(named: dic["image"] ?? "")
     if lineStatus == .Last {
       buttomLine?.removeFromSuperview()
     }
+    
+    if let status = dic["status"] {
+      statusView.backgroundColor = Activity.statusColorMap[status]
+      statusLabel.text = Activity.statusMap[status]
+      arrowView.hidden = true
+      return
+    }
+    
+    if let _ = dic["arrow"] {
+      statusView.hidden = true
+      return
+    }
+    
+    arrowView.hidden = true
+    statusView.hidden = true
   }
+  
 }

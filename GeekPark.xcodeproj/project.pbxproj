@@ -69,6 +69,10 @@
 		F78E4B7F1CB4D54A0049C560 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B7E1CB4D54A0049C560 /* CommentsView.swift */; };
 		F78E4B811CB4D67C0049C560 /* CommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F78E4B801CB4D67C0049C560 /* CommentsView.xib */; };
 		F78E4B831CB4F3A90049C560 /* CommentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B821CB4F3A90049C560 /* CommentViewCell.swift */; };
+		F78E4B851CB62E220049C560 /* CTTopNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B841CB62E220049C560 /* CTTopNavigationBar.swift */; };
+		F78E4B871CB62E860049C560 /* CTTopNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = F78E4B861CB62E860049C560 /* CTTopNavigationBar.xib */; };
+		F78E4B891CB756BE0049C560 /* WriteOrLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B881CB756BE0049C560 /* WriteOrLikeButton.swift */; };
+		F78E4B8B1CB7882B0049C560 /* UIColor+HEXColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78E4B8A1CB7882B0049C560 /* UIColor+HEXColor.swift */; };
 		F7B0BD041CA9321700EE6A36 /* Audience.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B0BD031CA9321700EE6A36 /* Audience.swift */; };
 		F7BB45EE1CA3D74F006741CB /* ActivityBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BB45ED1CA3D74F006741CB /* ActivityBaseTableViewCell.swift */; };
 		F7C042471CAB7D13000E4F4F /* BaseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C042461CAB7D13000E4F4F /* BaseButton.swift */; };
@@ -144,6 +148,10 @@
 		F78E4B7E1CB4D54A0049C560 /* CommentsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		F78E4B801CB4D67C0049C560 /* CommentsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentsView.xib; sourceTree = "<group>"; };
 		F78E4B821CB4F3A90049C560 /* CommentViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewCell.swift; sourceTree = "<group>"; };
+		F78E4B841CB62E220049C560 /* CTTopNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CTTopNavigationBar.swift; sourceTree = "<group>"; };
+		F78E4B861CB62E860049C560 /* CTTopNavigationBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTTopNavigationBar.xib; sourceTree = "<group>"; };
+		F78E4B881CB756BE0049C560 /* WriteOrLikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteOrLikeButton.swift; sourceTree = "<group>"; };
+		F78E4B8A1CB7882B0049C560 /* UIColor+HEXColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HEXColor.swift"; sourceTree = "<group>"; };
 		F7B0BD011CA929F300EE6A36 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		F7B0BD031CA9321700EE6A36 /* Audience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audience.swift; sourceTree = "<group>"; };
 		F7BB45ED1CA3D74F006741CB /* ActivityBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityBaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -258,6 +266,7 @@
 				8E48FD851CB7B2DD00BDEDAE /* UIViewController+Extension.swift */,
 				8EA58C811CBB552E0069F2BD /* NavigationBar+Extension.swift */,
 				8EA58C831CBB563D0069F2BD /* TabBar+Extension.swift */,
+				F78E4B8A1CB7882B0049C560 /* UIColor+HEXColor.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -464,6 +473,9 @@
 				F78E4B7E1CB4D54A0049C560 /* CommentsView.swift */,
 				F78E4B821CB4F3A90049C560 /* CommentViewCell.swift */,
 				F78E4B801CB4D67C0049C560 /* CommentsView.xib */,
+				F78E4B841CB62E220049C560 /* CTTopNavigationBar.swift */,
+				F78E4B861CB62E860049C560 /* CTTopNavigationBar.xib */,
+				F78E4B881CB756BE0049C560 /* WriteOrLikeButton.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -538,6 +550,7 @@
 				F73C03881CA4DE2E004AC3D8 /* ActivitySpeechGuestViewCell.xib in Resources */,
 				8E62A4251CAE21A9007867BD /* LaunchView.xib in Resources */,
 				F741ED841C9A76F8000A808B /* Main.storyboard in Resources */,
+				F78E4B871CB62E860049C560 /* CTTopNavigationBar.xib in Resources */,
 				F73BECB81C9BDC7800E5AFEF /* Topic.storyboard in Resources */,
 				F73BECBE1C9BDCAC00E5AFEF /* User.storyboard in Resources */,
 				F73BECB31C9BDBAC00E5AFEF /* Notification.storyboard in Resources */,
@@ -602,6 +615,7 @@
 			files = (
 				8E1616751CA1ABFE00E781B2 /* Activity.swift in Sources */,
 				8E92EDB31CAA440C0075D95F /* SystemNotificationCell.swift in Sources */,
+				F78E4B891CB756BE0049C560 /* WriteOrLikeButton.swift in Sources */,
 				8E9601AC1CAA6EF300B2A126 /* ActivityNotificationCell.swift in Sources */,
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
 				F72092C61CA792040096962F /* Guest.swift in Sources */,
@@ -630,6 +644,7 @@
 				F73C03821CA4D463004AC3D8 /* ActivitySpeechGuestViewCell.swift in Sources */,
 				8E3800331CABBAED006CBE03 /* Comment.swift in Sources */,
 				F726204F1CA27AD400822C73 /* ActivityDetailViewController.swift in Sources */,
+				F78E4B851CB62E220049C560 /* CTTopNavigationBar.swift in Sources */,
 				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
 				F78E4B7F1CB4D54A0049C560 /* CommentsView.swift in Sources */,
 				8EA58C841CBB563D0069F2BD /* TabBar+Extension.swift in Sources */,
@@ -644,6 +659,7 @@
 				F7B0BD041CA9321700EE6A36 /* Audience.swift in Sources */,
 				8E9601B31CAB878300B2A126 /* User.swift in Sources */,
 				F72092AE1CA514300096962F /* ActivityJoinedAudienceViewCell.swift in Sources */,
+				F78E4B8B1CB7882B0049C560 /* UIColor+HEXColor.swift in Sources */,
 				8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */,
 				F726204B1CA1452000822C73 /* TopicDetailViewController.swift in Sources */,
 				F72092BA1CA534210096962F /* DetailViewController.swift in Sources */,
