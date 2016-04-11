@@ -39,12 +39,18 @@ extension CommentsView: UITableViewDelegate{
 
 extension CommentsView: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    if comments.count == 0{
+      return NSBundle.mainBundle().loadNibNamed("CommentsView", owner: self, options: nil)[2] as! UITableViewCell
+    }
     let cell = NSBundle.mainBundle().loadNibNamed("CommentsView", owner: self, options: nil)[1] as! CommentViewCell
     cell.setData(comments[indexPath.row])
     return cell
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    if comments.count == 0{
+      return 1
+    }
     return comments.count
   }
   

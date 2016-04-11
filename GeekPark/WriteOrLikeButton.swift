@@ -13,9 +13,7 @@ class WriteOrLikeButton: UIButton {
   
   override var highlighted: Bool{
     didSet{
-      print("running")
       if style == .write{
-        print("running1")
         if highlighted {
           self.tintColor = Config.Color.hightlightColor
         } else {

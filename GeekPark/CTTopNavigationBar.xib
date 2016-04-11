@@ -13,7 +13,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAZ-6r-ait" customClass="WriteOrLikeButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="452" y="559" width="26" height="34"/>
+                    <rect key="frame" x="449" y="559" width="27" height="34"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="vAZ-6r-ait" secondAttribute="height" multiplier="38:27" id="0Va-GH-4nK"/>
                         <constraint firstAttribute="width" secondItem="vAZ-6r-ait" secondAttribute="height" multiplier="25:22" id="Jm6-RY-22b"/>
@@ -29,7 +29,7 @@
                     </variation>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpt-fR-jNT" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="554" y="569" width="26" height="24"/>
+                    <rect key="frame" x="553" y="569" width="27" height="24"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="Rpt-fR-jNT" secondAttribute="height" multiplier="36:50" id="D2M-mz-rMj"/>
                         <constraint firstAttribute="width" constant="50" id="SJf-b6-fZ5"/>
@@ -51,8 +51,8 @@
                         <action selector="clickShareAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="2ny-zO-cZw"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-oL-3P1" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="15" y="565" width="50" height="22"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYL-oL-3P1" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
+                    <rect key="frame" x="15" y="571" width="10" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="50" id="TOS-df-7za"/>
                     </constraints>
@@ -69,14 +69,14 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNT-Ef-dca" customClass="BaseButton" customModule="GeekPark" customModuleProvider="target">
-                    <rect key="frame" x="503" y="567" width="26" height="26"/>
+                    <rect key="frame" x="501" y="566" width="27" height="27"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="dNT-Ef-dca" secondAttribute="height" multiplier="1:1" id="DKq-LD-FSx"/>
                         <constraint firstAttribute="width" secondItem="dNT-Ef-dca" secondAttribute="height" multiplier="25:24" id="GJf-M0-tq4"/>
-                        <constraint firstAttribute="width" constant="26" id="U1N-5x-X7u"/>
+                        <constraint firstAttribute="width" constant="27" id="U1N-5x-X7u"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="8"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="4"/>
                     <state key="normal" title="99+" backgroundImage="comment_icon">
                         <color key="titleColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" red="0.51764705882352946" green="0.51764705882352946" blue="0.51764705882352946" alpha="1" colorSpace="calibratedRGB"/>

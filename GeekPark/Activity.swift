@@ -48,18 +48,20 @@ class Activity: BaseModel{
   }
   
   func infoDictionary() -> NSArray{
-    return [["image": "activity-icon", "value": title, "status": status], ["image": "clock-icon", "value": NSDate.formateTimeFromTimeStamp(timestamp_start_at, formateString: "MM.DD hh:mm") ?? ""], ["image": "location-icon", "value": location ?? "", "arrow": ""]]
+    return [["image": "activity-icon", "value": title, "status": status], ["image": "clock-icon", "value": NSDate.formateTimeFromTimeStamp(timestamp_start_at, formateString: "MM.dd hh:mm") ?? ""], ["image": "location-icon", "value": location ?? "", "arrow": ""]]
   }
   
   static let statusMap = [
     "end": "已结束",
     "applying": "报名中",
+    "examing": "审核中",
     "progressing": "进行中"
   ]
   
   static let statusColorMap = [
     "end": UIColor(red: 160/255.0, green: 160/255.0, blue: 160/255.0, alpha: 1),
     "applying": UIColor(red: 45/255.0, green: 198/255.0, blue: 105/255.0, alpha: 1),
+    "examing": UIColor(red: 45/255.0, green: 198/255.0, blue: 105/255.0, alpha: 1),
     "progressing": UIColor(red: 220/255.0, green: 146/255.0, blue: 1/255.0, alpha: 1),
   ]
   
