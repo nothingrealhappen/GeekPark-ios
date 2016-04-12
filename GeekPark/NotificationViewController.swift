@@ -41,7 +41,7 @@ class NotificationViewController: UIViewController {
 extension NotificationViewController: UITableViewDelegate {
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
-    let controller = storyboard?.instantiateViewControllerWithIdentifier("NotificationsViewController") as! NotificationsViewController
+    let controller = NotificationsViewController.initByName("Notification")
     controller.notificationGroup = notificationGroups[indexPath.row]
     self.gct_pushAndHideTabbar(controller)
   }

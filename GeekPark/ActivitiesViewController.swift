@@ -26,7 +26,6 @@ class ActivitiesViewController: UIViewController, GRefreshable {
   }
   
   func setupViews(){
-    self.title = "活动"
     setupTableView()
   }
   

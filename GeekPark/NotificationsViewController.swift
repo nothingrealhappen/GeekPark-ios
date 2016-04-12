@@ -26,11 +26,6 @@ class NotificationsViewController: DetailViewController {
     getData()
   }
   
-  override func viewWillAppear(animated: Bool) {
-    self.tabBarController?.tabBar.hidden = true
-    super.viewWillAppear(animated)
-  }
-  
   
   func setupViews(){
     navigationItem.title = notificationGroup?.title

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "activity-notification-icon.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "极客广播.png",
       "scale" : "2x"
     },
     {

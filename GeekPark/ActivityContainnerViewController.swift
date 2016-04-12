@@ -13,6 +13,7 @@ class ActivityContainnerViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     let vc = ActivitiesViewController.initByName("Activity")
+    self.title = "活动"
     view.addSubview(vc.view)
     addChildViewController(vc)
   }
