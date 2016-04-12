@@ -50,6 +50,15 @@ extension SettingsViewController: UITableViewDelegate{
   
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    let setting = settings[indexPath.section][indexPath.row]
+    if let controller = setting.controller {
+      controller.title = setting.title
+      self.gct_pushAndHideTabbar(controller)
+    }else{
+      if let handler = setting.handler {
+        handler()
+      }
+    }
   }
   
   func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

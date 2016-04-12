@@ -10,6 +10,8 @@ import UIKit
 
 class Setting{
   
+  typealias ActionHandler = () -> ()
+  
   var imageName: String?
   var title: String = ""
   var controller: UIViewController?
@@ -17,6 +19,8 @@ class Setting{
   var hasIndicator: Bool = false
   var extra: String?
   var titleCenter: Bool = false
+  var handler: ActionHandler?
+  
   
   init(title: String,
        imageName: String? = nil,
@@ -24,7 +28,8 @@ class Setting{
        hasSwitch: Bool = false,
        extra: String = "",
        hasIndicator: Bool = false,
-       titleCenter: Bool = false
+       titleCenter: Bool = false,
+       handler: ActionHandler = {}
     ){
     self.title = title
     self.imageName = imageName
@@ -33,6 +38,7 @@ class Setting{
     self.extra = extra
     self.hasIndicator = hasIndicator
     self.titleCenter = titleCenter
+    self.handler = handler
   }
   
   
@@ -56,7 +62,7 @@ class Setting{
   
   static let settingItems = [
     [
-      Setting(title: "接收小消息通知",extra: "已关闭")
+      Setting(title: "接收消息通知",extra: "已关闭")
     ],
     [
       Setting(title: "系统通知",hasSwitch: true),
@@ -64,10 +70,10 @@ class Setting{
       Setting(title: "评论回复",hasSwitch: true),
     ],
     [
-      Setting(title: "关于我们", hasIndicator: true),
+      Setting(title: "关于我们", hasIndicator: true ),
       Setting(title: "去Apple Store评价", hasIndicator: true),
       Setting(title: "意见反馈", hasIndicator: true),
-      Setting(title: "欢迎页", hasIndicator: true),
+      Setting(title: "欢迎页", hasIndicator: true , handler: { LaunchView.showAtWindow(force: true) }),
       Setting(title: "清除缓存", hasIndicator: true),
     ],
     [

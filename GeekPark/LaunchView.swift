@@ -18,7 +18,9 @@ class LaunchView: UIView{
   
   static var loaded = false
   
-  static func showAtWindow(image: String? = nil) {
+  static func showAtWindow(image: String? = nil, force: Bool = false ) {
+    print("showAtWindow")
+    if force{ loaded = false }
     if loaded { return }
     loaded = true
     
