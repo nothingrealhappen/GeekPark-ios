@@ -19,6 +19,8 @@
 		8E8E15101CBC941300AB9515 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E150F1CBC941300AB9515 /* Ticket.swift */; };
 		8E8E15121CBC96B300AB9515 /* UserTicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15111CBC96B300AB9515 /* UserTicketCell.swift */; };
 		8E8E15141CBCB03900AB9515 /* TicketDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */; };
+		8E8E15161CBCCD8E00AB9515 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */; };
+		8E8E15181CBCD0F000AB9515 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15171CBCD0F000AB9515 /* SettingCell.swift */; };
 		8E92EDA91CA9071D0075D95F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDA81CA9071D0075D95F /* Config.swift */; };
 		8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAB1CA909800075D95F /* NotificationCell.swift */; };
 		8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */; };
@@ -103,6 +105,8 @@
 		8E8E150F1CBC941300AB9515 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		8E8E15111CBC96B300AB9515 /* UserTicketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTicketCell.swift; sourceTree = "<group>"; };
 		8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDetailController.swift; sourceTree = "<group>"; };
+		8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8E8E15171CBCD0F000AB9515 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		8E92EDA81CA9071D0075D95F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E92EDAB1CA909800075D95F /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 			children = (
 				8EA58C8A1CBB7E5E0069F2BD /* UserCell.swift */,
 				8E8E15111CBC96B300AB9515 /* UserTicketCell.swift */,
+				8E8E15171CBCD0F000AB9515 /* SettingCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				F73BECA91C9BDAE500E5AFEF /* UserViewController.swift */,
 				8E8E150D1CBC933100AB9515 /* UserTicketsViewController.swift */,
 				8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */,
+				8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -640,6 +646,7 @@
 				8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */,
 				F7C0424D1CAD1361000E4F4F /* ActivityIntroductionViewController.swift in Sources */,
 				F72620531CA28D5E00822C73 /* TopImageHeaderCellTableViewCell.swift in Sources */,
+				8E8E15161CBCCD8E00AB9515 /* SettingsViewController.swift in Sources */,
 				F73BECAD1C9BDB2700E5AFEF /* NotificationViewController.swift in Sources */,
 				F73BECB01C9BDB4C00E5AFEF /* ActivitiesViewController.swift in Sources */,
 				8E1616771CA1AC6700E781B2 /* ActivityCell.swift in Sources */,
@@ -654,6 +661,7 @@
 				F73C03821CA4D463004AC3D8 /* ActivitySpeechGuestViewCell.swift in Sources */,
 				8E3800331CABBAED006CBE03 /* Comment.swift in Sources */,
 				F726204F1CA27AD400822C73 /* ActivityDetailViewController.swift in Sources */,
+				8E8E15181CBCD0F000AB9515 /* SettingCell.swift in Sources */,
 				F78E4B851CB62E220049C560 /* CTTopNavigationBar.swift in Sources */,
 				F73BECC11C9BF08F00E5AFEF /* CTScrollView.swift in Sources */,
 				F78E4B7F1CB4D54A0049C560 /* CommentsView.swift in Sources */,
