@@ -22,6 +22,7 @@
 		8E8E15161CBCCD8E00AB9515 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */; };
 		8E8E15181CBCD0F000AB9515 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15171CBCD0F000AB9515 /* SettingCell.swift */; };
 		8E8E151A1CBCDC2200AB9515 /* AboutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15191CBCDC2200AB9515 /* AboutsViewController.swift */; };
+		8E8E151C1CBCE01A00AB9515 /* FeedbackViewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E151B1CBCE01A00AB9515 /* FeedbackViewsController.swift */; };
 		8E92EDA91CA9071D0075D95F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDA81CA9071D0075D95F /* Config.swift */; };
 		8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAB1CA909800075D95F /* NotificationCell.swift */; };
 		8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */; };
@@ -109,6 +110,7 @@
 		8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8E8E15171CBCD0F000AB9515 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		8E8E15191CBCDC2200AB9515 /* AboutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutsViewController.swift; sourceTree = "<group>"; };
+		8E8E151B1CBCE01A00AB9515 /* FeedbackViewsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewsController.swift; sourceTree = "<group>"; };
 		8E92EDA81CA9071D0075D95F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E92EDAB1CA909800075D95F /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */,
 				8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */,
 				8E8E15191CBCDC2200AB9515 /* AboutsViewController.swift */,
+				8E8E151B1CBCE01A00AB9515 /* FeedbackViewsController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				8EA58C891CBB7B6D0069F2BD /* Setting.swift in Sources */,
 				F72092C41CA790E40096962F /* Speech.swift in Sources */,
 				F73BEC9B1C9BB60B00E5AFEF /* TopicsPageViewController.swift in Sources */,
+				8E8E151C1CBCE01A00AB9515 /* FeedbackViewsController.swift in Sources */,
 				F7C042471CAB7D13000E4F4F /* BaseButton.swift in Sources */,
 				8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */,
 				8E48FD841CB79C0A00BDEDAE /* NotificationGroup.swift in Sources */,
