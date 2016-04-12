@@ -8,5 +8,6 @@ target 'GeekPark' do
   pod 'Alamofire', '~> 3.0'
   pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'EVReflection'
+  pod "QRCode", "~> 0.5"
 end
 

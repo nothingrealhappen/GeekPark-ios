@@ -58,5 +58,9 @@ extension UserTicketsViewController: UITableViewDataSource{
 extension UserTicketsViewController: UITableViewDelegate{
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
+    let controller = TicketDetailController.initByName("User")
+    controller.ticket = tickets[indexPath.section][indexPath.row]
+    controller.title = "详情"
+    self.gct_pushAndHideTabbar(controller)
   }
 }
