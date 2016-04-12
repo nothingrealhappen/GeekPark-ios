@@ -15,6 +15,9 @@
 		8E4D1DB41CACD1360056699F /* UIScrollView+Refreshable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */; };
 		8E62A4231CAE2119007867BD /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E62A4221CAE2119007867BD /* LaunchView.swift */; };
 		8E62A4251CAE21A9007867BD /* LaunchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E62A4241CAE21A9007867BD /* LaunchView.xib */; };
+		8E8E150E1CBC933100AB9515 /* UserTicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E150D1CBC933100AB9515 /* UserTicketsViewController.swift */; };
+		8E8E15101CBC941300AB9515 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E150F1CBC941300AB9515 /* Ticket.swift */; };
+		8E8E15121CBC96B300AB9515 /* UserTicketCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15111CBC96B300AB9515 /* UserTicketCell.swift */; };
 		8E92EDA91CA9071D0075D95F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDA81CA9071D0075D95F /* Config.swift */; };
 		8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAB1CA909800075D95F /* NotificationCell.swift */; };
 		8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */; };
@@ -95,6 +98,9 @@
 		8E4D1DB31CACD1360056699F /* UIScrollView+Refreshable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Refreshable.swift"; sourceTree = "<group>"; };
 		8E62A4221CAE2119007867BD /* LaunchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		8E62A4241CAE21A9007867BD /* LaunchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchView.xib; sourceTree = "<group>"; };
+		8E8E150D1CBC933100AB9515 /* UserTicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTicketsViewController.swift; sourceTree = "<group>"; };
+		8E8E150F1CBC941300AB9515 /* Ticket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		8E8E15111CBC96B300AB9515 /* UserTicketCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTicketCell.swift; sourceTree = "<group>"; };
 		8E92EDA81CA9071D0075D95F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E92EDAB1CA909800075D95F /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -255,6 +261,7 @@
 			children = (
 				8E9601B21CAB878300B2A126 /* User.swift */,
 				8EA58C881CBB7B6D0069F2BD /* Setting.swift */,
+				8E8E150F1CBC941300AB9515 /* Ticket.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -263,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				8EA58C8A1CBB7E5E0069F2BD /* UserCell.swift */,
+				8E8E15111CBC96B300AB9515 /* UserTicketCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -381,6 +389,7 @@
 			isa = PBXGroup;
 			children = (
 				F73BECA91C9BDAE500E5AFEF /* UserViewController.swift */,
+				8E8E150D1CBC933100AB9515 /* UserTicketsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -616,9 +625,11 @@
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
 				F72092C61CA792040096962F /* Guest.swift in Sources */,
 				F73BECC61C9F883F00E5AFEF /* ImageLoopTableViewCell.swift in Sources */,
+				8E8E150E1CBC933100AB9515 /* UserTicketsViewController.swift in Sources */,
 				F72092B01CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift in Sources */,
 				F73BECC81C9F993900E5AFEF /* ImageCollectionViewCell.swift in Sources */,
 				F72620491CA11C0F00822C73 /* TopicTableViewCell.swift in Sources */,
+				8E8E15101CBC941300AB9515 /* Ticket.swift in Sources */,
 				F73BECA31C9BD99700E5AFEF /* BaseModel.swift in Sources */,
 				F72092B31CA5242D0096962F /* Extensions.swift in Sources */,
 				F73BECC41C9E4C7300E5AFEF /* Topic.swift in Sources */,
@@ -652,6 +663,7 @@
 				F7C042471CAB7D13000E4F4F /* BaseButton.swift in Sources */,
 				8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */,
 				8E48FD841CB79C0A00BDEDAE /* NotificationGroup.swift in Sources */,
+				8E8E15121CBC96B300AB9515 /* UserTicketCell.swift in Sources */,
 				8EA58C821CBB552E0069F2BD /* NavigationBar+Extension.swift in Sources */,
 				F7B0BD041CA9321700EE6A36 /* Audience.swift in Sources */,
 				8E9601B31CAB878300B2A126 /* User.swift in Sources */,

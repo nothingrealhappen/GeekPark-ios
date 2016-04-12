@@ -29,7 +29,8 @@ class Setting{
         controller: TopicsPageViewController.initByName("Topic")),
       Setting(title: "报名的活动", imageName: "applied-activity-icon",
         controller: ActivitiesViewController.initByName("Activity")),
-      Setting(title: "活动入场券", imageName: "tickets-icon", controller: nil),
+      Setting(title: "活动入场券", imageName: "tickets-icon",
+        controller: UserTicketsViewController.initByName("User")),
     ],
     [
       Setting(title: "设置", imageName: "setting-icon", controller: nil)
