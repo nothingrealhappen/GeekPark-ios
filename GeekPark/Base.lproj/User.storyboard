@@ -520,6 +520,89 @@
             </objects>
             <point key="canvasLocation" x="4607" y="910"/>
         </scene>
+        <!--Abouts View Controller-->
+        <scene sceneID="IEU-FK-7C7">
+            <objects>
+                <viewController storyboardIdentifier="AboutsViewController" id="TVb-bt-tdE" customClass="AboutsViewController" customModule="GeekPark" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZTz-cV-fkN"/>
+                        <viewControllerLayoutGuide type="bottom" id="5dS-E4-4g2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9sU-N5-sgl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about-us-icon" translatesAutoresizingMaskIntoConstraints="NO" id="jO1-FI-fe3">
+                                <rect key="frame" x="268" y="30" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="fYB-0r-qGG"/>
+                                    <constraint firstAttribute="height" constant="64" id="rjM-9s-01q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="极客公园" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qon-x4-Dgm">
+                                <rect key="frame" x="0.0" y="104" width="600" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="极客公园 版权所有" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rB-1R-Wjg">
+                                <rect key="frame" x="0.0" y="553" width="600" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2009 - 2016 北京中明万长管理咨询有限公司" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T1l-p3-DrC">
+                                <rect key="frame" x="0.0" y="576.5" width="600" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" GeekPark 1.0.1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yH-ir-c8b">
+                                <rect key="frame" x="0.0" y="129.5" width="600" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9rB-1R-Wjg" firstAttribute="leading" secondItem="9sU-N5-sgl" secondAttribute="leading" id="1eV-ek-bPE"/>
+                            <constraint firstItem="T1l-p3-DrC" firstAttribute="leading" secondItem="9sU-N5-sgl" secondAttribute="leading" id="2E0-kH-5pE"/>
+                            <constraint firstItem="1yH-ir-c8b" firstAttribute="top" secondItem="qon-x4-Dgm" secondAttribute="bottom" constant="6" id="3PD-CL-3AK"/>
+                            <constraint firstItem="qon-x4-Dgm" firstAttribute="leading" secondItem="9sU-N5-sgl" secondAttribute="leadingMargin" id="9UV-8A-4lU"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="1yH-ir-c8b" secondAttribute="leading" id="Een-MI-Yhb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9rB-1R-Wjg" secondAttribute="trailing" id="L0x-2h-l8n"/>
+                            <constraint firstItem="9rB-1R-Wjg" firstAttribute="trailing" secondItem="T1l-p3-DrC" secondAttribute="trailing" id="LmT-vD-aXW"/>
+                            <constraint firstItem="qon-x4-Dgm" firstAttribute="trailing" secondItem="T1l-p3-DrC" secondAttribute="trailing" id="LnU-y0-4Np"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qon-x4-Dgm" secondAttribute="trailing" id="PUA-ph-ueo"/>
+                            <constraint firstItem="qon-x4-Dgm" firstAttribute="top" secondItem="jO1-FI-fe3" secondAttribute="bottom" constant="10" id="Rec-Jn-nvr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1yH-ir-c8b" secondAttribute="trailing" id="Vx6-Vk-7Na"/>
+                            <constraint firstItem="5dS-E4-4g2" firstAttribute="top" secondItem="T1l-p3-DrC" secondAttribute="bottom" constant="10" id="b1z-JS-piV"/>
+                            <constraint firstItem="1yH-ir-c8b" firstAttribute="leading" secondItem="T1l-p3-DrC" secondAttribute="leading" id="bUa-Us-d5Y"/>
+                            <constraint firstItem="jO1-FI-fe3" firstAttribute="centerX" secondItem="9sU-N5-sgl" secondAttribute="centerX" id="brN-Qz-fpT"/>
+                            <constraint firstItem="1yH-ir-c8b" firstAttribute="trailing" secondItem="T1l-p3-DrC" secondAttribute="trailing" id="kLm-z9-z3n"/>
+                            <constraint firstItem="9rB-1R-Wjg" firstAttribute="leading" secondItem="T1l-p3-DrC" secondAttribute="leading" id="mpH-Et-ulw"/>
+                            <constraint firstItem="jO1-FI-fe3" firstAttribute="top" secondItem="ZTz-cV-fkN" secondAttribute="bottom" constant="10" id="pRa-Sw-mLg"/>
+                            <constraint firstItem="T1l-p3-DrC" firstAttribute="top" secondItem="9rB-1R-Wjg" secondAttribute="bottom" constant="10" id="wpj-tN-m81"/>
+                            <constraint firstAttribute="trailing" secondItem="T1l-p3-DrC" secondAttribute="trailing" id="zXr-FN-AEH"/>
+                            <constraint firstItem="qon-x4-Dgm" firstAttribute="leading" secondItem="T1l-p3-DrC" secondAttribute="leading" id="zzi-1m-U0b"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9UV-8A-4lU"/>
+                                <exclude reference="PUA-ph-ueo"/>
+                                <exclude reference="Een-MI-Yhb"/>
+                                <exclude reference="Vx6-Vk-7Na"/>
+                                <exclude reference="1eV-ek-bPE"/>
+                                <exclude reference="L0x-2h-l8n"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVH-kD-CVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5245" y="910"/>
+        </scene>
         <!--我的-->
         <scene sceneID="Kpa-fm-O8M">
             <objects>
@@ -542,6 +625,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about-us-icon" width="64" height="64"/>
         <image name="activity-icon" width="24" height="24"/>
         <image name="clock-icon" width="16" height="16"/>
         <image name="location-icon" width="16" height="16"/>

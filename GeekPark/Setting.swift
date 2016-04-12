@@ -70,7 +70,8 @@ class Setting{
       Setting(title: "评论回复",hasSwitch: true),
     ],
     [
-      Setting(title: "关于我们", hasIndicator: true ),
+      Setting(title: "关于我们", hasIndicator: true,
+        controller: AboutsViewController.initByName("User")),
       Setting(title: "去Apple Store评价", hasIndicator: true),
       Setting(title: "意见反馈", hasIndicator: true),
       Setting(title: "欢迎页", hasIndicator: true , handler: { LaunchView.showAtWindow(force: true) }),

@@ -21,6 +21,7 @@
 		8E8E15141CBCB03900AB9515 /* TicketDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */; };
 		8E8E15161CBCCD8E00AB9515 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */; };
 		8E8E15181CBCD0F000AB9515 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15171CBCD0F000AB9515 /* SettingCell.swift */; };
+		8E8E151A1CBCDC2200AB9515 /* AboutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E15191CBCDC2200AB9515 /* AboutsViewController.swift */; };
 		8E92EDA91CA9071D0075D95F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDA81CA9071D0075D95F /* Config.swift */; };
 		8E92EDAC1CA909800075D95F /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAB1CA909800075D95F /* NotificationCell.swift */; };
 		8E92EDAE1CA92C170075D95F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */; };
@@ -107,6 +108,7 @@
 		8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketDetailController.swift; sourceTree = "<group>"; };
 		8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8E8E15171CBCD0F000AB9515 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		8E8E15191CBCDC2200AB9515 /* AboutsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutsViewController.swift; sourceTree = "<group>"; };
 		8E92EDA81CA9071D0075D95F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8E92EDAB1CA909800075D95F /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		8E92EDAD1CA92C170075D95F /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
@@ -399,6 +401,7 @@
 				8E8E150D1CBC933100AB9515 /* UserTicketsViewController.swift */,
 				8E8E15131CBCB03900AB9515 /* TicketDetailController.swift */,
 				8E8E15151CBCCD8E00AB9515 /* SettingsViewController.swift */,
+				8E8E15191CBCDC2200AB9515 /* AboutsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -633,6 +636,7 @@
 				8E9601AC1CAA6EF300B2A126 /* ActivityNotificationCell.swift in Sources */,
 				F73BECAA1C9BDAE500E5AFEF /* UserViewController.swift in Sources */,
 				F72092C61CA792040096962F /* Guest.swift in Sources */,
+				8E8E151A1CBCDC2200AB9515 /* AboutsViewController.swift in Sources */,
 				F73BECC61C9F883F00E5AFEF /* ImageLoopTableViewCell.swift in Sources */,
 				8E8E150E1CBC933100AB9515 /* UserTicketsViewController.swift in Sources */,
 				F72092B01CA51E7D0096962F /* AudienceAvatorCollectionViewCell.swift in Sources */,
