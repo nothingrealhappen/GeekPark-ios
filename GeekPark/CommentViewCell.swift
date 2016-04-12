@@ -22,12 +22,12 @@ class CommentViewCell: UITableViewCell {
   
   func setData(comment: Comment){
     self.comment = comment
-    avator.kf_setImageWithURL(NSURL(string: comment.user?.avatar ?? "")!, placeholderImage: UIImage(named: "user_icon"))
+    avator.kf_setImageWithURL(NSURL(string: comment.user?.avatar ?? "")!, placeholderImage: UIImage(named: Comment.getRandomAvator()))
+    avator.circlize()
     content.text = comment.body
-    publishTime.text = comment.created_at
-//    if let time = Double(comment.created_at){
-//      publishTime.text = NSDate(timeIntervalSince1970: Double(time)!).timeAgo
-//    }
-    username.text = comment.user?.username
+    content.setTextColor(UIColor(rgba: "#6e6e6e"), after: "回复 ", before: ": ")
+    publishTime.text = NSDate.timeAgoFromDataSource(comment.created_at ?? "")?.timeAgo
+    username.text = comment.user?.username ?? ""
   }
+  
 }
